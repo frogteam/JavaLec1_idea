@@ -1,0 +1,7 @@
+java 17 부터 multiple case를 지원
+
+jungol 은 Java10 이라 함 (2022.11 현재)
+
+
+java 의 swtich 문 변천사 참조
+https://medium.com/@javatechie/the-evolution-of-switch-statement-from-java-7-to-java-17-4b5eee8d29b7

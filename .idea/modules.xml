@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/JavaLec1.iml" filepath="$PROJECT_DIR$/JavaLec1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Jungol_기초다지기/Jungol_기초다지기.iml" filepath="$PROJECT_DIR$/Jungol_기초다지기/Jungol_기초다지기.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Jungol_실력다지기/Jungol_실력다지기.iml" filepath="$PROJECT_DIR$/Jungol_실력다지기/Jungol_실력다지기.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Jungol_알고리즘/Jungol_알고리즘.iml" filepath="$PROJECT_DIR$/Jungol_알고리즘/Jungol_알고리즘.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Lec01_Hello/Lec01_Hello.iml" filepath="$PROJECT_DIR$/Lec01_Hello/Lec01_Hello.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Lec02_FirstJava/Lec02_FirstJava.iml" filepath="$PROJECT_DIR$/Lec02_FirstJava/Lec02_FirstJava.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Lec03_Variables/Lec03_Variables.iml" filepath="$PROJECT_DIR$/Lec03_Variables/Lec03_Variables.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Lec04_Input/Lec04_Input.iml" filepath="$PROJECT_DIR$/Lec04_Input/Lec04_Input.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Lec05_Operator/Lec05_Operator.iml" filepath="$PROJECT_DIR$/Lec05_Operator/Lec05_Operator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Lec06_If/Lec06_If.iml" filepath="$PROJECT_DIR$/Lec06_If/Lec06_If.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Lec07_Switch/Lec07_Switch.iml" filepath="$PROJECT_DIR$/Lec07_Switch/Lec07_Switch.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Lec08_For/Lec08_For.iml" filepath="$PROJECT_DIR$/Lec08_For/Lec08_For.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Lec09_While/Lec09_While.iml" filepath="$PROJECT_DIR$/Lec09_While/Lec09_While.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Lec10_Loop/Lec10_Loop.iml" filepath="$PROJECT_DIR$/Lec10_Loop/Lec10_Loop.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Lec11_Array/Lec11_Array.iml" filepath="$PROJECT_DIR$/Lec11_Array/Lec11_Array.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Lec12_Method/Lec12_Method.iml" filepath="$PROJECT_DIR$/Lec12_Method/Lec12_Method.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Lec13_Class/Lec13_Class.iml" filepath="$PROJECT_DIR$/Lec13_Class/Lec13_Class.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Lec14_Access/Lec14_Access.iml" filepath="$PROJECT_DIR$/Lec14_Access/Lec14_Access.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Lec15_Inheritance/Lec15_Inheritance.iml" filepath="$PROJECT_DIR$/Lec15_Inheritance/Lec15_Inheritance.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Lec16_OOP/Lec16_OOP.iml" filepath="$PROJECT_DIR$/Lec16_OOP/Lec16_OOP.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Lec17_MVC/Lec17_MVC.iml" filepath="$PROJECT_DIR$/Lec17_MVC/Lec17_MVC.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Lec18_Exception/Lec18_Exception.iml" filepath="$PROJECT_DIR$/Lec18_Exception/Lec18_Exception.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Lec19_String/Lec19_String.iml" filepath="$PROJECT_DIR$/Lec19_String/Lec19_String.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Lec20_Math/Lec20_Math.iml" filepath="$PROJECT_DIR$/Lec20_Math/Lec20_Math.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Lec21_Wrapper/Lec21_Wrapper.iml" filepath="$PROJECT_DIR$/Lec21_Wrapper/Lec21_Wrapper.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Lec22_Collection/Lec22_Collection.iml" filepath="$PROJECT_DIR$/Lec22_Collection/Lec22_Collection.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Lec23_InnerClass/Lec23_InnerClass.iml" filepath="$PROJECT_DIR$/Lec23_InnerClass/Lec23_InnerClass.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Lec24_Lambda/Lec24_Lambda.iml" filepath="$PROJECT_DIR$/Lec24_Lambda/Lec24_Lambda.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Lec25_Thread/Lec25_Thread.iml" filepath="$PROJECT_DIR$/Lec25_Thread/Lec25_Thread.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Lec26_FileIO/Lec26_FileIO.iml" filepath="$PROJECT_DIR$/Lec26_FileIO/Lec26_FileIO.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Lec27_GUI/Lec27_GUI.iml" filepath="$PROJECT_DIR$/Lec27_GUI/Lec27_GUI.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Lec28_JDBC/Lec28_JDBC.iml" filepath="$PROJECT_DIR$/Lec28_JDBC/Lec28_JDBC.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Lec29_DesignPattern/Lec29_DesignPattern.iml" filepath="$PROJECT_DIR$/Lec29_DesignPattern/Lec29_DesignPattern.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Lec30_Performance/Lec30_Performance.iml" filepath="$PROJECT_DIR$/Lec30_Performance/Lec30_Performance.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Lec31_Java_Util/Lec31_Java_Util.iml" filepath="$PROJECT_DIR$/Lec31_Java_Util/Lec31_Java_Util.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Lec32_Java_Lang/Lec32_Java_Lang.iml" filepath="$PROJECT_DIR$/Lec32_Java_Lang/Lec32_Java_Lang.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Lec33_WebCrawl/Lec33_WebCrawl.iml" filepath="$PROJECT_DIR$/Lec33_WebCrawl/Lec33_WebCrawl.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Lec34_DataStructure/Lec34_DataStructure.iml" filepath="$PROJECT_DIR$/Lec34_DataStructure/Lec34_DataStructure.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Lec35_Optional/Lec35_Optional.iml" filepath="$PROJECT_DIR$/Lec35_Optional/Lec35_Optional.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Lec36_Stream/Lec36_Stream.iml" filepath="$PROJECT_DIR$/Lec36_Stream/Lec36_Stream.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Lec41_Log/Lec41_Log.iml" filepath="$PROJECT_DIR$/Lec41_Log/Lec41_Log.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Lec50_Tip/Lec50_Tip.iml" filepath="$PROJECT_DIR$/Lec50_Tip/Lec50_Tip.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Phonebook/Phonebook.iml" filepath="$PROJECT_DIR$/Phonebook/Phonebook.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Phonebook_new/Phonebook_new.iml" filepath="$PROJECT_DIR$/Phonebook_new/Phonebook_new.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Phonebook_old/Phonebook_old.iml" filepath="$PROJECT_DIR$/Phonebook_old/Phonebook_old.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Practice/Practice.iml" filepath="$PROJECT_DIR$/Practice/Practice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Proj_BookSearch/Proj_BookSearch.iml" filepath="$PROJECT_DIR$/Proj_BookSearch/Proj_BookSearch.iml" />
+      <module fileurl="file://$PROJECT_DIR$/YeonWork001/YeonWork001.iml" filepath="$PROJECT_DIR$/YeonWork001/YeonWork001.iml" />
+    </modules>
+  </component>
+</project>
