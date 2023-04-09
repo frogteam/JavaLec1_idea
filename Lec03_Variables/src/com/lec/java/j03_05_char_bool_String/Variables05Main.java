@@ -1,4 +1,4 @@
-package com.lec.java.variables05;
+package com.lec.java.j03_05_char_bool_String;
 
 public class Variables05Main {
 
@@ -85,6 +85,7 @@ public class Variables05Main {
 	</body>
 </html>
  */
+		// 기존의 String 이라면 이와 같이 \n \t 등을 꾸덕꾸덕 붙여야 한다.
 		String txt1 = "<html>\n" +
 				"\t\n" +
 				"\t<body>\n" +

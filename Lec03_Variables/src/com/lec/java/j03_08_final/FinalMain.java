@@ -1,4 +1,4 @@
-package com.lec.java.constant;
+package com.lec.java.j03_08_final;
 
 /*
  * 상수 : final

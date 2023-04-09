@@ -1,4 +1,4 @@
-package com.lec.java.variables02;
+package com.lec.java.j03_02_variables;
 
 public class Variable02Main {
 

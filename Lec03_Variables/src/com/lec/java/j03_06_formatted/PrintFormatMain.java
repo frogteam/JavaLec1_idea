@@ -1,4 +1,4 @@
-package com.lec.java.prinf;
+package com.lec.java.j03_06_formatted;
 
 /* 서식화된 문자열 (formatted string)
  *  ● 화면에 출력할때는 -> printf()
@@ -95,11 +95,15 @@ public class PrintFormatMain {
 
 		//---------------------------------------------
 		// Text Block 으로 포맷팅 가능. (Java15 이상)
-		String txt1 = """
-                저는 %d살입니다. 키는 %.1fcm입니다
-                제 이름은 [%10s] 입니다 혈액형은 %c형입니다		
-				""".formatted(age, height, "김기덕", 'B');
-		System.out.println(txt1);
+		String textBlock = """
+        {
+            "title": %s,
+            "author": %s,
+            "id": %d
+        }
+        """.formatted("hi", "taeng", 2);
+
+		System.out.println(textBlock);
 		
 	} // end main
 

@@ -1,4 +1,4 @@
-package com.lec.java.j13_03_gettersetter;
+package com.lec.java.j13_03_getter_setter;
 
 /**
  *  캡슐화, 은닉, 추상화

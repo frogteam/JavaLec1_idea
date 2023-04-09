@@ -1,4 +1,4 @@
-package com.lec.java.casting;
+package com.lec.java.j03_07_casting;
 
 
 /*

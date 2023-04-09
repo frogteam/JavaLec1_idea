@@ -1,4 +1,4 @@
-package com.lec.java.variables01;
+package com.lec.java.j03_01_variables;
 
 /*
 * 	변수 (Variables) :

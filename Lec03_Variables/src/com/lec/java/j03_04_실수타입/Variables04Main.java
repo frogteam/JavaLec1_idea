@@ -1,4 +1,4 @@
-package com.lec.java.variables04;
+package com.lec.java.j03_04_실수타입;
 
 public class Variables04Main {
 

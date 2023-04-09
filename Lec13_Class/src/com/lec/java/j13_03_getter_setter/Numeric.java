@@ -1,4 +1,4 @@
-package com.lec.java.j13_03_gettersetter;
+package com.lec.java.j13_03_getter_setter;
 
 // boolean 타입의 getter, setter 는
 // 네이밍이 살짝 다르다.
