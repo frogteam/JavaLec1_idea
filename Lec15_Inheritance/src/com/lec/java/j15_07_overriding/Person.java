@@ -1,4 +1,4 @@
-package com.lec.java.inherit07;
+package com.lec.java.j15_07_overriding;
 
 public class Person {
 	// 멤버 변수

@@ -1,4 +1,4 @@
-package com.lec.java.inherit03;
+package com.lec.java.j15_03_Object;
 
 /* java.lang.Object
  * 	자바의 모든 클래스는 java.lang.Object로부터 상속 받는다.

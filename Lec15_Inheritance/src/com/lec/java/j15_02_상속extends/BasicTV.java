@@ -1,6 +1,5 @@
-package com.lec.java.inherit01;
+package com.lec.java.j15_02_상속extends;
 
-// 클래스: 멤버변수 (+ 생성자) + 메소드 => 데이터 타입
 public class BasicTV {
 	// 멤버 변수
 	boolean isPowerOn;
@@ -15,7 +14,8 @@ public class BasicTV {
 		System.out.println("볼륨: " + volume);
 	} // end displayInfo()
 	
-} // end class BasicTV
+} // class BasicTV
+
 
 
 

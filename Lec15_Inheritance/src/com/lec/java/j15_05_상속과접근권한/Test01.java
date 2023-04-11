@@ -1,4 +1,4 @@
-package com.lec.java.inherit05;
+package com.lec.java.j15_05_상속과접근권한;
 
 // private: 자기 클래스에서만
 // default: 자기 클래스 + 같은 패키지 안에서

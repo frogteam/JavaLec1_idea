@@ -1,4 +1,4 @@
-package com.lec.java.inherit02;
+package com.lec.java.j15_02_상속extends;
 
 /* 상속 (Inheritance)
  * 	상위클래스를 상속받아서 하위클래스를 정의하는 방법

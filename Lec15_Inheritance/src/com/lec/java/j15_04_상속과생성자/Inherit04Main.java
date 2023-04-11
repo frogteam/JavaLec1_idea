@@ -1,4 +1,4 @@
-package com.lec.java.inherit04;
+package com.lec.java.j15_04_상속과생성자;
 /* 상속에서 생성자 호출순서
  * 
  * 기본적으로 '자식'이 생성되기 전에 '부모' 가 생성된다. 

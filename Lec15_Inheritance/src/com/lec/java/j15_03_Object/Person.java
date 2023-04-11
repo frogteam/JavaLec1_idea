@@ -1,4 +1,4 @@
-package com.lec.java.inherit03;
+package com.lec.java.j15_03_Object;
 
 public class Person {
 	// 멤버 변수

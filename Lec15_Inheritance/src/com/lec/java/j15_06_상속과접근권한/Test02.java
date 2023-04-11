@@ -1,6 +1,6 @@
-package com.lec.java.inherit06;
+package com.lec.java.j15_06_상속과접근권한;
 
-import com.lec.java.inherit05.Test01;
+import com.lec.java.j15_05_상속과접근권한.Test01;
 
 public class Test02 {
 	int num;

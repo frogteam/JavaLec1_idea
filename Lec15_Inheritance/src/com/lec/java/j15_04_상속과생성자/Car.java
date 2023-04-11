@@ -1,4 +1,4 @@
-package com.lec.java.inherit04;
+package com.lec.java.j15_04_상속과생성자;
 
 
 public class Car extends Vehicle {

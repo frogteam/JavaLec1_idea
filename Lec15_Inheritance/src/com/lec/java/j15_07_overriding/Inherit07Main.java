@@ -1,4 +1,4 @@
-package com.lec.java.inherit07;
+package com.lec.java.j15_07_overriding;
 
 /* 메소드 재정의(Overriding)
  * '상속'관계에서 '부모 클래스에 있던 메소드'를 '재정의'하는 것.

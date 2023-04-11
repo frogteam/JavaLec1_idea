@@ -1,7 +1,7 @@
-package com.lec.java.inherit05;
+package com.lec.java.j15_05_상속과접근권한;
 
-import com.lec.java.inherit06.*;
-import com.lec.java.inherit06.test.Test04;
+import com.lec.java.j15_06_상속과접근권한.*;
+import com.lec.java.j15_06_상속과접근권한.test.Test04;
 // import문에서 *의 의미는 해당 디렉토리 밑에 있는 모든 클래스를 의미함
 // 서브 디렉토리에 있는 클래스까지는 import하지는 못함
 

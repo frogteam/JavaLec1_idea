@@ -1,4 +1,4 @@
-package com.lec.java.inherit01;
+package com.lec.java.j15_01_상속이없다면;
 
 public class Inherit01Main {
 

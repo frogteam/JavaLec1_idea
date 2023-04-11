@@ -1,4 +1,4 @@
-package com.lec.java.inherit02;
+package com.lec.java.j15_02_상속extends;
 
 
 // extends 키워드를 사용하여 상속
