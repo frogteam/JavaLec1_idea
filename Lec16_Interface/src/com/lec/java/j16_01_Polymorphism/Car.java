@@ -1,4 +1,4 @@
-package com.lec.java.oop01;
+package com.lec.java.j16_01_Polymorphism;
 
 public class Car extends Vehicle {
 	private int oil;

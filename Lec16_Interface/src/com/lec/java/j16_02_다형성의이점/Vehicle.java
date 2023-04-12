@@ -1,4 +1,4 @@
-package com.lec.java.oop02;
+package com.lec.java.j16_02_다형성의이점;
 
 public class Vehicle {
 	private int speed;

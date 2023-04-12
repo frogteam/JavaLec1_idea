@@ -55,6 +55,8 @@ public class FirstJava {
         System.out.println("10 - 20 = " + (10 - 20));
         System.out.println("10 * 20 = " + (10 * 20));
         System.out.println("10 / 20 = " + (10 / 20));   // 정수/정수 연산 결과는 정수 (즉 소수점이하 절삭)
+
+        // (double)10 => 10이라는 정수를 10.0 실수로 변환
         System.out.println("10 / 20 = " + ((double)10 / 20)); // 실수와의 연산 결과는 실수
 
 
@@ -80,8 +82,9 @@ public class FirstJava {
         // \\  : 문자열 안에서 역슬래시 출력
 
 
-        System.out.println("123\t456\t789\t");
-        System.out.println("12345\t45678\t78901\t");
+        System.out.println("123\t456\t7890");
+        System.out.println("12\t34\t56\t78\t90");
+        System.out.println("12345\t67890");
         System.out.println("Avengers\n\\Endgame\\");
 
         System.out.println("프로그램 종료");

@@ -1,5 +1,11 @@
 package com.lec.java.j03_02_variables;
 
+/*
+    변수명 등 사용자가 이름을 지어준것들 --> 식별자 (identifier) 라고 함.
+
+    식별자 수정할때는 refactor 기능을 활용하자.
+ */
+
 public class Variable02Main {
 
 	public static void main(String[] args) {
@@ -46,7 +52,7 @@ public class Variable02Main {
 
 		// 변수명 바꿀때는 refactor-rename 사용하자!   SHIFT+F6
 
-		// 변수명 (식별자) 작명 젝약사항.
+		// 변수명 (식별자) 작명 제약사항.
 		// 알파벳, 숫자, _, $
 		// 숫자로 시작하면 안됨
 		// 띄어쓰기 안됨

@@ -1,4 +1,4 @@
-package com.lec.java.oop03;
+package com.lec.java.j16_02_다형성의이점;
 
 public class Car extends Vehicle {
 	private int oil;

@@ -1,4 +1,4 @@
-package com.lec.java.oop05;
+package com.lec.java.j16_05_interface;
 
 /*
  인터페이스(interface):

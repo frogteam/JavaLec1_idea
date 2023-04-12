@@ -1,13 +1,22 @@
-package com.lec.java.oop03;
+package com.lec.java.j16_03_다운_업캐스팅;
 
+/**
+ *   업캐스팅 (Upcasting)
+ *        자식 클래스의 객체가 부모 클래스 타입으로 형변환 되는 것
+ *
+ *   다운캐스팅 (Downcasting)
+ *         업캐스팅의 반대
+ *         하위 클래스로의 다운캐스팅을 할때는 명시적으로 변환할 타입을 지정해주어야 한다.
+ *         이때 , 캐스팅에 실패하면 ClassCastException 발생
+ */
 public class Polymorphism03Main {
 
 	public static void main(String[] args) {
 		System.out.println("다형성의 어려움");
 		
 		Vehicle car1 = new Vehicle();
-		Vehicle car2 = new Car();
-		Vehicle car3 = new HybridCar();
+		Vehicle car2 = new Car();     // 다형성, 업캐스팅
+		Vehicle car3 = new HybridCar();  // 다형성, 업캐스팅
 		
 		car2.setSpeed(10);
 		// car2는 Vehicle 타입으로 선언되어 있으므로,
@@ -29,7 +38,7 @@ public class Polymorphism03Main {
 		// 부모 클래스의 displayInfo()를 덮어써 버리게 됨
 		// 결과는 Car의 정보를 출력하게 됨
 		
-		((Car) car2).setOil(50);
+		((Car) car2).setOil(50);  // 다운캐스팅!
 		// 실제로 Car 클래스의 인스턴스로 생성된 car2 변수는
 		// 형변환(casting)을 통해서 Car 타입으로 변환할 수 있고,
 		// Car 클래스에 정의된 메소드를 사용할 수 있다.

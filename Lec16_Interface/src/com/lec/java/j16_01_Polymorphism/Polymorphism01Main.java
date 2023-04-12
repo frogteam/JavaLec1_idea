@@ -1,4 +1,4 @@
-package com.lec.java.oop01;
+package com.lec.java.j16_01_Polymorphism;
 /*
  	다형성  ( Polymorphism )
  	하나의 이름의 클래스나 메소드가 '여러 가지 형태의 동작을 하는 능력'
@@ -6,6 +6,7 @@ package com.lec.java.oop01;
  	클래스의 다형성:
 	 	한 타입의 참조변수로 여러타입의 객체를 참조 가능.
 	 	조상클래스 타입의 참조변수로 자손클래스의 인스턴스를 참조가능한것
+	 	이를 업캐스팅(upcasting)이라 한다  -> 자식 클래스의 객체가 부모 클래스 타입으로 형변환 되는 것
  	
  	메소드의 다형성:
  		메소드 오버로딩, 메소드 오버라이딩

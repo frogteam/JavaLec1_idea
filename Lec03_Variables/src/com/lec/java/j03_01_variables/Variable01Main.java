@@ -25,7 +25,7 @@ public class Variable01Main {
 		int num1;  // int 타입의 변수 num1 을 선언. (int 타입,  integer)
 		int num2;
 		
-		// 변수의 초기화, 변수에 값을 저장
+		// 변수의 초기화, 최초로 변수에 값을 대입
 		num1 = 10;  // 변수 num1 의 값으로 정수값 10을 대입(assign)
 					// = : 대입연산자 (assignment operator)
 		num2 = 20;

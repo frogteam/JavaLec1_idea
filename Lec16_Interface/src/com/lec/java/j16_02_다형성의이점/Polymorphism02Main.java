@@ -1,4 +1,4 @@
-package com.lec.java.oop02;
+package com.lec.java.j16_02_다형성의이점;
 
 /* 다형성의 유용성
 	다형성에 의해서, 자식타입 객체가 부모타입으로 자동 형변환 가능!

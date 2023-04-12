@@ -1,4 +1,4 @@
-package com.lec.java.oop04;
+package com.lec.java.j16_04_abstract;
 /*
  클래스: 멤버 변수 (+ 생성자) + 메소드 => 데이터 타입
  추상 클래스(abstract class): 

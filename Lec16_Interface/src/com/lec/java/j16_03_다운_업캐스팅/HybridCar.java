@@ -1,4 +1,4 @@
-package com.lec.java.oop02;
+package com.lec.java.j16_03_다운_업캐스팅;
 
 public class HybridCar extends Car {
 	private int electricity;

@@ -1,4 +1,4 @@
-package com.lec.java.oop03;
+package com.lec.java.j16_01_Polymorphism;
 
 public class HybridCar extends Car {
 	private int electricity;

@@ -1,4 +1,4 @@
-package com.lec.java.oop03;
+package com.lec.java.j16_01_Polymorphism;
 
 public class Vehicle {
 	private int speed;
