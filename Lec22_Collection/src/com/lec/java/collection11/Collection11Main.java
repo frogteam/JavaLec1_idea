@@ -89,7 +89,20 @@ public class Collection11Main {
 		System.out.println(hmap);
 		
 		System.out.println();
-		
+
+		//-----------------------------------------------------------
+		// HashSet 을 초기화 하는 다양한 방법들
+		//    https://www.baeldung.com/java-initialize-hashmap
+		// double-brace syntax 사용.
+		Map<String, String> doubleBraceMap  = new HashMap<String, String>() {{
+			put("key1", "value1");
+			put("key2", "value2");
+		}};
+		System.out.println(doubleBraceMap); // {key1=value1, key2=value2}
+		// ↑ 그러나 위 방법은 가급적 비추함. 매번 내부적으로 익명 클래스를 생성하고,
+		//   이 생성객체에 hidden reference 가 발생하기 때문에  메모리 누수가 발생할수도 있다!
+
+		//-----------------------------------------------------------
 		// 도전과제
 		// arr[] = {2, 4, 5, 4, 3, 3, 4}
 		// 주어진 배열이 위와 같을때 다음과 같이 발생회수 나타내기 
@@ -98,10 +111,10 @@ public class Collection11Main {
 		// 4 : 3개 
 		// 5 : 1개
 		
-		System.out.println("HashMap 응용: 배열에서 발생빈도 구하기");
+		System.out.println("\nHashMap 응용: 배열에서 발생빈도 구하기");
 		int arr[] = {2, 4, 5, 4, 3, 3, 4};
 		printFreq(arr);
-		
+
 		System.out.println("\n프로그램 종료");
 	} // end main()
 	

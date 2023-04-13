@@ -90,7 +90,6 @@ public class Collection06Main {
 		System.out.println("forEach() 사용 출력");
 		hset.forEach(System.out::println);
 
-		
 		// toString() 제공됨
 		System.out.println();
 		System.out.println(hset);

@@ -3,7 +3,7 @@ package phonebook02.mvc;
 import java.util.List;
 
 // View(PhonebookMainView)와 Controller(PhonebookController) 사이의 인터페이스
-public interface Controller {
+public interface Controller extends C{
 	// 만들고자 하는 응용프로그램의 
 	// '동작' 을 설계하는 것이 인터페이스다.
 	// 이 인터페이스는  View 와 Controller 의 연결고리 역할을 하여.  모듈단위 유지관리를 용이하게 해준다. 
