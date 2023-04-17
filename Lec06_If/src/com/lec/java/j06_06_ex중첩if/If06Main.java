@@ -1,4 +1,4 @@
-package com.lec.java.if06;
+package com.lec.java.j06_06_ex중첩if;
 
 /* 중첩 if 연습
  * 

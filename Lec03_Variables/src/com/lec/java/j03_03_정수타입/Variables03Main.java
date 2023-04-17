@@ -1,10 +1,12 @@
 package com.lec.java.j03_03_정수타입;
 
-//자바의 기본 자료형(primitive data type)
-//정수 타입: byte(1바이트), short(2바이트), int(4바이트), long(8바이트)
-//실수 타입: float(4바이트), double(8바이트)
-//문자 타입: char(2바이트)
-//논리 타입: boolean(1바이트)
+/**
+ * 자바의 기본 자료형(primitive data type)
+ * 정수 타입: byte(1바이트), short(2바이트), int(4바이트), long(8바이트)
+ * 실수 타입: float(4바이트), double(8바이트)
+ * 문자 타입: char(2바이트)
+ * 논리 타입: boolean(1바이트)
+ */
 public class Variables03Main {
 
 	public static void main(String[] args) {
@@ -36,9 +38,10 @@ public class Variables03Main {
 		// long num10 = 9876543210; // 컴파일 에러:
 		
 		// 리터럴(literal) : 코드에 직접 입력하는 값.
-		// 리터럴도 타입이 있다.
-		// 정수타입리터럴은 int 타입으로 인식하려 한다.
-		// 실수타입리터럴은 double 타입으로 인식하려 한다.
+		// 리터럴도 '타입'이 있다.
+		// 자바는 기본적으로
+		//   정수타입리터럴을 int 타입으로 인식하려 한다.
+		//   실수타입리터럴을 double 타입으로 인식하려 한다.
 		
 		
 		long num11 = 9876543210L;

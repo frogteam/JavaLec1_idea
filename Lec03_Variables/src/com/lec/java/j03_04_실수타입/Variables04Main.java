@@ -43,6 +43,9 @@ public class Variables04Main {
 		double number10 = 0.00012;
 		System.out.println("number10 = " + number10);
 
+		System.out.println(0.1 + 0.2);  // 실수의 연산은 오차가 발생할수 있다!
+		System.out.println(0.3);
+
 	} // end main()
 
 } // end class Variables04Main

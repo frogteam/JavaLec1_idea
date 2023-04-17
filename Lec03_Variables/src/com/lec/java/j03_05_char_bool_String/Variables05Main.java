@@ -110,7 +110,7 @@ public class Variables05Main {
 		System.out.println(txt3);
 
 		// - TextBlock 안에서는 굳이 " 을 escaping 하지 않아도 된다.
-		// 유일하게 escaping 해야 하는 것은 \""" 뿐
+		// 유일하게 escaping 해야 하는 것은 \""" , \\뿐
 		System.out.println("""
             "fun" with
             whitespace

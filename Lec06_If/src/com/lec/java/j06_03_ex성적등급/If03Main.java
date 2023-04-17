@@ -1,4 +1,4 @@
-package com.lec.java.if03;
+package com.lec.java.j06_03_ex성적등급;
 
 import java.util.Scanner;
 

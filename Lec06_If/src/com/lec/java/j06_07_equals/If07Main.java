@@ -1,4 +1,4 @@
-package com.lec.java.if07;
+package com.lec.java.j06_07_equals;
 
 /* String 비교, char 비교
  * - 문자열 비교는 절대로 == 를 사용하지 말자

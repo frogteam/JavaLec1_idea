@@ -1,4 +1,4 @@
-package com.lec.java.if04;
+package com.lec.java.j06_04_삼항연산자;
 
 /*  삼항 연산자 (ternary operator)
  * 	 (조건식) ? 선택1 : 선택2

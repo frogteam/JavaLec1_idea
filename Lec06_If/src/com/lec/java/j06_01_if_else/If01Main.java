@@ -1,4 +1,4 @@
-package com.lec.java.if01;
+package com.lec.java.j06_01_if_else;
 
 /* if, if ~ else 조건문
  * 

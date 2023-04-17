@@ -1,4 +1,4 @@
-package com.lec.java.if05;
+package com.lec.java.j06_05_nested_if;
 
 /* 중첩된 if (nested-if) 문
  *   조건문 안의 조건문
