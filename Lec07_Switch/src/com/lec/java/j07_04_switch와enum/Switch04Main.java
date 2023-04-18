@@ -1,6 +1,6 @@
-package com.lec.java.switch05;
+package com.lec.java.j07_04_switch와enum;
 
-public class Switch05Main {
+public class Switch04Main {
 
 	// enum 타입 정의하는 방법:
 	// enum 이름 {}
@@ -32,27 +32,18 @@ public class Switch05Main {
 			break;
 			
 		case MON:
-			System.out.println("월요일");
-			break;
-			
 		case TUE:
-			System.out.println("화요일");
-			break;
-			
-		case WED:
-			System.out.println("수요일");
+		case WED:    // 이와 같은 것을 Fall through 라고도 한다.
+			System.out.println("주 초반");
 			break;
 			
 		case THU:
-			System.out.println("목요일");
-			break;
-			
 		case FRI:
-			System.out.println("금요일");
+			System.out.println("주 후반");
 			break;
 			
 		case SAT:
-			System.out.println("토요일");
+			System.out.println("주말");
 			break;
 		}// end switch
 		

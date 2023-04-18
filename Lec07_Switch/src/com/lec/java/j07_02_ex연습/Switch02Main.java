@@ -1,4 +1,4 @@
-package com.lec.java.switch02;
+package com.lec.java.j07_02_ex연습;
 
 public class Switch02Main {
 

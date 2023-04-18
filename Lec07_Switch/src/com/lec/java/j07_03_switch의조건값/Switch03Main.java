@@ -1,4 +1,4 @@
-package com.lec.java.switch03;
+package com.lec.java.j07_03_switch의조건값;
 
 /* switch (조건) {case1:  case2:}
  *   (조건)에 따라서 해당 case로 이동
@@ -18,32 +18,53 @@ public class Switch03Main {
 		case 'a':
 			System.out.println('A');
 			break;
-			
+
 		case 'b':
 			System.out.println('B');
 			break;
-			
+
 		case 'c':
 			System.out.println('C');
 			break;
-			
+
 		default:
 			System.out.println("몰라요~");
 		} // end switch
-		
+
 		// switch(조건) 에 사용할수 없는 값들
-		
+
 //		long num = 1;
 //		switch (num) {
-//		
+//
 //		}
 		// long 타입은 switch문에서 사용할 수 없다.
-		
+
 //		float real = 1;
 //		switch (real) {
-//		
+//
 //		}
 		// float, double 등도 switch에서 사용할 수 없다.
+
+		System.out.println("String 타입을 switch에서 사용하기");
+
+		// 변수타입(String) 변수이름(language) = 값("...");
+		String language = "C++";
+		switch (language) {
+			case "Java":
+				System.out.println("Hello, Java!");
+				break;
+
+			case "C++":
+				System.out.println("Hello, C++!");
+				break;
+
+			case "Swift":
+				System.out.println("Hello, Swift!");
+				break;
+
+			default:
+				System.out.println("프로그래밍 언어도 참 많지요~~");
+		} // end switch
 
 		System.out.println("\n프로그램 종료");
 	} // end main()

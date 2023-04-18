@@ -31,12 +31,12 @@ public class Input03Main {
 		
 		//숫자 타입도 여러개를 '한줄'에 받을수 있다.
 		// > 100 3.14 300
-		System.out.print("숫자 3개 (int, double, int)를 입력받으세요 >");    
+		System.out.print("숫자 3개 (int, double, short)를 입력받으세요 >");
 		int i1 = sc.nextInt();
 		double d1 = sc.nextDouble();
-		int i2 = sc.nextInt();
-		
-		System.out.println("i1, d1, i2: " + i1 + ", " + d1 + ", " + i2);
+		short s1 = sc.nextShort();
+
+		System.out.printf("i1, d1, s1:  %d %f %d\n", i1, d1, s1);
 		
 		sc.close();
 	} // end main()

@@ -1,4 +1,4 @@
-package com.lec.java.switch01;
+package com.lec.java.j07_01_switch문;
 
 /* switch - case 조건문
  * 
