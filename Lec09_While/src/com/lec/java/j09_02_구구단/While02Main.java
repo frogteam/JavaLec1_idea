@@ -1,4 +1,4 @@
-package com.lec.java.while02;
+package com.lec.java.j09_02_구구단;
 
 public class While02Main {
 

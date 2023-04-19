@@ -1,4 +1,4 @@
-package com.lec.java.loop01;
+package com.lec.java.j10_01_break;
 
 /* break;
  * 순환문(for, while, do~while) 안에서 break를 만나면

@@ -1,4 +1,4 @@
-package com.lec.java.for02;
+package com.lec.java.j08_02_구구단;
 
 public class For02Main {
 

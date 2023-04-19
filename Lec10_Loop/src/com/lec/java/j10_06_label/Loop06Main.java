@@ -1,4 +1,4 @@
-package com.lec.java.loop06;
+package com.lec.java.j10_06_label;
 
 /* break 레이블;   // 레이블(label) 위치까지 순환문 탈출
  * 

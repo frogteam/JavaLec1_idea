@@ -1,4 +1,4 @@
-package com.lec.java.loop02;
+package com.lec.java.j10_02_continue;
 
 /* continue;
  * 순환문(for, while, do~while) 안에서 continue   를 만나면

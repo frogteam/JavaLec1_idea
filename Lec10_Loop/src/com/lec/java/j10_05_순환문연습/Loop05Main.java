@@ -1,4 +1,4 @@
-package com.lec.java.loop05;
+package com.lec.java.j10_05_순환문연습;
 
 public class Loop05Main {
 

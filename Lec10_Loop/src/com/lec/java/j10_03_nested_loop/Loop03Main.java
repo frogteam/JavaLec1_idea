@@ -1,4 +1,4 @@
-package com.lec.java.loop03;
+package com.lec.java.j10_03_nested_loop;
 
 public class Loop03Main {
 

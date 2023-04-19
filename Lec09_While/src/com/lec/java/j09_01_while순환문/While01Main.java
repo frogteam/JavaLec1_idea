@@ -1,4 +1,4 @@
-package com.lec.java.while01;
+package com.lec.java.j09_01_while순환문;
 
 /*
  * while 순환문

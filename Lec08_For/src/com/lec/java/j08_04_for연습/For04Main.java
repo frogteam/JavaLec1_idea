@@ -1,4 +1,4 @@
-package com.lec.java.for04;
+package com.lec.java.j08_04_for연습;
 
 public class For04Main {
 

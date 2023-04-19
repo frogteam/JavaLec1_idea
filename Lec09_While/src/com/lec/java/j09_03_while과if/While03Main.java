@@ -1,4 +1,4 @@
-package com.lec.java.while03;
+package com.lec.java.j09_03_while과if;
 
 public class While03Main {
 

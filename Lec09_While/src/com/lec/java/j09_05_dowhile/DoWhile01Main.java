@@ -1,4 +1,4 @@
-package com.lec.java.dowhile01;
+package com.lec.java.j09_05_dowhile;
 
 /*
 	 do {

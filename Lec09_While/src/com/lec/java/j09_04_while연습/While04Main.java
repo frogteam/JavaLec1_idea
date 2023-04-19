@@ -1,4 +1,4 @@
-package com.lec.java.while04;
+package com.lec.java.j09_04_while연습;
 
 public class While04Main {
 

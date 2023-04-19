@@ -1,4 +1,4 @@
-package com.lec.java.for01;
+package com.lec.java.j08_01_for순환문;
 
 
 /*

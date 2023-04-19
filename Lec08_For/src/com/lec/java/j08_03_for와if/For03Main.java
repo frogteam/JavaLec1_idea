@@ -1,4 +1,4 @@
-package com.lec.java.for03;
+package com.lec.java.j08_03_for와if;
 
 public class For03Main {
 
