@@ -42,23 +42,27 @@ public class Operator04Main {
 		// postfix ++
 		num3++;
 		System.out.println("num3 = " + num3);
-		
-		int num4 = 100;
-		int num5 = ++num4; // prefix
-		// 접두사(prefix)인 경우에는, 증감(++, --)이 먼저 된 후 다른 연산자가 동작
-		// (1) num4의 값이 1 증가
-		// (2) 증가된 num4의 값이 num5에 저장
-		System.out.println("num4 = " + num4);
-		System.out.println("num5 = " + num5);
-		
-		int num6 = 100;
-		int num7 = num6++; // postfix
-		// 접미사(postfix)인 경우에는, 다른 연산자 먼저 실행된 후 증감(++, --)가 동작
-		// (1) 처음 num6의 값(100)이 먼저 num7에 저장
-		// (2) 그 다음에 num6의 값이 1 증가
-		System.out.println("num6 = " + num6);
-		System.out.println("num7 = " + num7);
-		
+
+		{
+			int num4 = 100;
+			int num5 = ++num4; // prefix
+			// 접두사(prefix)인 경우에는, 증감(++, --)이 먼저 된 후 다른 연산자가 동작
+			// (1) num4의 값이 1 증가
+			// (2) 증가된 num4의 값이 num5에 저장
+			System.out.println("num4 = " + num4);
+			System.out.println("num5 = " + num5);
+		}
+
+		{
+			int num4 = 100;
+			int num5 = num4++; // postfix
+			// 접미사(postfix)인 경우에는, 다른 연산자 먼저 실행된 후 증감(++, --)가 동작
+			// (1) 처음 num6의 값(100)이 먼저 num7에 저장
+			// (2) 그 다음에 num6의 값이 1 증가
+			System.out.println("num4 = " + num4);
+			System.out.println("num5 = " + num5);
+		}
+
 		
 		System.out.println("\n\n====================");
 		int num8 = 10;

@@ -36,11 +36,11 @@ public class Operator05Main {
 		
 		// 주의
 		// 실수 타입에서 같은지 여부는 산술적으로 계산한 값을 가지고 하면 안된다!
+		System.out.println(0.1 + 0.2 == 0.3);  // false
+
 		double d1 = 3.2;
 		double d2 = 12.3 / 4.1 + 0.2;
 
-		// 0.1 + 1.2 =?
-		
 		if(d1 == d2) {
 			System.out.println("같습니다");
 		}else {

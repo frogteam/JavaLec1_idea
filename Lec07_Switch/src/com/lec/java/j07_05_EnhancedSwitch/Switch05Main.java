@@ -33,7 +33,7 @@ public class Switch05Main {
                 break;
         } // end switch
 
-        System.out.println();
+        System.out.println("-".repeat(20));
 
         // 화살표 case 라벨과 다중 케이스 라벨
         switch (day) {

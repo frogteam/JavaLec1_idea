@@ -26,7 +26,7 @@ public class If01Main {
 		System.out.println("\n===== [1] =====");
 		int num = 10;
 		if (num > 0) {
-			// if () 조건문이 true일 때 실행되는 부분
+			// if () 조건식이 true일 때 실행하는 코드
 			System.out.println("양수입니다.");
 		} else {
 			// if () 조건문이 false일 때 실행되는 부분

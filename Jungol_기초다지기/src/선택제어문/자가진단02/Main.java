@@ -28,9 +28,13 @@ public class Main {
 		int height = sc.nextInt();
 		int weight = sc.nextInt();
 		
+		// 비만수치 계산
 		int obesity = weight + 100 - height; // 비만수치 공식
 		
+		// 비만수치 출력
 		System.out.println(obesity);
+		
+		// 비만여부 판정 출력
 		if(obesity > 0)
 			System.out.println("Obesity");
 		

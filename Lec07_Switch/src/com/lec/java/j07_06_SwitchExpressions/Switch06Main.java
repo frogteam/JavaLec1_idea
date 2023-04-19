@@ -3,7 +3,7 @@ package com.lec.java.j07_06_SwitchExpressions;
 import com.lec.java.j07_05_EnhancedSwitch.Day;
 
 /**
- *
+ * Switch Expressions
  *
  * ※참고
  *   식(expression) 과 문(statement) 의 차이!
@@ -42,7 +42,7 @@ public class Switch06Main {
         }
 
 
-        System.out.println();
+        System.out.println("-".repeat(20));
 
         // switch expressions(식) 사용
         {
@@ -54,6 +54,8 @@ public class Switch06Main {
             };
             System.out.println("numLetters: " + numLetters);
         }
+
+        System.out.println("-".repeat(20));
 
         // yield 키워드 사용
         // switch 연산식에서 길이를 return하기 전에 특정 메시지를 출력하고 싶으면 yield 사용
@@ -74,15 +76,17 @@ public class Switch06Main {
             System.out.println("numLetters: " + numLetters);
         }
 
+        System.out.println("-".repeat(20));
+
         // switch 식에선 enum타입(열거타입)을 사용하는 이유
         {
-            String s = "MONDAY";
-            int numLetters = switch (s) {
+            String s = "MONDAY";           // string 의 경우
+            int numLetters = switch (s) {  // 아래 Default 를 제거하면 에러다 'switch' expression does not cover all possible input values
                 case "MONDAY", "FRIDAY", "SUNDAY"	-> 6;
                 case "TUESDAY"					-> 7;
                 case "THURSDAY, SATURDAY"		-> 8;
                 case "WEDNESDAY"				-> 9;
-                //default						-> -1;
+                default						-> -1;
             };
         }
 

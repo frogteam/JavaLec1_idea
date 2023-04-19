@@ -78,16 +78,23 @@ public class Operator09Main {
 } // end class
 
 
-//Debug (디버깅)
-//step1 : breakpoint 설정
-//step2 : debug 시작
-//step3 : 
-//     step over
-//     resume
-
-//    1) 프로그램의 흐름
-//    2) 변수값의 변화
-//    3) 호출관계 흐름
-
-//step4 : debug 종료 (terminate)
-//
+/**
+ * Debug (디버깅)
+ * 		: 프로그램의 '논리적 오류' 를 찾아내기 위한 작업
+ * 		: "프로그램의 실력은 곧 디버깅 실력이다!"
+ *
+ * 	step1 : breakpoint 설정  (CTRL + F8)  (목록: CTRL+SHIFT+F8)
+ * 	step2 : debug 시작       (SHIFT + F9)
+ * 	        breakpoint 를 만나면 프로그램 실행이 일시 중단된다 -> step3 로
+ * 	step3 :
+ * 		 step over : 한 단계씩 명령 실행 (F8)
+ * 		 resume : 다음 breakpoint 까지 진행 (F9)
+ *
+ *      확인해야 하는 것들
+ * 		1) 프로그램의 흐름
+ * 		2) 변수값의 변화
+ * 		3) 호출관계 흐름
+ *
+ * 	step4 : debug 종료 (terminate)  (CTRL+F2)
+ *
+ */

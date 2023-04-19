@@ -9,65 +9,61 @@ package com.lec.java.j07_03_switch의조건값;
  */
 public class Switch03Main {
 
-	public static void main(String[] args) {
-		System.out.println("switch 제약 조건");
-		
-		System.out.println("char를 switch문에서 사용");
-		char ch = 'C';
-		switch (ch) {
-		case 'a':
-			System.out.println('A');
-			break;
+    public static void main(String[] args) {
+        System.out.println("switch 제약 조건");
 
-		case 'b':
-			System.out.println('B');
-			break;
+        System.out.println("char를 switch문에서 사용");
+        char ch = 'C';
+        switch (ch) {
+            case 'a':
+                System.out.println('A');
+                break;
 
-		case 'c':
-			System.out.println('C');
-			break;
+            case 'b':
+                System.out.println('B');
+                break;
 
-		default:
-			System.out.println("몰라요~");
-		} // end switch
+            case 'c':
+                System.out.println('C');
+                break;
 
-		// switch(조건) 에 사용할수 없는 값들
+            default:
+                System.out.println("몰라요~");
+        } // end switch
+
+        // switch(조건) 에 사용할수 없는 값들
 
 //		long num = 1;
 //		switch (num) {
 //
 //		}
-		// long 타입은 switch문에서 사용할 수 없다.
+        // long 타입은 switch문에서 사용할 수 없다.
 
 //		float real = 1;
 //		switch (real) {
 //
 //		}
-		// float, double 등도 switch에서 사용할 수 없다.
+        // float, double 등도 switch에서 사용할 수 없다.
 
-		System.out.println("String 타입을 switch에서 사용하기");
+        System.out.println("String 타입을 switch에서 사용하기");
 
-		// 변수타입(String) 변수이름(language) = 값("...");
-		String language = "C++";
-		switch (language) {
-			case "Java":
-				System.out.println("Hello, Java!");
-				break;
-
-			case "C++":
-				System.out.println("Hello, C++!");
-				break;
-
-			case "Swift":
-				System.out.println("Hello, Swift!");
-				break;
-
+        // 변수타입(String) 변수이름(language) = 값("...");
+        String language = "Java";
+        String result;
+        switch (language){
+            case "Java":
+                result = "자바"; break;
+            case "C++":
+                result = "씨뿔뿔"; break;
+            case "Python":
+                result = "파이썬"; break;
 			default:
-				System.out.println("프로그래밍 언어도 참 많지요~~");
-		} // end switch
+				result = "모르는 언어";
+        }
+        System.out.println("결과: " + result);  // 위에서 default 빼면 에러!
 
-		System.out.println("\n프로그램 종료");
-	} // end main()
+        System.out.println("\n프로그램 종료");
+    } // end main()
 
 } // end class
 
