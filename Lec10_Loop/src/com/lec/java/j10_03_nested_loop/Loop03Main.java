@@ -17,18 +17,18 @@ public class Loop03Main {
 		// 9 x 1 = 9
 		// ..
 		// 9 x 9 = 81
-		
+
 		// 구구단 출력 : 중첩 for 사용
-		for (int dan = 2; dan < 10; dan++) {
+		for (int dan = 2; dan < 10; dan++) { // 2단 ~ 9단
 
 			System.out.println("구구단 " + dan + "단");
-			for (int mul = 1; mul < 10; mul++) {
+			for (int mul = 1; mul < 10; mul++) {  // x1 ~ x9
 				System.out.println(dan + " x " + mul + " = " + (dan * mul));
 			} // end for (n)
 			System.out.println();
 
 		} // end for (dan)
-		
+
 		System.out.println();
 		// 구구단 출력 : 중첩 while 문 사용
 		int dan = 2;
@@ -43,12 +43,12 @@ public class Loop03Main {
 
 			dan++;
 		} // end while (dan)
-		
-		
+
+
 		// 연습
 		// 반복3_자가2  (별그리기)
-		
-		
+		// 반복3-형성3  (별, 증가->감소)
+
 		System.out.println("\n프로그램 종료");
 	} // end main()
 

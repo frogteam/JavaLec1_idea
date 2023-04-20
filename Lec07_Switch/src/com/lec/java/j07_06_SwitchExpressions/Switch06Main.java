@@ -58,13 +58,13 @@ public class Switch06Main {
         System.out.println("-".repeat(20));
 
         // yield 키워드 사용
-        // switch 연산식에서 길이를 return하기 전에 특정 메시지를 출력하고 싶으면 yield 사용
+        // switch 연산식에서 값을 리턴하기 전에 특정 문장을 수행하고 싶으면 yield 사용
         {
             day = Day.MONDAY;
             int numLetters = switch (day) {
                 case MONDAY, FRIDAY, SUNDAY	-> {
                     System.out.print("Six ");
-                    yield 6;   // yield 는 중괄호 안에서만 사용 가능!
+                    yield 6;   // yield 는 중괄호 블럭 안에서만 사용 가능!
                 }
                 case TUESDAY
                             -> 7;   // OK
@@ -80,7 +80,7 @@ public class Switch06Main {
 
         // switch 식에선 enum타입(열거타입)을 사용하는 이유
         {
-            String s = "MONDAY";           // string 의 경우
+            String s = "MONDAY";           // string 의 경우. 모든 경우 값을 리턴하기 위해선 default 꼭 필요
             int numLetters = switch (s) {  // 아래 Default 를 제거하면 에러다 'switch' expression does not cover all possible input values
                 case "MONDAY", "FRIDAY", "SUNDAY"	-> 6;
                 case "TUESDAY"					-> 7;

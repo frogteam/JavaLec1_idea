@@ -21,7 +21,7 @@ public class Main {
 		
 		int n = sc.nextInt();
 		
-		int sum = 0;
+		int sum = 0; // 누적 합산할 변수
 		int i = 1;
 		while(i <= n) {
 			sum += i;

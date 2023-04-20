@@ -74,7 +74,7 @@ public class Loop01Main {
 		
 		// 도전 :
 		// 반복1-형성2
-		// 반복제어문1 - 형성평가3
+		// 반복1-형성3
 		
 		System.out.println("\n프로그램 종료");
 	} // end main()
