@@ -57,6 +57,7 @@ public class Main {
 			for (int subj = 0; subj < score[stu].length; subj++) {
 				sum += score[stu][subj];  // stu 번째 학생의 subj 과목점수 누적 합산
 			}
+			// stu 학생의 평균 구하기
 			avg = (double)sum / score[stu].length;
 			
 			if(avg >= 80){

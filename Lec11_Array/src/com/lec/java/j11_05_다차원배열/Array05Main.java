@@ -73,8 +73,8 @@ public class Array05Main {
 		// array[0][0] 의 타입은? --> int
 		
 		// 2차원 배열 확인
-		for (int x = 0; x < array.length; x++) {
-			for (int y = 0; y < array[x].length; y++) {
+		for (int x = 0; x < array.length; x++) { // 첫번째 index 순환
+			for (int y = 0; y < array[x].length; y++) { // 두번째 index 순환
 				System.out.print(array[x][y] + "\t");
 				
 			} // end for (y): 열(column)
@@ -116,6 +116,7 @@ public class Array05Main {
 		
 	} // end main()
 
+	// 배열2자가6
 } // end class Array05Main
 
 

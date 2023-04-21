@@ -74,6 +74,8 @@ public class Array04Main {
 		
 	} // end main()
 
+	// 배열1-형성4
+
 } // end class Array04Main
 
 

@@ -41,9 +41,9 @@ public class Method01Main {
 		System.out.println("제 이름은 조은이입니다.");
 
 		System.out.println();
-		System.out.println("메소드 사용");
+		System.out.println("메소드 호출(사용)");
 		
-		// 메소드 sayHello() 호출 (method call, method invoke)
+		// 메소드 sayHello(String) 호출 (method call, method invoke)
 		sayHello("정예경");
 		sayHello("김진후");
 		
