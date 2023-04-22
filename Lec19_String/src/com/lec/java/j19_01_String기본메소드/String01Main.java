@@ -1,4 +1,4 @@
-package com.lec.java.string01;
+package com.lec.java.j19_01_String기본메소드;
 
 import java.util.Arrays;
 import java.util.List;

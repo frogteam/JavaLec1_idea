@@ -1,7 +1,6 @@
-package com.lec.java.regexp04;
+package com.lec.java.j19_14_정규표현식연습;
 
 import java.util.Scanner;
-import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /* 정규표현식 연습

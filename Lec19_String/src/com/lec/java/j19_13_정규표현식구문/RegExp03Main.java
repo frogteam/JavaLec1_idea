@@ -1,4 +1,4 @@
-package com.lec.java.regexp03;
+package com.lec.java.j19_13_정규표현식구문;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;

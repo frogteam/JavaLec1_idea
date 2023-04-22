@@ -1,4 +1,4 @@
-package com.lec.java.string03;
+package com.lec.java.j19_03_StringBuilder;
 
 /*  StringBuffer, StringBuilder
 

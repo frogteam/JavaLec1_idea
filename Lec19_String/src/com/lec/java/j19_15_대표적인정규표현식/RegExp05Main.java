@@ -1,6 +1,5 @@
-package com.lec.java.regexp05;
+package com.lec.java.j19_15_대표적인정규표현식;
 
-import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /* 대표적인 정규 표현식 

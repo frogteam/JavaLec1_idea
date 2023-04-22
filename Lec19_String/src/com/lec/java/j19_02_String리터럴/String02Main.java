@@ -1,4 +1,4 @@
-package com.lec.java.string02;
+package com.lec.java.j19_02_String리터럴;
 
 /* String 생성자, String literal(상수)
  */

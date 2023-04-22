@@ -1,4 +1,4 @@
-package com.lec.java.string04;
+package com.lec.java.j19_04_StringTokenizer;
 
 import java.util.StringTokenizer;
 
