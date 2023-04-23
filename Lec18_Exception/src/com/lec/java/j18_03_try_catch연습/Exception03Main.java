@@ -1,4 +1,4 @@
-package com.lec.java.exception03;
+package com.lec.java.j18_03_try_catch연습;
 
 /*  예외 처리: try ~ catch
  *  연습 01패키지에서 발생하던 예외들을 try~catch로 잡아보자

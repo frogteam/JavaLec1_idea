@@ -1,4 +1,4 @@
-package com.lec.java.exception06;
+package com.lec.java.j18_06_throws;
 
 public class TestClass {
 	

@@ -1,4 +1,4 @@
-package com.lec.java.exception01;
+package com.lec.java.j18_01_예외발생;
 
 import java.util.Scanner;
 

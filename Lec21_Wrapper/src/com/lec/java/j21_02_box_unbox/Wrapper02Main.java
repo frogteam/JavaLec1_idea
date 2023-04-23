@@ -1,4 +1,4 @@
-package com.lec.java.wrapper02;
+package com.lec.java.j21_02_box_unbox;
 
 /* Java 5부터 wrapper 클래스의 auto-boxing/unboxing 기능 제공
  * 	boxing(포장): 기본자료형의 값을 wrapper 클래스에 저장하는 것

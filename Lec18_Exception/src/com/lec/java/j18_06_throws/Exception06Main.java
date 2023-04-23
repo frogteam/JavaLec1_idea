@@ -1,4 +1,4 @@
-package com.lec.java.exception06;
+package com.lec.java.j18_06_throws;
 
 /* throws
 	 메소드 설계를 할 때 예외 처리를 직접 하지 않는 경우:

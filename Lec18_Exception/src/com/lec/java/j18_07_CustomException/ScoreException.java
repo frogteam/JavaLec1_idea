@@ -1,4 +1,4 @@
-package com.lec.java.exception07;
+package com.lec.java.j18_07_CustomException;
 
 // 우리가 만드는 예외 클래스
 // Exception 또는 RuntimeException 클래스를 상속 받아서 만듬

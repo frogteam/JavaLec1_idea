@@ -1,6 +1,5 @@
-package com.lec.java.exception08;
+package com.lec.java.j18_08_연습CustomException;
 
-import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Exception08Main {

@@ -1,4 +1,4 @@
-package com.lec.java.wrapper01;
+package com.lec.java.j21_01_wrapper생성;
 
 /* Wrapper 클래스: 기본 자료형(primitive type)의 데이터를 감싸는 클래스
  * 기본 자료형: boolean, char, byte, short, int, long, float, double
@@ -22,17 +22,19 @@ public class Wrapper01Main {
 
 		
 		// 1. 생성자 이용
-		Integer num1 = new Integer(123);   // Java9 부터 deprecated 됨.
-		System.out.println("num1 = " + num1);
+//		Integer num1 = new Integer(123);   // Java9 부터 deprecated 됨.
+//		System.out.println("num1 = " + num1);
 		
 		// 2. wrapper 클래스의 static 메소드인 valueOf() 메소드를 사용
+		Integer num1 = Integer.valueOf(123);
+		System.out.println("num1 = " + num1);
 		Integer num2 = Integer.valueOf(123);
 		System.out.println("num2 = " + num2);
 		
 		if (num1 == num2) { // Wrapper 끼리의 ==, != 연산은 주소비교
-			System.out.println("== 같다..");
+			System.out.println("== 같다..");   // 주소 비교인데도 같다! ?
 		} else {
-			System.out.println("== 다르다!!");  // 다르다!
+			System.out.println("== 다르다!!");  //
 		}
 		
 		if (num1.equals(num2)) {
@@ -40,37 +42,23 @@ public class Wrapper01Main {
 		} else {
 			System.out.println("equals 다르다!!");
 		}
-		
-		// 3. new Integer() VS Integer.valueOf()
-		Integer num3 = new Integer(123);     // new 는 새로운 instance 생성
-		Integer num4 = Integer.valueOf(123);  // valueOf() 는 Object를 cache 해둔다.  같은 literal로 생성하면 같은 Object.
-		                                      // 메모리 절약 차원/
+
+		// valueOf() 는 Object를 cache 해둔다.  같은 literal로 생성하면 같은 Object.
+	  // 메모리 절약 차원/
 		// 도움말 확인 : . If a new Integer instance is not required, this method should generally be used in preference to the constructor
-		if (num1 == num3) {
-			System.out.println("생성자: 같은 참조");
-		} else {
-			System.out.println("생성자: 다른 참조");  // 다르다!
-		}
-		// valueOf() 의 결과는?
-		if (num2 == num4) {
-			System.out.println("valueOf(): 같은 참조");  // 같다
-		} else {
-			System.out.println("valueOf(): 다른 참조");
-		}
-		
-		// 4. literal 상수로 생성
+
+		// 3. literal 상수로 생성
 		System.out.println();
 		Integer num5 = 123;
 		// 123 Literal(상수)를 가지고 Integer 클래스의 인스턴스를 생성
 		// Integer.valuOf(123)과 동일한 코드가 동작됨 (Auto-Boxing)
-		if (num4 == num5) {
+		if (num2 == num5) {
 			System.out.println("같은 참조");
 		} else {
 			System.out.println("다른 참조");
 		}
-		
-		
-		// 5. valueOf(문자열) 가능!
+
+		// 4. valueOf(문자열) 가능!
 		System.out.println();
 		Integer num6 = Integer.valueOf("123"); // 문자열 가능
 		System.out.println(num6);

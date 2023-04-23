@@ -1,4 +1,4 @@
-package com.lec.java.exception04;
+package com.lec.java.j18_04_예외객체계층;
 
 /*	예외 클래스의 상속 관계 (★필수 암기★)
 	java.lang.Object
@@ -22,6 +22,13 @@ package com.lec.java.exception04;
 	 
 	 ※ IntelliJ 단축키 : CTRL + H , class hierarchy (계층도) 보기
 */
+
+/*	multi-catch
+ *		 Java 7부터 하나의 catch문에서 여러개의 예외를 처리할 수 있는 방법을 제공
+ *		 절대로 같은 상속레벨의 exception 들만 multi-catch 하기.
+ */
+
+
 public class Exception04Main {
 
 	public static void main(String[] args) {
@@ -59,7 +66,27 @@ public class Exception04Main {
 		
 		} // end catch
 		
-		System.out.println();
+		System.out.println("-".repeat(20));
+		System.out.println("multi-catch");
+		// Java 7부터 하나의 catch문에서 여러개의 예외를 처리할 수 있는 방법을 제공
+		// 절대로 같은 상속레벨의 exception 들만 multi-catch 하기.
+
+		try {
+//			String str = null;
+//			str.length();
+			int n = 123 / 0;
+
+		} catch (ArithmeticException
+				 //| Exception    // 다른 레벨의 예외를 같이 나열하면 앙되요.
+				 | NullPointerException
+				 | ArrayIndexOutOfBoundsException ex) {
+			System.out.println(ex.getClass());
+			System.out.println(ex.getMessage());
+
+		} // end catch
+
+
+
 		System.out.println("프로그램 종료");
 
 		// infinite(0);  // StackOverFlowError  <-- Error

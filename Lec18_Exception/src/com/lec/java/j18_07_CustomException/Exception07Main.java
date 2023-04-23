@@ -1,4 +1,4 @@
-package com.lec.java.exception07;
+package com.lec.java.j18_07_CustomException;
 
 import java.util.Scanner;
 

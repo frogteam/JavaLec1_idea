@@ -1,4 +1,4 @@
-package com.lec.java.exception02;
+package com.lec.java.j18_02_try_catch;
 /* 예외처리 : try~catch를 사용하는 이유
 	 1. if 문은 예외 처리 이외의 용도로 사용되기 때문에 프로그램 코드상에서 
 	    예외처리 부분을 구분하기가 쉽지 않다

@@ -1,12 +1,7 @@
-package com.lec.java.exception05;
+package com.lec.java.j18_05_finally;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
-
-/*	multi-catch
- *		 Java 7부터 하나의 catch문에서 여러개의 예외를 처리할 수 있는 방법을 제공
- *		 절대로 같은 상속레벨의 exception 들만 multi-catch 하기.
- */
 
 /*
  *	finally
@@ -32,26 +27,6 @@ import java.util.Scanner;
 public class Exception05Main {
 
 	public static void main(String[] args) {
-		System.out.println("multi-catch");
-		// Java 7부터 하나의 catch문에서 여러개의 예외를 처리할 수 있는 방법을 제공
-		// 절대로 같은 상속레벨의 exception 들만 multi-catch 하기.
-		
-		try {
-//			String str = null;
-//			str.length();
-			int n = 123 / 0;
-			
-		} catch (ArithmeticException
-				//| Exception    // 다른 레벨의 예외를 같이 나열하면 앙되요.
-				| NullPointerException
-				| ArrayIndexOutOfBoundsException ex) {
-			System.out.println(ex.getClass());
-			System.out.println(ex.getMessage());
-			
-		} // end catch
-		
-		
-		System.out.println();
 		System.out.println("finally");
 		// 예외(exception) 발생 여부와 상관없이 항상 실행되어야 할
 		// 코드들은 finally 블록 안에서 작성.

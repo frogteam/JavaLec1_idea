@@ -1,4 +1,4 @@
-package com.lec.java.wrapper05;
+package com.lec.java.j21_03_wrapper유용성;
 
 /* Wrapper 클래스의 유용성
  * 1. Object 타입이 모~든 (심지어 primitive) 타입도 받을수 있다.
@@ -7,14 +7,14 @@ package com.lec.java.wrapper05;
  *     
  * 3. Wrapper 는 null 값 표현 가능
  */
-public class Wrapper05Main {
+public class Wrapper03Main {
 
 	public static void main(String[] args) {
 		System.out.println("Wrapper 클래스의 유용성");
 		
 		Object [] obj = new Object[5];
 		
-		obj[0] = Method1(new Wrapper05Main());
+		obj[0] = Method1(new Wrapper03Main());
 		obj[1] = Method1(new A());
 		obj[2] = Method1(new A2());
 		obj[3] = Method1(new B());		

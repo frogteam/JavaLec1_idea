@@ -1,4 +1,4 @@
-package com.lec.java.wrapper04;
+package com.lec.java.j21_04_BigDecimal;
 
 import java.math.BigDecimal;
 import java.math.BigInteger;
@@ -34,7 +34,7 @@ public class Wrapper04Main {
 				new BigInteger("10000000000000000000");
 		BigInteger bigNum2 = 
 				new BigInteger("999999999999999999999999");
-		
+
 		// 2. 사칙연산과 같은 계산을 위해서는 메소드를 사용
 		System.out.println("덧셈: " + bigNum1.add(bigNum2));
 		System.out.println("뺄셈: " + bigNum1.subtract(bigNum2));
