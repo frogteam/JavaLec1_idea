@@ -64,7 +64,15 @@ public class Method01Main {
 		
 		System.out.println("\\n프로그램 종료");
 	} // end main()
-	
+
+	public static void sayAnthem(){
+		System.out.println("""
+    			동해물과 백두산이
+    			마르고 닳도록
+    			하느님이 보우하사
+    			우리나라 만세""");
+	}
+
 	//   메소드이름: sayHello
 	//   매개변수: name (매개변수가 필요없는 경우에는 생략 가능)
 	// 메소드 위에 아래와 같이 javadoc 타입 주석 달수 있다.

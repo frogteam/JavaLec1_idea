@@ -130,7 +130,15 @@ public class Method03Main {
 //		if (avg >= 70) return 'C';
 //		if (avg >= 60) return 'D';
 //		return 'F';
-		
+
+		// switch expression
+//		return switch((int)(avg / 10)){
+//			case 9 -> 'A';
+//			case 8 -> 'B';
+//			case 7 -> 'C';
+//			case 6 -> 'D';
+//			default -> 'F';
+//		};
 		
 	} // end calcGrade
 

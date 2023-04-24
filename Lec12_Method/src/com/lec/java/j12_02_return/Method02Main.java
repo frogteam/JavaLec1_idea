@@ -2,7 +2,7 @@ package com.lec.java.j12_02_return;
 
 /* return 의 의미
  * 
- *   1. 메소드를 호출한 곳으로 값을 리턴한다.
+ *   1. 메소드를 호출한 곳으로 값을 리턴할수 있다.
  *   2. 메소드 종료
  *   3. 메소드 정의시 명시한 리턴타입의 값이 '반드시' 리턴되어야 한다
  *          (혹은 리턴타입으로 형변환 가능한 값이)
@@ -135,15 +135,12 @@ public class Method02Main {
 	// 리턴타입: String ★
 
 	public static String divide2(int x, int y) {
-		String result;
-		if (y == 0) {
-			result = "0으로 나눌 수 없어요!!!";
+		if(y == 0){
+			return "0으로 나눌수 없어요!";
 		} else {
-			result = "나눈 몫은 " + (x / y) + "\n"
-					+ "나눈 나머지는 " + (x % y) + "입니다.";
-		} // end else
-		
-		return result;
+			return String.format("나눈 몫은 %d \n나머지는 %d 입니다\n", x / y, x % y);
+		}
+
 	} // end divide2();
 	
 

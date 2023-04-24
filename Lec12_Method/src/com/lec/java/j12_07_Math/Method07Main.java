@@ -24,9 +24,9 @@ public class Method07Main {
 		// 1.2 == 1 < 1.2 < 2 == floor: 1, ceil: 2
 		// -1.2 == -2 < -1.2 < -1 == floor: -2, ceil: -1
 		
-		System.out.println(Math.floor(2.7));
-		System.out.println(Math.ceil(2.7));
-		System.out.println(Math.round(2.7));
+		System.out.println(Math.floor(2.7));  // 2.0
+		System.out.println(Math.ceil(2.7));   // 3.0
+		System.out.println(Math.round(2.7));  // 3
 				
 		System.out.println(Math.floor(-1.2));
 		System.out.println(Math.ceil(-1.2));

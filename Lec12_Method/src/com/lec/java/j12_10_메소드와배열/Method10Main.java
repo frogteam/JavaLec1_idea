@@ -23,7 +23,11 @@ public class Method10Main {
 		
 		// 저장된 점수를 확인
 		displayScore(score);
-		
+
+		// x2배 하기
+		int[] newArr = doubleUp(score);
+		displayScore(newArr);
+
 		// 총점 계산
 		int total = calcTotal(score);
 		System.out.println("총점: " + total);
@@ -39,16 +43,9 @@ public class Method10Main {
 		// 점수들 중에서 최소값 출력
 		int min = findMin(score);
 		System.out.println("최소값: " + min);
-		
-		
-		System.out.println("랜덤 숫자 배열 생성");
-		double[] randArr;
-		randArr = genRandom(10);
-		for(double num : randArr) {
-			System.out.print(num + " ");
-		}
-		
-		
+
+
+
 		sc.close();
 		System.out.println("\n프로그램 종료");
 	} // end main()
@@ -63,7 +60,7 @@ public class Method10Main {
 		System.out.println("length: " + score.length);
 		
 		for (int i = 0; i < score.length; i++) {
-			System.out.println("점수" + (i+1) + " 입력:");
+			System.out.print("점수" + (i+1) + " 입력:");
 			score[i] = sc.nextInt();
 			
 		} // end for
@@ -79,7 +76,7 @@ public class Method10Main {
 		System.out.println("점수");
 		System.out.println("--------------------");
 		
-		for (int x : score) {
+		for (var x : score) {
 			System.out.print(x + ", ");
 		} // end for
 		
@@ -134,17 +131,21 @@ public class Method10Main {
 		
 		return min;
 	} // end findMin
-	
-	
-	// method name: genRandom()
-	// return: double[]  (생성된 난수 배열)
-	// arguments: n  생성할 난수 개수
-	public static double[] genRandom(int n) {
-		double[] arr = new double[n];
-		for(int i = 0; i < n; i++) {
-			arr[i] = Math.random();
+
+
+	// method name: doubleUp()
+	// return: int[]  (생성된 배열)
+	// arguments: int[] (입력 배열)
+	//   입력된 배열의 원소들을 x2 를 한 새로운 배열 생성하여 리턴
+
+	public static int[] doubleUp(int[] arr){
+		int[] result = new int[arr.length];
+
+		for(int i = 0; i < arr.length; i++){
+			result[i] = arr[i] * 2;
 		}
-		return arr;
+
+		return result;
 	}
 
 } // end class Method09Main
