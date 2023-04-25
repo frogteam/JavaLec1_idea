@@ -90,7 +90,7 @@ public class String01Main {
 //		String year = date.split("-")[0];
 
 		
-		// 공백기준으로 쪼갤때는 정규표현식의 \\s+  사용하기 : 공백, 탭, 줄바꿈
+		// 공백기준으로 쪼갤때는 정규표현식의 \s+  사용하기 : 공백, 탭, 줄바꿈
 		str4 = "    Hello\t  \n  \t MY \n\n WORLD";
 		strings = str4.split("\\s+");
 		System.out.println(Arrays.toString(strings));  // [, Hello, MY, WORLD]		
@@ -128,11 +128,16 @@ public class String01Main {
 		System.out.println();
 		System.out.println("trim()");   // 좌우의 여백 제거
 		String str9 = "   김동후   ";
-		System.out.println("[" + str9 + "]");
-		System.out.println("[" + str9.trim() + "]");
-		
-		// strip()  Java11 등장
-		
+		System.out.printf("[%s]\n", str9);
+		System.out.printf("[%s]\n", str9.trim());
+
+		// Java11 에 추가:
+		// strip()   좌우 공백 제거
+		// stripLeading()  좌측 공백 제거
+		// stripTrailing() 우측 공백 제거
+		System.out.printf("[%s]\n", str9.strip());
+		System.out.printf("[%s]\n", str9.stripLeading());
+		System.out.printf("[%s]\n", str9.stripTrailing());
 		
 		System.out.println();
 		System.out.println("replace(target, replacement)");   // 문자열 치환  target → replacement  

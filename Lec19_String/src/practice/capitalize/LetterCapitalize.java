@@ -7,7 +7,7 @@ import java.util.Scanner;
  *  quit 을 입력 받으면 종료하기
  * 
  * 	[입력예]
- * 		hello my world
+ * 		hello my WORLD
  *  [출력예]
  * 		Hello My World  
  */
@@ -20,7 +20,7 @@ public class LetterCapitalize {
 		while(true) {
 			str = sc.nextLine();
 			if(str.trim().equalsIgnoreCase("quit")) break;
-			str = str.toLowerCase();  // 일단 소문자로 변환
+			str = str.trim().toLowerCase();  // 일단 소문자로 변환
 			words = str.split("\\s+");  // 공백기준으로 단어 구분
 			
 			for(String word : words) {
