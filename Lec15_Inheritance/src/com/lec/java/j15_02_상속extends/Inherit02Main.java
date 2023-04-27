@@ -7,7 +7,7 @@ package com.lec.java.j15_02_상속extends;
  *  자바 에선 오로지 '하나의 부모'로부터 상속받을수 있습니다 (단일 상속)  다중 상속 허용하지 않음
  *  
  *  (용어)
- *  Super Class(상위 클래스), Parent Class(부모/조상 클래스), Basic Class(기본 클래스)
+ *  Super Class(상위 클래스), Parent Class(부모/조상 클래스), Base Class(기반 클래스)
  *  Sub Class(하위 클래스), Child Class(자식 클래스), Derived Class(유도 클래스)
  *  	※ 상속받는다..(동사) inherit , subclass
  *  

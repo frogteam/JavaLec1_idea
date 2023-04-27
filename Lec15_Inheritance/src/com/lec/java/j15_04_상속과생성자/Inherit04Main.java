@@ -25,7 +25,7 @@ package com.lec.java.j15_04_상속과생성자;
  * 		 IS-A 관계 ===>  상속으로 설계  
  *		 			Vehicle is-a Car  (NO)  
  *		 			Car is-a Vehicle  (OK)
- *					HybricCar is-a Car (OK) 
+ *					HybridCar is-a Car (OK)
  */
 
 public class Inherit04Main {
