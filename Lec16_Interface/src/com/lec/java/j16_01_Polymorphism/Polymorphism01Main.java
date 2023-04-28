@@ -16,7 +16,11 @@ public class Polymorphism01Main {
 
 	public static void main(String[] args) {
 		System.out.println("다형성(Polymorphism)");
-		
+
+		A aaa = new A();
+		B bbb = new B();
+		//aaa = bbb;
+
 		System.out.println();
 		
 		// v1, c1, h1 의 타입은 다르다
@@ -56,7 +60,8 @@ public class Polymorphism01Main {
 
 } // end class
 
-
+class A{}
+class B{}
 
 
 

@@ -48,7 +48,7 @@ public class Exception04Main {
 			numbers[10] = 11111;
 			System.out.println("numbers: " + numbers[10]);
 			
-		} catch (ArithmeticException ex) { // CTRL + T : class hierarchy (계층도)  
+		} catch (ArithmeticException ex) { // CTRL + H : class hierarchy (계층도)
 			System.out.println("산술연산 예외: " + ex.getMessage());
 
 			// catch 절 안에서 exception 이 발생하면??

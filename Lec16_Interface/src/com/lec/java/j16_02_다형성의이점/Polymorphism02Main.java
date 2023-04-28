@@ -5,6 +5,8 @@ package com.lec.java.j16_02_다형성의이점;
 	부모(조상)타입 만으로도 상속된 모~든 자손 타입들을 담을수 있다.
 */
 
+import com.lec.java.j16_01_Polymorphism.*;
+
 public class Polymorphism02Main {
 
 	public static void main(String[] args) {
@@ -17,16 +19,16 @@ public class Polymorphism02Main {
 		
 		// 다형성의 유용함 1
 		// 부모타입으로 모든 자손 타입들을 담을수 있다.
-		Vehicle[] car = new Vehicle[3];
-		car[0] = new Vehicle();
-		car[1] = new Car();
-		car[2] = new HybridCar();
+		Vehicle[] cars = new Vehicle[3];
+		cars[0] = new Vehicle();
+		cars[1] = new Car();
+		cars[2] = new HybridCar();
 		
 		// car 라는 하나의 이름의 변수로 여러가지 타입의
 		// 오버라이딩 된 메소드가 각각 동작시킬수 있다!
-		for (int i = 0; i < car.length; i++) {
-			car[i].displayInfo();	
-		} // 우왕! 한가지 타입으로 한꺼번에 처리 가능!!!
+		for(var car : cars){
+			car.displayInfo();
+		}// 우왕! 한가지 타입으로 한꺼번에 처리 가능!!!
 		
 		// 다형성이 없었다면?  각 타입별로 변수들을 만들고 따로따로 사용해야 하는 왕불편.
 		//		Vehicle car1 = new Vehicle();
@@ -41,7 +43,7 @@ public class Polymorphism02Main {
 		// 다형성의 유용함은 매개변수, 혹은 리턴 타입에도 적용된다
 		// println의 매개변수로 Object의 참조변수가 넘겨지면,
 		// 내부적으로 해당 클래스의 toString() 메소드가 불리게 됨
-		System.out.println(car1);
+		System.out.println(car1); // println(Object)  <-- Java 의 모든 객체를 받을수 있다! (다형성!)
 		System.out.println(car2);
 		System.out.println(car3);
 		
@@ -68,19 +70,19 @@ public class Polymorphism02Main {
 		// instanceof 연산자
 		// 용법: 변수/값 instanceof 클래스 
 		// 결과: true / false
-		if( car1 instanceof Vehicle){
+		if( car1 instanceof Vehicle){  // true
 			System.out.println("car1 은 Vehicle 의 instance");
 		}else{
 			System.out.println("car1 은 Vehicle 의 instance 가 아닙니다");
 		}
 		
-		if( car1 instanceof Car){
+		if( car1 instanceof Car){  // false
 			System.out.println("car1 은 Car 의 instance");
 		}else{
 			System.out.println("car1 은 Car 의 instance 가 아닙니다");
 		}
 		
-		if( car2 instanceof Vehicle){
+		if( car2 instanceof Vehicle){  // true  Car IS-A Vehicle
 			System.out.println("car2 은 Vehicle 의 instance");
 		}else{
 			System.out.println("car2 은 Vehicle 의 instance 가 아닙니다");

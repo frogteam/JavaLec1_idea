@@ -1,5 +1,7 @@
 package com.lec.java.j16_03_다운_업캐스팅;
 
+import com.lec.java.j16_01_Polymorphism.*;
+
 /**
  *   업캐스팅 (Upcasting)
  *        자식 클래스의 객체가 부모 클래스 타입으로 형변환 되는 것
@@ -49,7 +51,7 @@ public class Polymorphism03Main {
 		// ClassCastException 발생:
 		// 실제로 Vehicle 클래스의 인스턴스로 생성된 car1을 
 		// 자식 클래스인 Car로 강제 형변환을 하게 되면 문제가 발생할 수 있다.
-		// 예외는 setOil() 을 호출하는 과정이 아니라, 형변환 하는 과정에서 발생된다
+		// 예외는 setOil() 을 호출하는 과정이 아니라, 다운캐스팅 형변환 하는 과정에서 발생된다
 		
 		
 	} // end main()

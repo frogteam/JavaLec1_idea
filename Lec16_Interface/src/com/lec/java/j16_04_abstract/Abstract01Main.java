@@ -56,7 +56,7 @@ abstract class TestAbstract {
 	
 } // end class TestAbstract
 
-// 추상 클래스를 상속받는 클래스는 반드시 추상메소드를 구현(implement)해야 함
+// 추상 클래스를 상속받는 클래스는 반드시 추상메소드를 구현(implement)★ 해야 함
 // 추상 메소드의 본체({ ... })를 만들어줘야 함
 class TestClass extends TestAbstract {
 
