@@ -22,13 +22,19 @@ public class Wrapper03Main {
 					// ↑ Auto-Boxing + Polymorphism(다형성)
 		
 		// 각각 출력해보면, Wrapper는 자동적으로 Auto-Unboxing 발생
-		for(Object elm: obj) {
-			System.out.println(elm);
+		for(var elm: obj) {
+			System.out.println(elm);   // 사실 toString() 이다
 		}
+
+		//int num = obj[3];  // 에러
+		int num = (Integer)obj[3];
+		// ↑ 실제 담고 있는게 Integer 다 하더라도,
+		//  원소타입이 Object 이기 때문에  일단 Wrapper 로 형변환 하여 auto-unboxing 이 발생하게 해야 한다
+
 
 		// ↓ Integer를 리턴 받더라도, 실제 리턴타입이 Object 이면
 		// 일단 Integer 로 형변환을 해서 Auto-Unboxing이 발생되게 해야 한다 
-		int num = (Integer)Method1(200) * 3;   // 이경우 (int) 로 바로 형변환 해도 된다.
+		num = (Integer)Method1(200) * 3;   // 이경우 (int) 로 바로 형변환 해도 된다.
 		System.out.println(num);
 
 		System.out.println("\n프로그램 종료");

@@ -8,7 +8,7 @@ import java.util.Date;
 
 /*
  * java.sql.Timestamp;
- * 1970.01.01 00:00:00  GMT 기준 의 경과 시간을 ms 로 계산해 담은 객체
+ * 1970.01.01 00:00:00  GMT 기준 의 경과 시간을 ms (정수)로 계산해 담은 객체
  */
 public class DateTime05Main {
 
@@ -18,11 +18,12 @@ public class DateTime05Main {
 		
 		
 		System.out.println("Timestamp(0)");
-		t = new Timestamp(0L);  //1970.01.01 00:00:00  GMT 기준 --> 한국 1970-01-01 09:00:00.0
-		System.out.println(t);
+		t = new Timestamp(0L);
+		System.out.println(t);  //1970.01.01 00:00:00  GMT 기준 --> 한국 1970-01-01 09:00:00.0
 		System.out.println();
 		
 		System.out.println("Timestamp(현재ms)");
+		System.out.println(System.currentTimeMillis());    // 현재 timestamp ms 값
 		t = new Timestamp(System.currentTimeMillis());
 		System.out.println(t);
 		System.out.println();

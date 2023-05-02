@@ -27,6 +27,7 @@ public class Exception06Main {
 		// divide2() 메소드가 throw Exception을 하고 있기 때문에
 		// 메소드를 호출하는 곳에서 예외 처리를 해 주지 않으면 컴파일 에러
 		// 반드시 메소드 호출하는 곳에서 예외 처리를 해 주어야 함.
+		// 이러한 예외를 'checked exception' 이라 한다
 		try {
 			test.divide2(123, 0);
 		} catch (Exception e) {

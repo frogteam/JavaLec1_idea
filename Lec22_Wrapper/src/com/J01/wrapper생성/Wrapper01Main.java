@@ -25,7 +25,7 @@ public class Wrapper01Main {
 //		Integer num1 = new Integer(123);   // Java9 부터 deprecated 됨.
 //		System.out.println("num1 = " + num1);
 		
-		// 2. wrapper 클래스의 static 메소드인 valueOf() 메소드를 사용
+		// 1. wrapper 클래스의 static 메소드인 valueOf() 메소드를 사용
 		Integer num1 = Integer.valueOf(123);
 		System.out.println("num1 = " + num1);
 		Integer num2 = Integer.valueOf(123);
@@ -47,18 +47,18 @@ public class Wrapper01Main {
 	  // 메모리 절약 차원/
 		// 도움말 확인 : . If a new Integer instance is not required, this method should generally be used in preference to the constructor
 
-		// 3. literal 상수로 생성
+		// 2. literal 상수로 생성
 		System.out.println();
 		Integer num5 = 123;
 		// 123 Literal(상수)를 가지고 Integer 클래스의 인스턴스를 생성
-		// Integer.valuOf(123)과 동일한 코드가 동작됨 (Auto-Boxing)
+		// Integer.valueOf(123)과 동일한 코드가 동작됨 (Auto-Boxing)
 		if (num2 == num5) {
 			System.out.println("같은 참조");
 		} else {
 			System.out.println("다른 참조");
 		}
 
-		// 4. valueOf(문자열) 가능!
+		// 3. valueOf(문자열) 가능!
 		System.out.println();
 		Integer num6 = Integer.valueOf("123"); // 문자열 가능
 		System.out.println(num6);
@@ -69,7 +69,7 @@ public class Wrapper01Main {
 			System.out.println("다른 참조");
 		}
 
-		// 6. 산술 연산 가능
+		// 4. 산술 연산 가능
 		num6 *= 2;
 		System.out.println(num6);
 
