@@ -46,7 +46,7 @@ public class TestOuter {
 		
 		// 멤버 메소드:
 		public void printOuterValue() {
-			System.out.println("value = " + outerValue);
+			System.out.println("outerValue = " + outerValue);
 			// 멤버 내부 클래스는 외부 클래스의 멤버를 직접 접근 가능
 			
 		} // end printOuterValue()

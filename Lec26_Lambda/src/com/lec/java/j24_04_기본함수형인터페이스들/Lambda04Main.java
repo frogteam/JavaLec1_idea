@@ -77,6 +77,7 @@ public class Lambda04Main {
             Predicate<String> p = str -> str.isEmpty();
             boolean result = p.test("hello");
             System.out.println(result);  // false
+            System.out.println(p.test(""));  // true
         }
 
         // UnaryOperator<T>
