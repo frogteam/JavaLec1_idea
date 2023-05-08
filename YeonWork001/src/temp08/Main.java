@@ -4,26 +4,19 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-
+        int lin1 = 0;
+        int lin2 = 0;
 
         Scanner sc = new Scanner(System.in);
-        int a;
-        float sum = 0;
-        int cnt = 0;
 
-        while (true) {
-            a = sc.nextInt();
-            if (a > 100) {
-                System.out.printf("sum : %.0f\n",sum);
-                System.out.printf("avg : %.1f",(sum / cnt));
-                break;
-            } else {
-                sum = sum + a;
-                cnt++;
+        lin1 = sc.nextInt();
+        lin2 = sc.nextInt();
 
+        for (int i = 1; i <= lin1; i++){
+            for (int j = 1; j<= lin2; j++){
+                System.out.print(j*i + " ");
             }
+            System.out.println();
         }
-
-        sc.close();
     }
 }
