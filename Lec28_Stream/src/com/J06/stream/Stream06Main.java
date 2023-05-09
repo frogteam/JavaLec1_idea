@@ -1,4 +1,4 @@
-package com.lec.stream06;
+package com.J06.stream;
 
 import java.util.ArrayList;
 import java.util.List;

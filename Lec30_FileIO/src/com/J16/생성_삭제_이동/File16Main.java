@@ -75,7 +75,7 @@ public class File16Main {
 		System.out.println(f3.getAbsolutePath());
 		
 		if (f2.exists()) { // 파일이 존재하는 지 체크
-			// 파일이 존재할 때만 이름 변경(rename)
+			// 파일이 존재할 때만 이름 변경(renameTo)
 			
 			if (f2.renameTo(f3)) {
 				System.out.println("파일 이름 변경 성공!");

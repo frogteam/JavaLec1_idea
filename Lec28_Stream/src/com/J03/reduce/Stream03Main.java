@@ -1,4 +1,4 @@
-package com.lec.stream03;
+package com.J03.reduce;
 
 import java.util.Arrays;
 import java.util.function.BinaryOperator;

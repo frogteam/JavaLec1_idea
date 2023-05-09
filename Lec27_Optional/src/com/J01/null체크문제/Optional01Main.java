@@ -1,4 +1,4 @@
-package com.lec.optional01;
+package com.J01.null체크문제;
 
 import common.Address;
 import common.User;
@@ -20,8 +20,8 @@ public class Optional01Main {
 		userInfo1(user1);
 
 		User[] arr = new User[3];
-		User user2 = arr[0];
-		userInfo2(user1);  // null
+		User user2 = arr[0];   // null
+		userInfo2(user1);
 		// userInfo2(user2); // NPE
 		userInfo3(user2);
 

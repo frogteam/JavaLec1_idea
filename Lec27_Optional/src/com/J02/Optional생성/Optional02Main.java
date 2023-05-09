@@ -1,4 +1,4 @@
-package com.lec.optional02;
+package com.J02.Optional생성;
 
 import java.util.Optional;
 import java.util.OptionalDouble;
@@ -42,7 +42,7 @@ public class Optional02Main {
 		System.out.println(o1);    // Optional[hello]
 		System.out.println(o1.get());   // "hello"   .get() Optional 의 내부객체 리턴,
 		
-		//o1 = Optional.of(null); // value 가 null이면 NPE 발생
+		//o1 = Optional.of(null); // of(value) 의 value 가 null이면 NPE 발생
 		
 		// 2. Optional.ofNullable(value)
 		// value 가 null이면 empty Optional 객체 반환

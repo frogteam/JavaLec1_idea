@@ -1,4 +1,4 @@
-package com.lec.optional03;
+package com.J03.Optional메소드;
 
 /* Optional 의 주요 메소드
  * 
@@ -61,13 +61,14 @@ public class Optional03Main {
 		System.out.println(optAddr1.get());
 //		System.out.println(optAddr2.get());  // NPE 발생
 
-		System.out.println(optAddr1.orElse(new Address("UNKNOWN")));
+		System.out.println(optAddr1.orElse(new Address("UNKNOWN")));  // orElse(T)
 		System.out.println(optAddr2.orElse(new Address("UNKNOWN")));
-		System.out.println(optAddr2.orElseGet(()-> new Address("몰라요")));
+		System.out.println(optAddr2.orElseGet(()-> new Address("몰라요")));  // orElseGet(Supplier<>)
 
 		// optAddr2.orElseThrow();   // NoSuchElementException: No value present
 		// optAddr2.orElseThrow(() -> new NullPointerException());
 
+		// Optional<T> filter(Predicate<>)
 		System.out.println(optAddr1.filter(s -> s.getStreet().equals("역삼로")));  // Optional[[Address: street=역삼로]]
 		System.out.println(optAddr1.filter(s -> s.getStreet().equals("강남대로"))); // Optional.Empty
 
