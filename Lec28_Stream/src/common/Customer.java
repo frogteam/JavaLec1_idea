@@ -25,5 +25,14 @@ public class Customer {
         this.age = age;
     }
 
+    @Override
+    public String toString() {
+        return String.format("[name:%s, age:%d]", name, age);
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        return this.name.equalsIgnoreCase(((Customer)obj).name);
+    }
 
 } // end Customer
