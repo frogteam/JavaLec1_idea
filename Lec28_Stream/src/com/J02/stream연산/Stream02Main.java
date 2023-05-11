@@ -28,13 +28,12 @@ import java.util.stream.*;
  *  		그래서, 맨 마지막에 등장. 최종연산후에 스트림은 더이상 다른연산 적용 불가.
  *  		최종연산이 적용(수행)되어야 모든 그 앞의 중간연산이 적용되는 '지연연산'이 발생
  *  
- *
+ *          forEach()
  *  		min(), max(), count(), sum(), average()
  *  		reduce(a, b)
- *  		anyMatch(), allMatch(), noneMatch()
+ *  		anyMatch(), allMatch(), noneMatch(),
+ *  		findFirst(), findAny(),
  *  	    collecting()
- *  	    forEach()
- *  		...
  */
 
 // 참조
@@ -253,7 +252,7 @@ public class Stream02Main {
 		// 이를 stream 으로 작성하면.
 		System.out.println(stringList.stream().anyMatch(str -> str.contains("a")));
 
-		//---------------------------------------------------------------
+		/*************************************************************/
 		System.out.println("■".repeat(30));
 		System.out.println("[최종연산(터미널 연산)]");
 
@@ -361,6 +360,36 @@ public class Stream02Main {
 					.noneMatch(person -> person.getName().length() >= 10);
 			System.out.println("noneMatch = " + noneMatch);
 		}
+
+		//-------------------------------------------------------
+		// find   [중간연산]
+		//
+		//   findFirst() : 주어진 스트림에서 '순서상 첫번째' 원소를 리턴
+		//   findAny() : 주어진 스트림에서 '가장 먼저' 탐색되는 원소 리턴  (병렬처리 환경)
+		//
+		//   리턴값: Optional
+		//        Stream 에 원소가 없으면 empty 리턴
+		//
+		//   findFirst() 와 findAny() 의 차이점
+		//     Stream 이 직렬로 처리될때는 둘다 동일 값 리턴
+		//     Stream 을 병렬로 처리할때는 차이가 있을수 있다
+		//         병렬로 처리하는 상황에선 findAny 는 '가장 먼저' 탐색되는 요소 리턴
+		
+		// 참조: https://codechacha.com/ko/java8-stream-difference-findany-findfirst/#3-findfirst%EC%99%80-findany%EC%9D%98-%EC%B0%A8%EC%9D%B4%EC%A0%90
+
+		System.out.println("-".repeat(30) +"\n▶ findFirst() findAny()");
+		{
+			var result = customerList.stream()
+					.filter(x -> x.getAge() >= 20)
+					.findFirst();
+			System.out.println("result = " + result);
+
+			var result2 = customerList.stream()
+					.filter(x -> x.getAge() >= 20)
+					.findAny();
+			System.out.println("result2 = " + result2);
+		}
+
 
 		/* 아래 collect 하기 전에 reduce 먼저 하길 추천 함 */
 
@@ -493,7 +522,8 @@ public class Stream02Main {
 			}
 		}
 		return false;
-	}
+	} // end match()
+
 
 
 } // end class

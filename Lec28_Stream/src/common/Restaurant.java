@@ -1,11 +1,11 @@
-package com.J04.stream;
+package common;
 
 
 public class Restaurant {
 
+    private Long id;
     private final String name;
     private String address;
-    private Long id;
 
     public Restaurant(String name) {
         this.name = name;
@@ -29,7 +29,8 @@ public class Restaurant {
         return this.address;
     }
 
-    public String getInformation() {
-        return name + " in " + address;
+    @Override
+    public String toString() {
+        return String.format("[id:%d name:%s address:%s]", id, name, address);
     }
 }

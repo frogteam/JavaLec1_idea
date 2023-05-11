@@ -1,4 +1,6 @@
-package com.J06.stream;
+package com.J04.stream연습;
+
+import common.TravelCustomer;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,7 +28,7 @@ CustomerHong
 비용 : 50
 
  */
-public class Stream06Main {
+public class Stream04Main {
     public static void main(String[] args) {
         TravelCustomer customerLee = new TravelCustomer("이순신", 40, 100);
         TravelCustomer customerKim = new TravelCustomer("김유신", 20, 100);
