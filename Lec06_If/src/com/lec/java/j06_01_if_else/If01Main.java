@@ -30,7 +30,7 @@ public class If01Main {
 			System.out.println("양수입니다.");
 		} else {
 			// if () 조건문이 false일 때 실행되는 부분
-			System.out.println("음수입니다.");
+			System.out.println("음수 혹은 0 입니다.");
 		} // end else
 
 		System.out.println("if-else 끝");

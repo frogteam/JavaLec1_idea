@@ -13,7 +13,7 @@ import com.lec.java.j07_05_EnhancedSwitch.Day;
 
 public class Switch06Main {
     public static void main(String[] args) {
-        Day day = Day.THURSDAY;
+        Day day = Day.THURSDAY;  // 외부 클래스 니까 import 필요
 
         // 기본 switch 문 방식으로 day 의 길이를 변수에 저장
         {
@@ -80,11 +80,13 @@ public class Switch06Main {
 
         // switch 식에선 enum타입(열거타입)을 사용하는 이유
         {
-            String s = "MONDAY";           // string 의 경우. 모든 경우 값을 리턴하기 위해선 default 꼭 필요
-            int numLetters = switch (s) {  // 아래 Default 를 제거하면 에러다 'switch' expression does not cover all possible input values
+            String s = "MONDAY";
+            // string 의 경우. 모든 경우 값을 리턴하기 위해선 default 꼭 필요
+            // 아래 Default 를 제거하면 에러다 'switch' expression does not cover all possible input values
+            int numLetters = switch (s) {
                 case "MONDAY", "FRIDAY", "SUNDAY"	-> 6;
                 case "TUESDAY"					-> 7;
-                case "THURSDAY, SATURDAY"		-> 8;
+                case "THURSDAY", "SATURDAY"		-> 8;
                 case "WEDNESDAY"				-> 9;
                 default						-> -1;
             };

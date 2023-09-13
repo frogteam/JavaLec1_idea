@@ -25,6 +25,7 @@ public class VarMain {
         var num2 = 3.14;   // double 타입
         var num3 = 100.45f;  // float 타입
         var num4 = 1234L;    // long 타입
+        var num5 = (short)100;
 
         // num1 = "hello";  // 불가
     } // end main

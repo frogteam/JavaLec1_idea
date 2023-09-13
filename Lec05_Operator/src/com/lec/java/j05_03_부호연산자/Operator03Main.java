@@ -29,6 +29,7 @@ public class Operator03Main {
 		System.out.println("num7 = " + num7);
 		
 		// 위에서 띄어쓰기 주의
+		// IntelliJ : CTRL + ALT + L : reformat code
 
 		System.out.println("\n프로그램 종료");
 	} // end main

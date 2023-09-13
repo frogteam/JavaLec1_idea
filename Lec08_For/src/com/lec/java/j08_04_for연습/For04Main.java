@@ -19,7 +19,7 @@ public class For04Main {
 
 		
 		// 1부터 n까지의 합을 계산
-		int n = 1000;
+		int n = 10;
 		System.out.printf("\n1부터 %d까지의 합 계산\n", n);
 		int sum = 0;
 		for(int i = 1; i <= n; i++) {

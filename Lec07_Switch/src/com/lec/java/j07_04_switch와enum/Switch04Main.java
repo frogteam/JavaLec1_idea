@@ -19,8 +19,9 @@ public class Switch04Main {
 		System.out.println(day1); // THU
 		Days day2 = Days.MON;
 		//System.out.println(day2 - day1);  // enum 타입은 산술연산 안됨
+		//System.out.println(day1 > day2);   // X. 대소비교 불가
 		System.out.println(day1 == day2);  // false  ==, != 가능
-		//System.out.println(day1 > day2);   // X. 크기비교 불가
+		
 
 		
 		Numbers num1 = Numbers.ONE;

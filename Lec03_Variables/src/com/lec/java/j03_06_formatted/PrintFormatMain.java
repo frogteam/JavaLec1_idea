@@ -11,7 +11,7 @@ package com.lec.java.j03_06_formatted;
  *    
  *  ● format specifier (서식 지정자)
  *  	%d  :  십진수 정수로 출력
- *  	%f  :  실수 출력
+ *  	%f  :  실수로 출력
  *  	%s  :  문자열 출력
  *  	%c  :  '문자하나' 출력
  *  	%x  :  16진수 정수로 출력
@@ -69,7 +69,7 @@ public class PrintFormatMain {
 		// 숫자에 패딩 가능
 		System.out.printf("|%05d|%05d|%05d|\n",100,200,300);  // - 는 적용 안됨.		
 
-		// format 문자열을 따로 설정해서 진행가능
+		// format 문자열을 따로 설정해서 사용가능
 		String fmt = "주소: %s, 우편번호[%05d]";
 		System.out.printf(fmt + "\n", "서울", 12345);
 		System.out.printf(fmt + "\n", "광주", 44);
@@ -101,7 +101,7 @@ public class PrintFormatMain {
             "author": %s,
             "id": %d
         }
-        """.formatted("hi", "taeng", 2);
+        """.formatted("hi", "김자까", 2);
 
 		System.out.println(textBlock);
 		

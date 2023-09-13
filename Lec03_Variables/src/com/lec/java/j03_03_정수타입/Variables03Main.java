@@ -49,7 +49,7 @@ public class Variables03Main {
 		// 숫자 뒤에 영문자 L을 붙여줌
 		// 자바에서 정수 타입 변수의 기본은 int임.
 		// 자바는 정수 숫자(리터럴)를 별도 표기가 없으면 int라고 생각.
-		long num12 = 12; // 12라는 int를 long 타입에 저장
+		long num12 = 12; // 12 라는 int 값을 long 타입에 대입
 		long num13 = 12L; // 12라는 long을 long 타입에 저장
 		int num14 = 12;
 		//int num15 = 12L; // 컴파일 에러: long 타입 숫자를 int에 저장하려고 했을 때
