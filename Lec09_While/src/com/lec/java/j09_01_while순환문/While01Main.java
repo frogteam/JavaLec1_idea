@@ -22,6 +22,7 @@ public class While01Main {
 			count++;  // '증감식'을 while 수행문 안에 배치
 		} // end while
 		System.out.println("while 끝난 후 count = " + count);
+		// 위에서 증감식 빠지면 무한루프!!
 		
 		System.out.println();
 		// 10, 9, 8, ... , 1까지 출력

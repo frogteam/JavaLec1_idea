@@ -1,5 +1,6 @@
 package com.lec.java.j19_04_StringTokenizer;
 
+import java.util.Arrays;
 import java.util.StringTokenizer;
 
 /* StringTokenizer 클래스
@@ -18,8 +19,13 @@ public class String04Main {
 		String str1 = "13:46:12";
 		StringTokenizer tokenizer = new StringTokenizer(str1, ":");
 		System.out.println("토큰 개수: " + tokenizer.countTokens());
-		
-		while (tokenizer.hasMoreTokens()) {
+
+		//System.out.println(tokenizer.nextToken());  // "13"
+//		System.out.println(tokenizer.nextToken());  // "46"
+//		System.out.println(tokenizer.nextToken());  // "12"
+//		System.out.println(tokenizer.nextToken());  // NoSuchElementException
+
+		while (tokenizer.hasMoreTokens()) { // 남아 있는 token 이 있는지 여부 true/false
 			System.out.println(tokenizer.nextToken());
 		} // end while
 		
@@ -50,6 +56,22 @@ public class String04Main {
 		
 		System.out.println();
 		String str5 = "2015-04-08 14:10:55";
+
+		// 1. split 사용
+		var dateStr = str5.trim().split("\\s+");
+
+		for (var d : dateStr[0].split("-")) {
+			System.out.println(d);
+		}
+
+		for (var d: dateStr[1].split(":")) {
+			System.out.println(d);
+		}
+
+		// 2. 정규표현식 사용
+		System.out.println(Arrays.toString(str5.split("[-: ]+")));
+
+		// 3. StringTokenizer
 		StringTokenizer token5 = new StringTokenizer(str5, "-: ");
 		while (token5.hasMoreTokens()) {
 			System.out.println(token5.nextToken());

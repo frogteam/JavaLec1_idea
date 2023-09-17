@@ -131,7 +131,8 @@ public class RegExp03Main {
 			"abcDefGHIUJ-KLM123opQrstuz"
 		};
 
-		regex = "[a-zA-Z]+";  // a ~ z, A ~ Z		
+		regex = "[a-zA-Z]+";  // a ~ z, A ~ Z
+		regex = "[^a-zA-Z]+";  // ^ 은 NOT
 		regex = "[a-zA-Z0-9]+";  // a ~ z, A ~ Z, 0 ~ 9
 		regex = "[a-zA-Z0-9-]+";
 		regex = "[0-9]+";
@@ -149,7 +150,7 @@ public class RegExp03Main {
 
 		// 프로젝트 내에서 printf, print, println 을 사용한 곳을 찾아보자?
 		// Fine in Files ..
-		// print[a-z]{1,2}\(  <- Regex 옵션 ON,  Case 옵션 ONs
+		// print[a-z]{0,2}\(  <- Regex 옵션 ON,  Case 옵션 ON
 		
 		//─────────────────────────────────────────
 		title = " () : ()안에 있는 글자들을 그룹화 ";

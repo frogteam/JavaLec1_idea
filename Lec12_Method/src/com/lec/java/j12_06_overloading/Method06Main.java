@@ -40,6 +40,7 @@ public class Method06Main {
 		System.out.println(10);
 		System.out.println(3.14);
 		System.out.println("hello");
+		System.out.println(new int[10]);
 		
 		System.out.println("\n프로그램 종료");
 	} // end main()

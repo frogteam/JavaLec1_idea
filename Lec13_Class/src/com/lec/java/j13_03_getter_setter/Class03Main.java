@@ -9,7 +9,7 @@ package com.lec.java.j13_03_getter_setter;
  *  사용자에게는 필요한 기능만 제공하여 추상화(abstraction) 하는
  *  객체지향 기술을 '캡슐화(encapsulation)' 라고 한다
  *
- *  접근을 제어하기 위해 Access modifier 를 사용 (다음단원에 자세히..)
+ *  접근을 제어하기 위해 Access modifier 를 사용 (다음 단원에 자세히..)
  *
  *  클래스의 멤버변수를 접근하기 위한 기능을 제공하는 메소드를
  *  getter , setter 라 한다
@@ -23,8 +23,8 @@ package com.lec.java.j13_03_getter_setter;
  *
  *	● 프로퍼티 (Property, 속성)
  *     getter, setter 네이밍 규약
- *		- 프로퍼티 값을 '읽는' 메소드는 get으로 시작한다.
- * 		- 프로퍼티 값을 '변경'하는 메소드는 set으로 시작한다.
+ *		- 프로퍼티 값을 '읽는' 메소드는 get으로 시작한다.  (읽기 속성)
+ * 		- 프로퍼티 값을 '변경'하는 메소드는 set으로 시작한다.  (쓰기 속성)
  * 		- get과 set 뒤에는 프로퍼티의 이름 첫 글자를 대문자로 바꾼다.
  * 		- set 메소드는 1개의 파라미터를 갖는다.
  *

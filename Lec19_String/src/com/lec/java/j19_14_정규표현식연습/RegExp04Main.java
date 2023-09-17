@@ -37,7 +37,7 @@ public class RegExp04Main {
 
 		String regex;
 		regex = "^[a-zA-Z]{2}-[1-9][0-9]{3}-[1-9][0-9]{2}-[a-zA-Z]{3}$";
-		regex = "^[a-zA-Z]{2}-[1-9][0-9]{3}-[1-9][0-9]{2}-[a-zA-Z]{3}$";
+		regex = "^[a-zA-Z]{2}-[1-9]\\d{3}-[1-9]\\d{2}-[a-zA-Z]{3}$";
 		String input = "";				
 		
 		while(true) {			

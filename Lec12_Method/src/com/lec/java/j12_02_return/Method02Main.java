@@ -39,7 +39,20 @@ public class Method02Main {
 		// 그 결과로 앞의 수에서 뒤의 수를 뺀 값을 되돌려 싶다.
 		int result = sub(100, 200);
 		System.out.println("result = " + result);
-		
+
+		result = sub(add(10, add(100, 300)), 100);
+		/*
+		①	sub(         , 100	)
+			       ↑
+		②	  add(10,         )
+			           ↑
+		③	     add(100, 300)
+
+		    호출순서 : ① ② ③
+		    리턴순서 : ③ ② ①
+		 */
+
+
 		System.out.println();
 		// 곱하기
 		result = multiply(123, 321);
@@ -147,9 +160,8 @@ public class Method02Main {
 } // end class
 
 /*
- * Refactor - Inline   (ALT + SHIFT + I)
- * Refactor - Extract Local Variable  (ALT + SHIFT + L)
- * 	
+   Refactor - Intruduce Variable  CTRL + ALT + V
+   Refactor - Inline  CTRL + ALT + N
  */
 
 

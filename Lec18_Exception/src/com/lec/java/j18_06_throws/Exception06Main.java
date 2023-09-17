@@ -10,7 +10,7 @@ package com.lec.java.j18_06_throws;
 	 
 	반면 'RuntimeException' 및 이를 상속받은 예외를 throws 하는 메소드는
 	굳이 호출하는 쪽에서 매번 예외 처리 할 필요는 없다
-
+	    (이를 'unchecked exception' 이라 한다)
  */
 public class Exception06Main {
 

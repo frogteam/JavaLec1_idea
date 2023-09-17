@@ -37,4 +37,15 @@ public class Main {
 		sc.close();
 	} // end main
 
+	/*
+            i
+            0   ---> 1
+            1   ---> 2
+            2  ----> 3
+            3  ----> 4
+            .
+            .
+
+         */
+
 } // end class

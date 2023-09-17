@@ -40,6 +40,14 @@ public class Array08Main {
 			}
 			System.out.println(); // 줄바꿈
 		}
+
+		// var 사용 가능!
+		for (var row : array) {
+			for (var x : row) {
+				System.out.print(x + " ");
+			}
+			System.out.println(); // 줄바꿈
+		}
 		
 		
 		System.out.println("============");

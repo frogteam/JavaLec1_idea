@@ -32,43 +32,43 @@ Successful : 2
 
 public class Main {
 
-	public static void main(String[] args) {
-		// 5명 학생 x 4개 과목 점수 담을 2차원 배열
-		int[][] score = new int[5][4];
-		
-		Scanner sc = new Scanner(System.in);
-		
-		for (int stu = 0; stu < score.length; stu++) {
-			for (int subj = 0; subj < score[stu].length; subj++) {
-				score[stu][subj] = sc.nextInt();
-			}
-		}		
+    public static void main(String[] args) {
+        // 5명 학생 x 4개 과목 점수 담을 2차원 배열
+        int[][] score = new int[5][4];
+
+        Scanner sc = new Scanner(System.in);
+
+        for (int stu = 0; stu < score.length; stu++) {
+            for (int subj = 0; subj < score[stu].length; subj++) {
+                score[stu][subj] = sc.nextInt();
+            }
+        }
 
 
-		int sum;
-		double avg;
-		int success = 0;   // 합격(Pass) 한 학생수
-		
-		// 학생별로 점수 계산
-		for (int stu = 0; stu < score.length; stu++) {
-			sum = 0;
+        int sum;
+        double avg;
+        int success = 0;   // 합격(Pass) 한 학생수
 
-			// stu 학생의 총점 구하기 => sum
-			for (int subj = 0; subj < score[stu].length; subj++) {
-				sum += score[stu][subj];  // stu 번째 학생의 subj 과목점수 누적 합산
-			}
-			// stu 학생의 평균 구하기
-			avg = (double)sum / score[stu].length;
-			
-			if(avg >= 80){
-				System.out.println("pass");
-				success++;  // 합격자수 +1 증가
-			}else{
-				System.out.println("fail");
-			}
-		}		
-		System.out.println("Successful : " + success);
+        // 학생별로 점수 계산
+        for (int stu = 0; stu < score.length; stu++) {
+            sum = 0;
 
-		sc.close();
-	} // end main()
+            // stu 학생의 총점 구하기 => sum
+            for (int subj = 0; subj < score[stu].length; subj++) {
+                sum += score[stu][subj];  // stu 번째 학생의 subj 과목점수 누적 합산
+            }
+            // stu 학생의 평균 구하기
+            avg = (double) sum / score[stu].length;
+
+            if (avg >= 80) {
+                System.out.println("pass");
+                success++;  // 합격자수 +1 증가
+            } else {
+                System.out.println("fail");
+            }
+        }
+        System.out.println("Successful : " + success);
+
+        sc.close();
+    } // end main()
 } // end class

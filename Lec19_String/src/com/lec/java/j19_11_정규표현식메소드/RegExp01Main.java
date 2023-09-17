@@ -120,14 +120,14 @@ public class RegExp01Main {
 		
 		
 		// matches()
-		// 패턴매칭이 '문자열 전체영역' 이 패턴매칭 되는지 여부
+		// 패턴매칭이 '문자열 전체영역' 이 패턴매칭 되는지 여부 (true/false)
 		System.out.println();
 		System.out.println("matches()");
 		matcher = pat.matcher("-My1234-");
 		if(matcher.matches()) {
-			System.out.println("matches() 매칭 OK");
+			System.out.println("matches() 전체 매칭 OK");
 		} else {
-			System.out.println("matches() 매칭 FAIL"); // ●
+			System.out.println("matches() 전체 매칭 FAIL"); // ●
 		}
 		
 		matcher = pat.matcher("My1234");
@@ -162,7 +162,8 @@ public class RegExp01Main {
 		// 기본적으로 대소문자를 구분하여 매칭한다
 		input = "-My98KK-myABCD--My1234567--MyZZ---My789";  // 3개 매칭
 		matcher = pat.matcher(input);  // Matcher 생성
-		
+
+		System.out.println(input);
 		while(matcher.find()) {
 			System.out.println(matcher.group() + " {" + matcher.start() + "~" + matcher.end() + "}");
 			// 결과 : 3개 매칭!
@@ -179,7 +180,7 @@ public class RegExp01Main {
 		
 		System.out.println();
 		System.out.println("find(fromIndex)");  // fromIndex부터 검색
-		// find(fronIndex) 줄수 있다
+		// find(fromIndex) 줄수 있다
 		matcher = pat.matcher(input);  // Matcher 생성
 		int fromIndex = 16;
 		while(matcher.find(fromIndex)) {

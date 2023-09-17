@@ -89,7 +89,12 @@ public class String01Main {
 //		String time = str4.split(" ")[1];
 //		String year = date.split("-")[0];
 
-		
+		str4 = "Hello My WORLD";
+		System.out.println(Arrays.toString(str4.split(" ")));
+		str4 = "     Hello     My    WORLD     ";
+		System.out.println(Arrays.toString(str4.split(" ")));
+
+
 		// 공백기준으로 쪼갤때는 정규표현식의 \s+  사용하기 : 공백, 탭, 줄바꿈
 		str4 = "    Hello\t  \n  \t MY \n\n WORLD";
 		strings = str4.split("\\s+");

@@ -41,24 +41,24 @@ http://jungol.co.kr/bbs/board.php?bo_table=pbank&wr_id=64&sca=10a0
 
 public class Main {
 
-	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
-		
-		int [][] arr = new int[4][3];
-		int [] sum = new int[4];
-		
-		for(int row = 0; row < arr.length; row++){
-			System.out.print( (row + 1) + "class? ");
-			for(int col = 0; col < arr[row].length; col++){
-				arr[row][col] = sc.nextInt();
-				sum[row] += arr[row][col];
-			}
-		}
-		
-		for(int row = 0; row < sum.length; row++){
-			System.out.println( (row + 1) + "class : " + sum[row]);
-		}
-		
-		sc.close();
-	} // end main()
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int[][] arr = new int[4][3];  // 4개반 x 3학생
+        int[] sum = new int[4];
+
+        for (int ban = 0; ban < arr.length; ban++) {
+            System.out.print((ban + 1) + "class? ");
+            for (int col = 0; col < arr[ban].length; col++) {
+                arr[ban][col] = sc.nextInt();
+                sum[ban] += arr[ban][col];
+            }
+        }
+
+        for (int row = 0; row < sum.length; row++) {
+            System.out.println((row + 1) + "class : " + sum[row]);
+        }
+
+        sc.close();
+    } // end main()
 } // end class

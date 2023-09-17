@@ -48,13 +48,14 @@ public class RockScissorPaper {
 	// arguments: none
 	// 기능: 유저가 가위/바위/보 선택할 수 있는 메뉴 출력
 	public static void showMenu() {
-		System.out.println("-------------");
-		System.out.println("1] 가위");
-		System.out.println("2] 바위");
-		System.out.println("3] 보");
-		System.out.println("0] 종료");
-		System.out.println("-------------");
-		System.out.print("선택:");
+		System.out.print("""
+    			-------------
+    			1] 가위
+    			2] 바위
+    			3] 보
+    			0] 종료
+    			-------------
+    			선택""");
 	} // end showMenu()
 	
 	// method name: inputChoice
@@ -106,6 +107,7 @@ public class RockScissorPaper {
 	//   2) int com: 컴퓨터의 선택(가위(1)/바위(2)/보(3))
 	public static void computeResult(int user, int com) {
 
+		// 방법1
 		if (user == com) {
 			System.out.println("비겼습니다.");
 			return;
@@ -118,7 +120,8 @@ public class RockScissorPaper {
 			System.out.println((com == 2) ? "User Win!" : "Com Win!");
 		}
 		
-		
+
+		// 방법2
 //		if (user == com) {
 //			System.out.println("비겼습니다.");
 //		}else if ((user - com == -2) || (user - com) == 1) {
@@ -127,7 +130,11 @@ public class RockScissorPaper {
 //			else {
 //				System.out.println("Com win!");
 //		}
-		
+
+		// 방법3
+		if (user == com) {
+			System.out.println("비겼습니다.");
+		}
 		
 	} // end computeResult()
 
