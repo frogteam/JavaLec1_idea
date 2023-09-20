@@ -74,7 +74,7 @@ public class RegExp03Main {
 				"xxzdfdk",
 				"aa10x9zbxbz",
 				"xz",
-				"90x zxx_zdf",  // 공백도 하나의 문자다! 매칭된다
+				"90x zxx_zdf",
 				"xbz",				
 				"xyyz"
 			};
@@ -149,7 +149,7 @@ public class RegExp03Main {
 		regex = "ab{3,5}"; // b가 3개에서 5개 까지
 
 		// 프로젝트 내에서 printf, print, println 을 사용한 곳을 찾아보자?
-		// Fine in Files ..
+		// Find in Files ..
 		// print[a-z]{0,2}\(  <- Regex 옵션 ON,  Case 옵션 ON
 		
 		//─────────────────────────────────────────

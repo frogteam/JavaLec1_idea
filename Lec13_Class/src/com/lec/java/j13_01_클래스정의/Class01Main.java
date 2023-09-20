@@ -81,7 +81,7 @@ public class Class01Main {
 		tv1.displayStatus();
 		
 		System.out.println();
-		MyTV tv2 = new MyTV();
+		MyTV tv2 = new MyTV();  // 새로운 MyTV 인스턴스 생성
 		tv1.powerOnOff();
 		tv2.channelUp();
 		tv2.volumeUp();

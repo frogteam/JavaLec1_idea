@@ -19,7 +19,7 @@ public class Polymorphism01Main {
 
 		A aaa = new A();
 		B bbb = new B();
-		//aaa = bbb;
+		//aaa = bbb;   // 타입이 달라요!!!!
 
 		System.out.println();
 		

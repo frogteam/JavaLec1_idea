@@ -17,13 +17,18 @@ public class Method07Main {
 		} // end for
 		
 		System.out.println();
-		// double Math.floor(num): num을 넘지 않는 가장 큰 정수(바닥)
-		// double Math.ceil(num): num보다 큰 가장 작은 정수(천장)
+		// double Math.floor(num): num이하의 수 중 가장 큰 정수(바닥)
+		// double Math.ceil(num): num이상의 수 중 가장 작은 정수(천장)
 		// long Math.round(num): num에서 소수점 사사오입 (반올림)
 		
 		// 1.2 == 1 < 1.2 < 2 == floor: 1, ceil: 2
 		// -1.2 == -2 < -1.2 < -1 == floor: -2, ceil: -1
-		
+
+		for(var d : new double[]{2.7, -1.2, -2.8}){
+			System.out.println("        floor   ceil   round");
+			System.out.printf("%5.1f]  %5.1f  %5.1f  %3d\n", d, Math.floor(d), Math.ceil(d), Math.round(d));
+		}
+
 		System.out.println(Math.floor(2.7));  // 2.0
 		System.out.println(Math.ceil(2.7));   // 3.0
 		System.out.println(Math.round(2.7));  // 3

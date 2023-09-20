@@ -19,7 +19,7 @@ public class LetterCapitalize {
         String[] words;
         while (true) {
             str = sc.nextLine().trim();
-            if (str.trim().equalsIgnoreCase("quit")) break;
+            if (str.equalsIgnoreCase("quit")) break;
             str = str.toLowerCase();  // 일단 소문자로 변환
             words = str.split("\\s+");  // 공백기준으로 단어 구분
 

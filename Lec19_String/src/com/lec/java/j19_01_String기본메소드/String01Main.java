@@ -80,8 +80,8 @@ public class String01Main {
 		System.out.println();
 		System.out.println("split(regex)"); // 문자열을 주어진 문자열로 쪼개어 String[] 리턴
 		String str4 = "HH:MM:SS";
-		String[] strings = str4.split(":");
-		System.out.println(Arrays.toString(strings));
+		String[] arr = str4.split(":");
+		System.out.println(Arrays.toString(arr));
 		
 		// 년,월,일,시,분,초 분리하기
 		str4 = "2021-07-26 14:34:52";
@@ -97,14 +97,14 @@ public class String01Main {
 
 		// 공백기준으로 쪼갤때는 정규표현식의 \s+  사용하기 : 공백, 탭, 줄바꿈
 		str4 = "    Hello\t  \n  \t MY \n\n WORLD";
-		strings = str4.split("\\s+");
-		System.out.println(Arrays.toString(strings));  // [, Hello, MY, WORLD]		
+		arr = str4.split("\\s+");
+		System.out.println(Arrays.toString(arr));  // [, Hello, MY, WORLD]
 		
 		// 단!  "|" 을 할경우는 주의,   ※ split(정규표현식) 을 사용하는 메소드임
 		String str5 = "HH|MM|SS";
 		//strings = str5.split("|");   //  <-- 이렇게 하면 결과 이상해진다. (내부적으로 "|"는 정규표현식에서 boolean (OR)와 같은 동작함. 따라서 아래와 같이 escaping 해야 함)
-		strings = str5.split("\\|"); 
-		for (String x : strings) {
+		arr = str5.split("\\|");
+		for (String x : arr) {
 			System.out.println(x);
 		}
 		
@@ -143,12 +143,15 @@ public class String01Main {
 		System.out.printf("[%s]\n", str9.strip());
 		System.out.printf("[%s]\n", str9.stripLeading());
 		System.out.printf("[%s]\n", str9.stripTrailing());
-		
+
+		// repeat(n)  문자열 반복
+		System.out.println("-".repeat(20));
+
 		System.out.println();
 		System.out.println("replace(target, replacement)");   // 문자열 치환  target → replacement  
 		String str10 = "Hello Language My Language";
 		System.out.println(str10.replace("My", "Our"));
-		System.out.println(str10.replace("Language", "Java"));  // 매치되는거 모두 치환
+		System.out.println(str10.replace("Language", "Java"));  // 매칭되는거 모두 치환
 		
 	
 		System.out.println();

@@ -63,17 +63,12 @@ public class Method11Main {
 	//   if n > 0, n! = n * (n - 1)!
 	//   if n < 0, 계산 불가
 	
-	public static long calcFactorial(long num) {
+	public static long calcFactorial(long n) {
 		long result = 0L;
-		
-		if (num == 0) {
-			result = 1L;  // 0! = 1
-		} else if (num > 0) {
-			result = num * calcFactorial(num - 1); // 재귀호출!    n! = n * (n - 1)!
-		} else {
-			System.out.println("음수 팩토리얼은 계산할 수 없어요");
-		}
-		
+
+		if(n == 0) return 1L;   // 재귀호출 종료조건(리턴)  0! = 1
+		if(n > 0) return n * calcFactorial(n - 1);  // 재귀호출  n! = n * (n - 1)!
+		System.out.println("음수 팩토리얼 없단다");
 		return result;
 		
 	} // end calcFactorial()

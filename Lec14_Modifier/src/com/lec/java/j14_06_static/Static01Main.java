@@ -43,6 +43,7 @@ public class Static01Main {
 		test();
 		
 		// static 메소드 안에서 static이 아닌 메소드를 바로 호출할 수는 없다.
+		// static 은 non-static 을 사용못한다 ★★
 		//test2(); // 컴파일 에러
 		
 		// 인스턴스 변수/메소드

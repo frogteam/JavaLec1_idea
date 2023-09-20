@@ -19,7 +19,7 @@ public class Number {
 	public Number() {}
 	// 매개변수가 있는 생성자
 	public Number(int num) {
-		this.num = num;    // this : 자기자신을 가리킴
+		this.num = num;    // this : 자기자신(인스턴스)을 가리킴
 	}
 	
 	// 메소드
@@ -31,9 +31,15 @@ public class Number {
 	public void setNum(int num) {
 		this.num = num;
 	}
-	
-	
-	
+
+	// getter & setter 작명
+	// age => getAge
+	//     => setAge
+
+	// realNumber => getRealNumber
+	//            => setRealNumber
+
+
 } // class Number
 
 

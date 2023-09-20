@@ -42,6 +42,15 @@ public class Array05Main {
 		
 		
 		// 1차원배열 x 3개을 담고 있는 2차원 배열.
+		// 1차원 배열을 원소로하는 2차원 배열 선언
+		{
+			int[][] array = new int[3][];    // 1차원 배열 x 3개 담는 2차원 배열로 생성
+
+			array[0] = new int[]{1, 2};
+			array[1] = new int[]{3, 4};
+			array[2] = new int[]{5, 6};
+		}
+
 		//int[] array[] = {  // <-- 가능
 		int[][] array = {
 				{1, 2},	// <- array[0]

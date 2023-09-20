@@ -160,8 +160,8 @@ public class Method02Main {
 } // end class
 
 /*
-   Refactor - Intruduce Variable  CTRL + ALT + V
-   Refactor - Inline  CTRL + ALT + N
+   Refactor - Introduce Variable  CTRL + ALT + V
+   Refactor - Inline Variable  CTRL + ALT + N
  */
 
 

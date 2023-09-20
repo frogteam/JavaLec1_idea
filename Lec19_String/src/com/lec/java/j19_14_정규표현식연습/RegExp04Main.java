@@ -21,6 +21,7 @@ import java.util.regex.Pattern;
  * 
  * 불가]
  * 	xX-1200-089-zuy
+ *  Ab-a890-b86-zuy
  * 	p9-324-389-zopl
  * 
  * 쿠폰번호를 계속해서 입력 받으면서 
@@ -41,7 +42,7 @@ public class RegExp04Main {
 		String input = "";				
 		
 		while(true) {			
-			input = sc.nextLine();
+			input = sc.nextLine().trim();
 			if(input.equalsIgnoreCase("quit")) break;
 			if(Pattern.matches(regex, input)) {
 				System.out.println("유효한 쿠폰입니다");
