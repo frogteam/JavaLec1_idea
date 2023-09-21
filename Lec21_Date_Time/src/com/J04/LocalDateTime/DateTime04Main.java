@@ -12,8 +12,8 @@ import java.time.format.DateTimeFormatter;
  *  
  *  날짜와 시간을 표현하는 클래스들
  *  LocalDate	로컬 날짜 클래스 
- *  LodalTime	로클 시간 클래스
- *  LodalDateTime  로컬 날짜 및 시간클래스 (LocalDate + LocalTime)
+ *  LocalTime	로클 시간 클래스
+ *  LocalDateTime  로컬 날짜 및 시간클래스 (LocalDate + LocalTime)
  *  
  *  https://docs.oracle.com/javase/8/docs/api/java/time/package-summary.html
  *  

@@ -43,7 +43,7 @@ public class Exception02Main {
 	} // end main()
 
 	/* 
-		특히 시스템 자원(resource), HW (파일, DB..) 등을 사용하는 프로그래밍에선
+		특히 시스템 자원(resource), HW (파일, DB..), 네트워크 등을 사용하는 프로그래밍에선
 		'예외' 가 언제든지 발생할수 있으므로 try ~ catch 가 필수적이다.
 		 
 		try {

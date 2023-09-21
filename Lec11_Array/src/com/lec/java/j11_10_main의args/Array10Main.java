@@ -1,5 +1,7 @@
 package com.lec.java.j11_10_main의args;
 
+import java.util.Arrays;
+
 /* main() 의 매개변수 String[] args
  */
 public class Array10Main {
@@ -12,15 +14,20 @@ public class Array10Main {
 		System.out.println("main 메소드 매개변수: String[] args");
 		
 		System.out.println("args.length = " + args.length);
+		System.out.println("args: " + Arrays.toString(args));
+
 		for(String name : args) {
 			System.out.println("안녕하세요, " + name);
 		}
+
+
 		
 	} // end main
 
 } // end class Array12Main
 
-
+// ※ IntellJ 터미널에서 실행해보기
+//
 
 
 

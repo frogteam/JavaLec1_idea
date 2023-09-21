@@ -52,7 +52,7 @@ public class Exception04Main {
 			System.out.println("산술연산 예외: " + ex.getMessage());
 
 			// catch 절 안에서 exception 이 발생하면??
-			// 이또한 hadndlnig 되지 않으면 프로그램 종료됨
+			// 이또한 handling 되지 않으면 프로그램 종료됨
 			// Integer.parseInt("abc");
 			
 		} catch (ArrayIndexOutOfBoundsException ex) {

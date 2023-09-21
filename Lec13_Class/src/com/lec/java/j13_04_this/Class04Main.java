@@ -74,6 +74,11 @@ public class Class04Main {
 		// 메소드 체이닝은 한줄로 해결된다..
 		n4.setNum1(10).setNum2(20).setNum3(30).setNum4(40).setNum5(50).setNum6(60);
 
+		// 문자열 메소드도 체이닝 되어 있다.
+		String str = "Hello";
+		str = str.toUpperCase().substring(0, 4).replace("H", "S");
+		System.out.println(str);
+
 		System.out.println("프로그램 종료");
 	} // end main()
 

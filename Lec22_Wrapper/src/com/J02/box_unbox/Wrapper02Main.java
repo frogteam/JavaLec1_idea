@@ -68,7 +68,7 @@ public class Wrapper02Main {
 		// OCJP D-01
 		// https://marobiana.tistory.com/130
 
-		System.out.println(num1 == 10);   // true,  unboxing 발생!
+		System.out.println(num1 == 10);   // true (값 비교), unboxing 발생!
 		System.out.println(num1 == num2);  // false unboxing 발생안함!
 		//Integer num7 = "10";  // auto-boxing 불가
 		

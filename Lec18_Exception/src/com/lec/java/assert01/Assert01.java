@@ -23,11 +23,19 @@ package com.lec.java.assert01;
  * @ 컴파일
  *  javac -source 1.5 Assert01.java 
  * @ 실행시 아래 옵션 필요
+ *   Assertion은 디버깅 용도로 사용되어서
+ *   JVM 기본 설정으로 프로그램을 실행하게 되면
+ *   assert문은 모두 실행에서 제외 됩니다.
+ *   assert가 동작하게 하려면 실행시 -ea 옵션을 사용해서 실행합니다
  *  java -ea Assert01
  *  
- *  이클립스에서는 Run - Run Configurations..  에서
- *  좌측에서 해당 프로젝트 선택하고
- *  우측에서 [Argument] 탭 선택하고 VM arguments 에 -ea 입력 
+ *  이클립스에서는
+ *    Run - Run Configurations..  에서
+ *    좌측에서 해당 프로젝트 선택하고
+ *    우측에서 [Argument] 탭 선택하고 VM arguments 에 -ea 입력
+ *
+ *  IntelliJ 에서는
+ *     Run Configuration의 VM Options에 옵션을 적어주기
  */
 public class Assert01 {
 	public static void main(String[] args) {

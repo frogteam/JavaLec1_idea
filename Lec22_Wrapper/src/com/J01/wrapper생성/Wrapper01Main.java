@@ -5,7 +5,9 @@ package com.J01.wrapper생성;
  * Wrapper: Boolean, Character, Byte, Short, Integer, Long, Float, Double
  * 
  * Wrapper 클래스는 String 과 마찬가지로 immutable(불변) 이다.
- * 
+ *
+ * Wrapper 는 null  값을 가질수 있다 (reference type 이니까!)
+ * 	          ↑ primitive 는 표현할 수 없는 값!
  */
 
 public class Wrapper01Main {
@@ -73,6 +75,9 @@ public class Wrapper01Main {
 		num6 *= 2;
 		System.out.println(num6);
 
+		// 5. Wrapper 는 null  값을 가질수 있다 (당연!)  primitive 는 가질수 없는 값!
+		Integer num3 = null;
+		//num1 = num3 + 10;  // NPE 발생!
 		
 		System.out.println("\n프로그램 종료");
 	} // end main()
