@@ -16,8 +16,7 @@ public class Collection11Main {
 		System.out.println("TreeMap 클래스");
 		
 		// TreeMap<Integer, String> 타입 인스턴스 생성
-		TreeMap<Integer, String> tmap =
-				new TreeMap<Integer, String>();
+		TreeMap<Integer, String> tmap = new TreeMap<>();
 		
 		// 데이터 저장: put(key, value) 메소드 사용
 		tmap.put(1, "aaa");

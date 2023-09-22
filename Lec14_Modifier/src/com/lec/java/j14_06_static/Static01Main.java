@@ -25,7 +25,7 @@ public class Static01Main {
 
 	static Scanner sc = new Scanner(System.in);
 
-	public static void test() {
+	public static void test1() {
 		System.out.println("Hello, Java!");
 	}
 	
@@ -40,7 +40,7 @@ public class Static01Main {
 		// 인스턴스 생성 없이(new 하지 않고) 사용 가능
 		int n = sc.nextInt();
 		System.out.println("n = " + n);
-		test();
+		test1();
 		
 		// static 메소드 안에서 static이 아닌 메소드를 바로 호출할 수는 없다.
 		// static 은 non-static 을 사용못한다 ★★

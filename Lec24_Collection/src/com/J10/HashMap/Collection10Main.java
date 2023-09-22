@@ -96,46 +96,49 @@ public class Collection10Main {
 
 		//-----------------------------------------------------------
 		// HashMap 을 초기화 하는 다양한 방법들
-		//    https://www.baeldung.com/java-initialize-hashmap
-
-		// Stream 사용 (Java8 이상)
+		System.out.println("\n다양한 Map initializer");
+		// 참고:  https://www.baeldung.com/java-initialize-hashmap
 		{
+			Map<String, String> map1;
+			Map<String, Integer> map2;
+
+			// Stream 사용 (Java8 이상)
 			// key, value 가 같은 타입이면
-			Map<String, String> map = Stream.of(new String[][] {
+			map1 = Stream.of(new String[][] {
 					{ "Hello", "World" },
 					{ "John", "Doe" },
 			}).collect(Collectors.toMap(data -> data[0], data -> data[1]));
-			System.out.println(map);
+			System.out.println(map1);
 
 			// key, value 가 서로 다른 타입이라면 Object[][] 로 초기화 가능
 			// object 인 경우 형변환
-			Map<String, Integer> map2 = Stream.of(new Object[][] {
+			map2 = Stream.of(new Object[][] {
 					{ "data1", 1 },
 					{ "data2", 2 },
 			}).collect(Collectors.toMap(data -> (String) data[0], data -> (Integer) data[1]));
 			System.out.println(map2);
+
+			// Java9 방식
+			// Map.of( .. ) <= 최대 10개까지의 key, value 쌍 지정 가능
+			map1 = Map.of();
+			System.out.println(map1);
+
+			map1 = Map.of("key1", "value1");
+			System.out.println(map1);
+
+			map1 = Map.of("key1","value1", "key2", "value2");
+			System.out.println(map1);
+
+			// double-brace syntax 사용.
+			map1  = new HashMap<String, String>() {{
+				put("key1", "value1");
+				put("key2", "value2");
+			}};
+			System.out.println(map1); // {key1=value1, key2=value2}
+			// ↑ 그러나 위 방법은 가급적 비추함. 매번 내부적으로 익명 클래스를 생성하고,
+			//   이 생성객체에 hidden reference 가 발생하기 때문에  메모리 누수가 발생할수도 있다!
 		}
 
-		// Java9 방식
-		// Map.of( .. ) <= 최대 10개까지의 key, value 쌍 지정 가능
-		{
-			Map<String, String> emptyMap = Map.of();
-			Map<String, String> singletonMap = Map.of("key1", "value");
-			Map<String, String> map = Map.of("key1","value1", "key2", "value2");
-
-			System.out.println(emptyMap);
-			System.out.println(singletonMap);
-			System.out.println(map);
-		}
-
-		// double-brace syntax 사용.
-		Map<String, String> map  = new HashMap<String, String>() {{
-			put("key1", "value1");
-			put("key2", "value2");
-		}};
-		System.out.println(map); // {key1=value1, key2=value2}
-		// ↑ 그러나 위 방법은 가급적 비추함. 매번 내부적으로 익명 클래스를 생성하고,
-		//   이 생성객체에 hidden reference 가 발생하기 때문에  메모리 누수가 발생할수도 있다!
 
 		//-----------------------------------------------------------
 		// 도전과제
@@ -155,7 +158,7 @@ public class Collection10Main {
 
 	static void printFreq(int arr[]) {
 		// 발생빈도를 담을 Map<> 준비
-		// key : 등장 숫자
+		// key : 등장 데이터
 		// value : 등장 횟수
 		HashMap<Integer, Integer> hmap = new HashMap<Integer, Integer>();
 

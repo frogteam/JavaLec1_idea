@@ -20,7 +20,7 @@ public class Collection02Main {
 
 		
 		// String 타입을 저장할 수 있는 ArrayList 인스턴스 생성
-		List<String> list = new ArrayList<String>();
+		List<String> list = new ArrayList<>();
 		
 		// 데이터 저장: add()
 //		list.add("Java");

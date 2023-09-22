@@ -39,7 +39,6 @@ public class Collection03Main {
 
 		System.out.println(students);
 
-		// TODO
 		// 1학년과 3학년 출력하세요
 		System.out.println("\n1학년, 3학년 학생 출력");
 		{
@@ -50,7 +49,6 @@ public class Collection03Main {
 			}
 		}
 
-		// TODO
 		// 3학년 이상의 학생이 몇명인지 출력하세요
 		// 6명
 		System.out.println("\n3학년 이상 학생수");
@@ -62,13 +60,12 @@ public class Collection03Main {
 			System.out.println(cnt + "명");
 		}
 
-		// TODO
 		// 각 전공별로 학생이 몇명인지 출력해보세요
 		// 출력예시]
 		// SoftWare: 6
 		// Design: 2
 		// Theater: 1
-		// Advertisement: 1명
+		// Advertisement: 1
 
 		System.out.println("\n전공별 학생수");
 		{
@@ -82,25 +79,44 @@ public class Collection03Main {
 					case "Software":
 						softCnt++;
 						break;
+					case "Design":
+						designCnt++;
+						break;
+					case "Advertisement":
+						adCnt++;
+						break;
+					case "Theater":
+						theaterCnt++;
+						break;
 				}
 			}
 
+			System.out.println("Software: " + softCnt);
+			System.out.println("Design: " + designCnt);
+			System.out.println("Advertisement: " + adCnt);
+			System.out.println("Theater: " + theaterCnt);
+
 		}
 
-		// TODO
-		// 학점의 최댓값, 최솟값, 평균값 을 출력해보세요
+		// 평균의 최댓값, 최솟값 을 출력해보세요
 		//
 		// [출력예시]
 		// Max: 4.4
 		// Min: 1.8
-		// Avg: 3.28
+		System.out.println("\n평균 의 최댓값, 최솟값");
+		{
+			double max = 0, min = 100.0;
+			for(var stu : students){
+				Score score = stu.getScore();
+				double avg = (score.getEnglish() + score.getMath() + score.getKorean()) / 3.0;
+				System.out.println(avg);
+				if(max < avg) max = avg;
+				if(min > avg) min = avg;
+			}
+			System.out.printf("Max: %.1f\n", max);
+			System.out.printf("Min: %.1f\n", min);
+		}
 
-		// 삭제: remove()
-		students.remove(1);
-		System.out.println("삭제 후:");
-		for (int i = 0; i < students.size(); i++) {
-			System.out.println(students.get(i));
-		} // end for
 
 
 		System.out.println("\n프로그램 종료");

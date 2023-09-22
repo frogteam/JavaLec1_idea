@@ -141,6 +141,9 @@ public class Collection01Main {
 			list = Arrays.asList(new String[]{"반숙", "완숙"});
 			System.out.println(list);
 
+			list = Arrays.asList("반숙", "완숙");
+			System.out.println(list);
+
 			// List <- var args
 			list = Arrays.asList("부먹", "찍먹");
 			System.out.println(list);
@@ -151,11 +154,13 @@ public class Collection01Main {
 			System.out.println(list);
 
 			// Factory method (Java9 이상)
+			// ★ immutable list(unmodifiable list) 가 생성된다.
 			list = List.of("소금장", "기름장", "쌈장");
 			System.out.println(list);
 
 			// Double-brace initialization
-			// 비추
+			// 그러나 이 방법은 가급적 비추함. 매번 내부적으로 익명 클래스를 생성하고,
+			//   이 생성객체에 hidden reference 가 발생하기 때문에  메모리 누수가 발생할수도 있다!
 			list = new ArrayList() {{
 				add("New York");
 				add("Rio");
@@ -163,6 +168,13 @@ public class Collection01Main {
 			}};
 			System.out.println(list);
 		}
+
+		//-----------------------------------------------
+		// 제네릭은 공변성이 없다. (아래는 에러다)
+		// ArrayList<Object> Covariance = new ArrayList<Integer>();
+		// ArrayList<Integer> Contravariance = new ArrayList<Object>();
+
+		// ArrayList<Object> arr = new ArrayList<Integer>();
 
 		System.out.println("\n프로그램 종료");
 	} // end main

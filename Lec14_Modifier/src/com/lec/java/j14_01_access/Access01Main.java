@@ -53,7 +53,7 @@ public class Access01Main {
 //		t1.publicMethod();
 
 		
-		// 다른 패키지(com.lec.java.access02)에 있는 클래스
+		// 다른 패키지 에 있는 클래스
 		// 일단 다른 패키지 라면 import 부터 선행되어야 한다
 		Test02 t2 = new Test02();
 		

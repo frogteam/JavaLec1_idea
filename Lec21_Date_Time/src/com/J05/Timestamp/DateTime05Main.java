@@ -13,7 +13,12 @@ import java.util.Date;
 
 /**
  * 시간, 날짜 객체 다룰때
- *   java.time.*  ↔ String ↔ Timestamp 간의 데이터 변환 작업은 빈번히 발생한다.
+ *
+ *         java.time.*
+ *        ↙↗      ↘↖
+ *   Timestamp  ↔  String
+ *
+ *   위 데이터간 변환 작업은 빈번히 발생한다.
  *   관련 변환 메소드들을 잘 활용하세요
  */
 

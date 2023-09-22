@@ -1,7 +1,8 @@
 package com.J05.HashSet;
 
-import java.util.HashSet;
-import java.util.Iterator;
+import java.util.*;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 /* Set, HashSet<E>
 
@@ -26,7 +27,7 @@ public class Collection05Main {
 		System.out.println("HashSet 클래스");
 		
 		// Integer 타입을 저장할 수 있는 HashSet 인스턴스 생성
-		HashSet<Integer> hset = new HashSet<Integer>();
+		Set<Integer> hset = new HashSet<Integer>();
 		
 		// 데이터 저장: add()
 		hset.add(100);    // <-- Integer.valueOf(100)
@@ -95,6 +96,45 @@ public class Collection05Main {
 		// toString() 제공됨
 		System.out.println();
 		System.out.println(hset);
+
+		System.out.println("\n다양한 Set initializer");
+		// 참고: https://www.baeldung.com/java-initialize-hashset
+		//      https://stackoverflow.com/questions/2041778/how-to-initialize-hashset-values-by-construction
+		{
+			Set<String> set = new HashSet<>();
+
+			// List, 배열로부터 생성
+			set = new HashSet<>(Arrays.asList("a", "a", "b"));
+			System.out.println(set);
+
+			// Collections utility 클래스 하용
+			Collections.addAll(set, "a", "a", "b");
+			System.out.println(set);
+
+			// Stream 사용 (Java8 이상)
+			set = Stream.of("a", "a", "b")
+					.collect(Collectors.toCollection(HashSet::new));
+					//.collect(Collectors.toSet());  // 가능
+			System.out.println(set);
+
+			// Factory method (Java9 이상)
+			set = Set.of("a", "b");  // 중복된 값 불가.
+			System.out.println(set);
+
+			// Double-brace initialization
+			// 비추
+			set = new HashSet<String>(){{
+				add("a");
+				add("a");
+				add("b");
+			}};
+			System.out.println(set);
+
+			// 그밖에도 guava 라는 3rd party 라이브러리도 활용할수 있다
+			// https://guava.dev/releases/22.0/api/docs/com/google/common/collect/Sets.html#newHashSet--
+			// Sets.newHashSet("a", "b", "c")
+		}
+
 		
 		System.out.println("\n프로그램 종료");
 	} // end main()

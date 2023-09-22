@@ -17,7 +17,7 @@ public class PriorityQueueMain {
 
 	public static void main(String[] args) {
 
-		System.out.println("PriotiryQueue<>");
+		System.out.println("PriorityQueue<>");
 		
 		// Comparator 적용전
 		PriorityQueue<Integer> pq = new PriorityQueue<Integer>();

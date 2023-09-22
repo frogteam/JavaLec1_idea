@@ -1,35 +1,62 @@
 package com.J03.Generic메소드;
 
 /* Generic메소드
- *   <T, R> R Method (T t)
+ *
+ *   제네릭 메소드는 메소드의 선언부에 적은 타입 파라미터로
+ *    '리턴 타입' 이나 '파라미터 타입'이 정해지는 메소드
+ *
  *   <타입파라미터..> 리턴타입 메소드명(매개변수) {...}
+ *
+ *   Ex)
+ *    <T, R> R MethodName (T t)
+ *
  */
 
-// 참조: https://futurecreator.github.io/2018/08/12/java-generics/
-//      와일드 카드 <?>   
-//		upper-bounded <? extends Number>
-//		lower-bounded <? super Integer> 
-//		generic 사용 <? extends T>
-//		generic 인터페이스
 
 public class Generic03Main {
 
 	public static void main(String[] args) {
 		System.out.println("Generic 메소드");
-		
-		// TODO
+
+		test1(123);
+		test1(123.);
+		test1(123.f);
+		test1("123");
+
+		System.out.println();
+		System.out.println(test2(123).getClass());
+		System.out.println(test2(123.).getClass());
+		System.out.println(test2(123.f).getClass());
+		System.out.println(test2("123").getClass());
+
+
+		Box<String> sBox = boxing("Apple");
+		System.out.println(sBox.data);
+
+		Box<Integer> nBox = boxing(34);
+		System.out.println(nBox.data);
 		
 		System.out.println("\n프로그램 종료");
 
 	} // end main()
-	
-	// ※ 우선 아래 Box<K> 부터 생성
+
+	// static 메소드는 generic 사용 가능.
+	public static <T> void  test1(T param){
+		System.out.println(param + " : " + param.getClass());
+	}
+
+	public static <T> T test2(T param){
+		return param;
+	}
+
+
+	// ※ 우선 아래 class Box<K> 부터 생성
 	public static <T> Box<T> boxing(T t){
-		Box<T> box = new Box<T>();
+		Box<T> box = new Box<>();
 		box.setData(t);
 		return box;
 	} // end boxing()
-	
+
 
 } // end class
 
