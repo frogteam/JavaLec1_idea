@@ -2,24 +2,19 @@ package com.J03.reduce;
 
 import common.Customer;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 import java.util.function.BinaryOperator;
 
-/* reduce() 연산
+/** reduce() 연산
  * 
- *  전달된 스트림의 데이터를 2개를 소모하며 주어진 '연산' 수행
- *  주어진 연산은 결괏값 1개 리턴
- *  
- * 	reduce(초깃값, (전달된 스트림의 데이터) -> 연산기능)
- * 				  ↑
- * 				  직접 구현하든지,
- * 				  BinaryOperator 를 구현한 클래스
- * 
- *  기존의 주어진 연산 (count, sum 등..) 이 아닌 연산을 Stream 에 수행할때 필요
+ *  전달된 스트림의 데이터에서
+ *  '2개'를 소모하며 결괏값 '1개' 리턴하며 reduce 되는 '연산' 을 반복 수행 → BinaryOperator
+ *  최종적으로 한개 까지 reduce 되면 리턴한다.  리턴값은 Optional<T> 객체
  *
- *  리턴값은 Optional 객체
+ *  reduce(BinaryOperator<T>)
+ * 	reduce(초깃값, BinaryOperator<T>)
+ *
+ *  기존의 주어진 연산 (count, sum 등..) 이 아닌 연산을 Stream 에 수행할때 필요
  *
  * ※ 데이터 연산 3대장
  *  	map : n -> n
@@ -54,6 +49,7 @@ public class Stream03Main {
 		int [] arr = {1, 2, 3, 4, 5};
 
 		// 초깃값을 안 준 경우
+		// 리턴값은 Optional
 		System.out.println(Arrays.stream(arr)
 				.reduce((a, b) -> a + b));  // 초깃값이 없는 경우 OptionalInt 리턴
 
@@ -77,7 +73,7 @@ public class Stream03Main {
 		// 리턴타입은 초깃값 타입!
 		System.out.println(Arrays.stream(arr)
 				.reduce(100, (a, b) -> a + b)
-		);  // 결과 15
+		);  // 결과 115
 
 
 		// 100, 1, 2, 3, 4, 5
@@ -95,6 +91,7 @@ public class Stream03Main {
 
 		result = Arrays.stream(greetings)
 				.reduce("", (s1, s2) -> {
+					// System.out.println("s1:" + s1 + ", s2:" + s2);  // reduce 중간과정
 					return (s1.length() >= s2.length()) ? s1 : s2;
 				})
 		;
@@ -160,6 +157,16 @@ public class Stream03Main {
 		}
 		 */
 
+		// 빈도수 (작성중)
+		{
+			String[] arr2 = {"a", "a", "b", "a", "c", "c", "c"};
+//			Arrays.stream(arr2)
+//					.reduce(new HashMap<String, Integer>()
+//							, (map, str) -> {
+//
+//							});
+//			참조: https://johngrib.github.io/wiki/java/stream/  <- Java reduce 에선
+		}
 
 		System.out.println("\n프로그램 종료");
 	} // end main()

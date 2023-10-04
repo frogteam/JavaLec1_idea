@@ -20,6 +20,7 @@ public class Wrapper03Main {
 		obj[3] = Method1(new B());		
 		obj[4] = Method1(123);  // primitive type 도 받을 수 있다!
 					// ↑ Auto-Boxing + Polymorphism(다형성)
+					//  Integer <- Integer.valueOf() <- 123
 		
 		// 각각 출력해보면, Wrapper는 자동적으로 Auto-Unboxing 발생
 		for(var elm: obj) {

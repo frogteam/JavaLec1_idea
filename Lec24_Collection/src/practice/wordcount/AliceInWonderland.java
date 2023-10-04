@@ -103,20 +103,20 @@ public class AliceInWonderland {
 		} // end for
 		
 		// 발생빈도 방법2 : 정규표현식을 사용한다면 아래와 같이도 가능.
-		hmap = new HashMap<String, Integer>();
-		Matcher wordMatcher = Pattern.compile("[a-zA-Z]{2,}").matcher(C.ALICE30.toLowerCase());
-		
-		while(wordMatcher.find()) {
-			String word = wordMatcher.group();
-			
-			Integer occur = hmap.get(word);
-			
-			if(occur == null) {
-				hmap.put(word, 1);
-			}else {
-				hmap.put(word, occur + 1);			
-			} // end if
-		}// end while
+//		hmap = new HashMap<String, Integer>();
+//		Matcher wordMatcher = Pattern.compile("[a-zA-Z]{2,}").matcher(C.ALICE30.toLowerCase());
+//
+//		while(wordMatcher.find()) {
+//			String word = wordMatcher.group();
+//
+//			Integer occur = hmap.get(word);
+//
+//			if(occur == null) {
+//				hmap.put(word, 1);
+//			}else {
+//				hmap.put(word, occur + 1);
+//			} // end if
+//		}// end while
 		
 		
 		// 결과 출력

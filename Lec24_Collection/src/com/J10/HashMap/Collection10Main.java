@@ -40,6 +40,7 @@ public class Collection10Main {
 		System.out.println("put 결과: " + hmap.put(1, "최진형"));
 		System.out.println("put 결과: " + hmap.put(2, "최민영"));
 		System.out.println("put 결과: " + hmap.put(3, "조은이"));
+		System.out.println("put 결과: " + hmap.put(4, "곽지은"));
 		System.out.println("put 결과: " + hmap.put(1, "정은선"));
 		// 기존에 없던 key 값으로 put 하면 null 리턴하고
 		// 같은 키 값으로 데이터를 put하게 되면, 기존 값이 수정(replace)되고 기존 값을 리턴함
@@ -47,7 +48,6 @@ public class Collection10Main {
 
 		// 저장된 데이터 개수 확인 : size()
 		System.out.println("데이터 개수: " + hmap.size());
-
 		System.out.println();
 
 		// 데이터 읽기
@@ -56,9 +56,16 @@ public class Collection10Main {
 		System.out.println(hmap.get(1));
 		System.out.println(hmap.get(5)); // 없는 key 값에 대해선, null 리턴
 
+		// getOrDefault(key, default)  
+		// 없는 key 값에 대해 default 값 리턴
+		System.out.println();
+		System.out.println(hmap.getOrDefault(1, "고질라"));
+		System.out.println(hmap.getOrDefault(5, "고질라"));
+
 		// 데이터 삭제
 		// remove(key) : 삭제된 value 리턴
 		// 없는 key 삭제하면 null 리턴
+		System.out.println();
 		System.out.println("삭제 : " + hmap.remove(2));
 		System.out.println("삭제 : " + hmap.remove(2)); // null
 
@@ -82,17 +89,18 @@ public class Collection10Main {
 		System.out.println();
 
 		// 방법2 : Map.Entry 사용
-		// entrySet() 은 Set<Entry<Integer, String>> 리턴함
+		// entrySet() 은 Set<Map.Entry<K, V>> 리턴함
 		for(Map.Entry<Integer, String> entry : hmap.entrySet()) {
 			System.out.println(entry.getKey() + ":" + entry.getValue());
 		}
 
-		//for(var entry : hmap){}
+		//for(var entry : hmap){}  // 불가
 
 		// 방법3 : toString()
 		System.out.println(hmap);
 
 		System.out.println();
+
 
 		//-----------------------------------------------------------
 		// HashMap 을 초기화 하는 다양한 방법들
@@ -164,12 +172,22 @@ public class Collection10Main {
 
 		// 발생빈도 작성
 		for (int i = 0; i < arr.length; i++) {
-			Integer v = hmap.get(arr[i]);  // arr[i] 가 key
+			// ▶ 방법1 : get() 사용
+			{
+				Integer count = hmap.get(arr[i]);  // arr[i] 가 key
 
-			if(v == null)  // 기존에 해당 key값이 없었다면 (즉, 첫 등장이면)
-				hmap.put(arr[i], 1);  // 등장 회수 1
-			else            // 기존에 key 값이 존재했던 (즉, 이전에 1번이상 등장했었다)
-				hmap.put(arr[i],  v + 1);  // 기존 등장회수(v) 에 +1증가.
+				if (count == null)  // 기존에 해당 key값이 없었다면 (즉, 첫 등장이면)
+					hmap.put(arr[i], 1);  // 등장 회수 1
+				else            // 기존에 key 값이 존재했던 (즉, 이전에 1번이상 등장했었다)
+					hmap.put(arr[i], count + 1);  // 기존 등장회수(v) 에 +1증가.
+			}
+
+			// ▶ 방법2 :  getOrDefault() 사용
+//			{
+//				Integer count = hmap.getOrDefault(arr[i], 0);
+//				hmap.put(arr[i], count + 1);
+//			}
+
 		} // end for
 
 		// 결과 출력

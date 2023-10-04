@@ -1,5 +1,9 @@
 package com.J14.Collection간변환;
 
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
+
 /* 컬렉션 간의 변환
  * 
  * List, Set --> 배열
@@ -16,8 +20,18 @@ package com.J14.Collection간변환;
 public class Collection14Main {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 
-	}
+		System.out.println("[Collection to Arrays]");
+		// list to array
+		int[] arr = {1, 2, 3};
+		List<Integer> list;
 
-}
+		System.out.println(Arrays.toString(arr));
+
+		Arrays.asList();
+		//Arrays.stream(arr).collect(Collectors.toList());
+		System.out.println();
+
+	} // end main()
+
+} // end class

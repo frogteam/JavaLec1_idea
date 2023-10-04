@@ -34,17 +34,17 @@ public class Collection08Main {
 		// 데이터 검색 - Iterator 사용
 		// TreeSet인 경우에 iterator() 메소드 오름차순 정렬
 		System.out.println("오름차순:");
-		Iterator<Integer> iterator = tset.iterator();
-		while (iterator.hasNext()) {
-			System.out.println(iterator.next());
+		Iterator<Integer> itr = tset.iterator();
+		while (itr.hasNext()) {
+			System.out.println(itr.next());
 		}
 		
 		System.out.println();
 		System.out.println("내림차순:");
 		// 내림차순 Iterator : descendingIterator() 사용
-		Iterator<Integer> iterator2 = tset.descendingIterator();
-		while (iterator2.hasNext()) {
-			System.out.println(iterator2.next());
+		itr = tset.descendingIterator();
+		while (itr.hasNext()) {
+			System.out.println(itr.next());
 		}
 		
 		// enhanced for

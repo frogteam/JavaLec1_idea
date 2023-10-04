@@ -57,9 +57,9 @@ public class Optional03Main {
 		System.out.println(optAddr1.isEmpty());   // false
 		System.out.println(optAddr1.isPresent()); // true
 
-		optAddr1.ifPresent(s-> System.out.println("주소" + s));
+		optAddr1.ifPresent(s-> System.out.println("주소:" + s));
 		System.out.println(optAddr1.get());
-//		System.out.println(optAddr2.get());  // NPE 발생
+//		System.out.println(optAddr2.get());  // NoSuchElementException 발생
 
 		System.out.println(optAddr1.orElse(new Address("UNKNOWN")));  // orElse(T)
 		System.out.println(optAddr2.orElse(new Address("UNKNOWN")));

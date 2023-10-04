@@ -71,7 +71,7 @@ public class DateTime04Main {
                 datetime1.format(DateTimeFormatter.ofPattern("yyyy-MM-dd a hh:mm:ss")),
 
                 // String -> LocalDate
-                "\n[String → LocalDate ] LocalDate.parse(), DateTiomeFormatter 사용",
+                "\n[String → LocalDate ] LocalDate.parse(), DateTimeFormatter 사용",
                 LocalDate.parse("2023-04-05", DateTimeFormatter.ofPattern("yyyy-MM-dd")),
         };
         for (var d : arr) System.out.println(d);

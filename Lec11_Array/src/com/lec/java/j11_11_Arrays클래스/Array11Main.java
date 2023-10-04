@@ -49,7 +49,7 @@ public class Array11Main {
 //		int[] arr6 = Arrays.copyOfRange(arr, 10, 20);   // 시작index 벗어나면  ArrayIndexOutOfBoundsException
 //		System.out.println(Arrays.toString(arr6));
 		
-		// Arrays.fill(배열, from, to)) 
+		// Arrays.fill(배열, val))
 		System.out.println("\nArrays.fill()");
 		int[] arr6 = new int[4];
 		Arrays.fill(arr6, 8);   // 죄다 8로 채움
@@ -72,7 +72,8 @@ public class Array11Main {
 		int[] arr8 = {10, 20, 30};
 		int[] arr9 = {10, 20, 30};
 		int[] arr10 = {10, 30, 20};
-		System.out.println(Arrays.equals(arr8, arr9));
+		System.out.println(Arrays.equals(arr8, arr9));  // true
+		System.out.println(arr8.equals(arr9));  // false.
 		System.out.println(Arrays.equals(arr8, arr10));
 		
 		

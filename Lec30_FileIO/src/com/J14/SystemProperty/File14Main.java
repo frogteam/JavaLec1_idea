@@ -58,8 +58,14 @@ public class File14Main {
         System.setProperty("db", "mydatabase");
         System.out.println(System.getProperty("db"));
 
-//        System.out.println(System.getProperty("username"));
-//        System.out.println(System.getProperty("password"));
+        System.out.println(System.getProperty("username"));
+        System.out.println(System.getProperty("password"));
+/*
+ex) java 명령에서 -D 옵션을 주면 실행할때 시스템 property 줄수 있다.
+IntelliJ 의 경우
+{Project}\out\production\Lec30_FileIO> java -Dusername="hello" com.J14.SystemProper
+ty.File14Main
+*/
 
 		System.out.println();
 		// current working directory

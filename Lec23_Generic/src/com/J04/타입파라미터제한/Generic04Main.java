@@ -14,31 +14,31 @@ import java.util.ArrayList;
 //      https://inpa.tistory.com/entry/JAVA-%E2%98%95-%EC%A0%9C%EB%84%A4%EB%A6%AD-%EC%99%80%EC%9D%BC%EB%93%9C-%EC%B9%B4%EB%93%9C-extends-super-T-%EC%99%84%EB%B2%BD-%EC%9D%B4%ED%95%B4
 public class Generic04Main {
     public static void main(String[] args) {
+        System.out.println("\n타입 파라미터 제한");
+
         // test1(new A());
         test1(new B());
         test1(new C());
         test1(new D());
 
-        test2(new Box<A>(new A()));
-        test2(new Box<B>(new B()));
-        test2(new Box<C>(new C()));
-        test2(new Box<D>(new D()));
+        System.out.println();
+        test2(new Box<A>());
+        test2(new Box<B>());
+        test2(new Box<C>());
+        test2(new Box<D>());
 
-        //test3(new Box<A>(new A()));  // 에러
-        test3(new Box<B>(new B()));
-        test3(new Box<C>(new C()));
-        test3(new Box<D>(new D()));
+        System.out.println();
+        //test3(new Box<A>());
+        test3(new Box<B>());
+        test3(new Box<C>());
+        test3(new Box<D>());
 
-        test4(new Box<A>(new A()));
-        test4(new Box<B>(new B()));
-        test4(new Box<C>(new C()));
-        // test2(new Box<D>(new D()));  // 에러
+        System.out.println();
+        test4(new Box<A>());
+        test4(new Box<B>());
+        test4(new Box<C>());
+        //test4(new Box<D>());
 
-        // ↓보류
-        test5(new Box<A>(new A()));
-        test5(new Box<B>(new B()));
-        test5(new Box<C>(new C()));
-        test5(new Box<D>(new D()));
 
         // -----------------------------
         // 제네릭은 공변성(covariance) 이 없다
@@ -58,29 +58,22 @@ public class Generic04Main {
         // boxA = boxB;  // 불가
 
         //ArrayList<Object> Covariance = new ArrayList<Integer>();
-    }
+        System.out.println("\n프로그램 종료");
+    } // end main()
 
     public static <T extends B> void test1(T param){
         System.out.println(param.getClass());
     }
 
-    public static void test2(Box<?> box){
-        System.out.println("test2 box.value : " + box.value.getClass());
-    }
-
-    public static void test3(Box<? extends B> box){
-        System.out.println("test3 box.value : " + box.value.getClass());
-    }
-
-    public static void test4(Box<? super C> box){
-        System.out.println("test4 box.value : " + box.value.getClass());
-    }
+    public static void test2(Box<?> box){}
+    public static void test3(Box<? extends B> box){}
+    public static void test4(Box<? super C> box){}
 
     // ↓보류
     public static <T> void test5(Box<? extends T> box){
 
     }
-}
+} //end class
 
 
 class A {}
@@ -89,9 +82,9 @@ class C extends B{}
 class D extends C{}
 
 class Box<T>{
-    T value;
-    Box(){}
-    Box(T value){
-        this.value = value;
-    }
+//    T value;
+//    Box(){}
+//    Box(T value){
+//        this.value = value;
+//    }
 }

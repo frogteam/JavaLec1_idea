@@ -157,6 +157,7 @@ public class Collection01Main {
 			// ★ immutable list(unmodifiable list) 가 생성된다.
 			list = List.of("소금장", "기름장", "쌈장");
 			System.out.println(list);
+			//list.add("된장");  //  불가
 
 			// Double-brace initialization
 			// 그러나 이 방법은 가급적 비추함. 매번 내부적으로 익명 클래스를 생성하고,

@@ -35,7 +35,7 @@ public class Person {
 
 
 interface MyReadable {
-	public abstract void readInfo();
+	void readInfo();
 } // end interface Readable
 
 

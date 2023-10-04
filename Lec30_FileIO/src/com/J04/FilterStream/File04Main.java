@@ -80,6 +80,7 @@ public class File04Main {
 			e.printStackTrace();
 		} finally {
 			try {
+				// filter stream 을 close() 하면 장착된 Input/Output Stream 도 함께 close() 됨.
 				if (bin != null) {
 					bin.close();
 				} // end if

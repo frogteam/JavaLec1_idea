@@ -58,18 +58,22 @@ public class Stream01Main {
 		Set<Integer> integerSet = Set.of(10, 20, 30);     // Set<Integer>
 		Map<String, Integer> person = Map.of("zayson", 28, "chaeyoung", 26);
 
+
+		// 배열의 스트림 생성
 		// Arrays.stream(int[]) => IntStream 생성
 		IntStream stream1 = Arrays.stream(intArr);   // 배열의 스트림 생성
 		//IntStream stream2 = intList.stream();   // 이건 에러인데..
 		DoubleStream stream2 = Arrays.stream(doubleArr);
 
-		Stream<String> stringStream = stringList.stream();  // 리스트의 스트림 생성
+		// 컬렉션 의 스트림 생성
+		Stream<String> stringStream = stringList.stream();  // Collection 의 Stream 생성
 		Stream<Integer> intStream = intList.stream();
 
-		// toString() 은 따로 없다..
+		// toString() 이 딱히...  볼수 있는 형태로 제공되지 않는다.
 		System.out.println(stream1);  // java.util.stream.IntPipeline$Head@4eec7777
 		System.out.println(stringStream); // java.util.stream.ReferencePipeline$Head@3b07d329
 
+		// Map 의 Entry 들의 Stream
 		Stream<Map.Entry<String, Integer>> entryStream = person.entrySet().stream(); // 맵의 EntrySet 스트림 생성
 
 		Stream<Integer> stream = integerSet.stream();   // Set 의 스트림 생성 ->  Integer이므로 Integer 스트림 생성

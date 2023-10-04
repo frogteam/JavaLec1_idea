@@ -101,7 +101,7 @@ public class File12Main {
 				bw.write(buf, 0, charsRead);
 				charsCopied += charsRead;
 			}
-			bw.flush();
+			bw.flush(); // ★
 			
 			endTime = System.currentTimeMillis(); // 끝난 시간 저장
 			elapsedTime = endTime - startTime; // 경과 시간

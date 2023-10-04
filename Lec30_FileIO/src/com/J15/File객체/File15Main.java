@@ -45,6 +45,7 @@ public class File15Main {
 //		File tempDir = new File(tempDirPath); // 절대경로 이용 파일 생성
 		
 		File[] list2 = tempDir.listFiles();
+		//list2.stream
 		for (File f : list2) {
 			if (f.isFile()) {
 				System.out.print("FILE" + "\t");

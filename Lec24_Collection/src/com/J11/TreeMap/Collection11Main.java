@@ -51,9 +51,9 @@ public class Collection11Main {
 		// key 역순 출력
 		// TreeMap에만 있는 KeySet을 만들어 내는 메소드
 		NavigableSet<Integer> navi = tmap.navigableKeySet();
-		Iterator<Integer> itr2 = navi.descendingIterator();
-		while (itr2.hasNext()) {
-			int key = itr2.next();
+		itr = navi.descendingIterator();
+		while (itr.hasNext()) {
+			int key = itr.next();
 			System.out.println(key + ":" + tmap.get(key));
 		}
 		

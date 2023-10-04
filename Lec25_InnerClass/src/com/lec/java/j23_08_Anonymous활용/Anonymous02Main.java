@@ -87,7 +87,7 @@ interface Calculable {
   자바에서 제공하는 대표적으로 많이 사용하는 이러한 인터페이스들.
   Serializable, Cloneable, Readable, Appendable, Closeable,  
   AutoCloseable, Observable, Iterable, Comparable, Runnable,
-  Callable, Repeatable, 
+  Callable, Repeatable,  ...
  */
 
 class TestMyMath implements Calculable {

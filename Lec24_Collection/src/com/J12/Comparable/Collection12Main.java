@@ -71,7 +71,7 @@ public class Collection12Main {
 		list3.add(new Student("James", 80));		
 		list3.add(new Student("Kevin", 30));
 		
-		System.out.println(list3.toString());  
+		System.out.println(list3);
 		
 		System.out.println("Comparable 구현, sort() 적용");
 		Collections.sort(list3);  //Student 에 Comparable 이 구현안되어 있으면 sort() 가 에러 난다
@@ -94,9 +94,9 @@ public class Collection12Main {
 		// Comparator 인터페이스의 compare 메소드를 오버라이드 하면 됩니다.
 		System.out.println("Comparator<> 적용");
 		Collections.sort(list3, new Asc());  // '이름' 오름차순
-		System.out.println(list3.toString());
+		System.out.println(list3);
 		Collections.sort(list3, new Desc()); // '이름' 내림차순
-		System.out.println(list3.toString());
+		System.out.println(list3);
 		
 		// Collections 에서 많이 쓰이는 인터페이스임
 		// Comparable<> 은 클래스 자체에 구현하는 인터페이스  compareTo(자기사진 vs 매개변수)
@@ -190,7 +190,7 @@ class Student implements Comparable<Student>{
 //		return this.name.compareTo(o.name);
 
 		// 이름(name) 내림차순
-//		return -this.name.compareTo(o.name);		
+//		return o.name.compareTo(this.name);
 	}
 	
 } // end class
@@ -198,6 +198,10 @@ class Student implements Comparable<Student>{
 
 class Asc implements Comparator<Student>{
 
+	// 두개의 객체를 비교
+	// o1 이 o2 보다 우선순위 낮으면 음수 리턴
+	// o1 이 o2 보다 우선순위 높으면 양수 리턴
+	// o1 과 o2 가 같으면 0 리턴
 	@Override
 	public int compare(Student o1, Student o2) {
 //		if(o1.point < o2.point) return -1;

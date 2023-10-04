@@ -44,11 +44,20 @@ public class Stream04Main {
         customerList.stream().map(c->c.getName()).forEach(System.out::println);
 
         System.out.println("== 총 여행비용 출력 ==");
+        /**
+         * [출력]
+         * 총 여행 비용은 :250입니다
+         */
         int total = 0;
         total = customerList.stream().mapToInt(c->c.getPrice()).sum();
         System.out.println("총 여행 비용은 :" + total + "입니다");
 
         System.out.println("== 20세 이상 고객 '이름'을 정렬하여 출력 ==");
+        /**
+         * [출력]
+         * 김유신
+         * 이순신
+         */
         customerList.stream().filter(c->c.getAge() >= 20).map(c->c.getName()).sorted().forEach(s->System.out.println(s));
 
         System.out.println("\n프로그램 종료");

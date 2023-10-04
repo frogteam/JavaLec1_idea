@@ -1,5 +1,7 @@
 package com.J05.HashSet;
 
+import dataset.Score;
+
 import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -135,14 +137,56 @@ public class Collection05Main {
 			// Sets.newHashSet("a", "b", "c")
 		}
 
-		
+		// HashSet에서 값을 찾을 때에는 이미 존재하는 요소인지 파악하기 위해서 아래와 같은 과정을 거치게 된다.
+		// 검색할 값의 hashCode() 메소드를 호출해 반환된 해시값으로 검색 범위를 결정한다.
+		// 해당 범위의 요소를 equals() 메소드로 비교한다. (Array Index에 있는 Linked List들과 값을 비교)
+		// 참고: https://2ssue.github.io/base/study-about-set/
+
+		System.out.println();
+		{
+			Person p1 = new Person(1, 20, "Mike");
+			Person p2 = new Person(1, 20, "Mike");
+			Person p3 = new Person(3, 20, "Susan");
+
+			HashSet<Person> scoreSet = new HashSet<>();
+			scoreSet.add(p1);
+			scoreSet.add(p2);
+			scoreSet.add(p3);
+
+			// 과연?
+			System.out.println(scoreSet.size());
+		}
+
+
+
 		System.out.println("\n프로그램 종료");
 	} // end main()
 
 } // end class
 
+class Person {
+	int id;
+	int age;
+	String name;
 
+	public Person(int id, int age, String name) {
+		this.id = id;
+		this.age = age;
+		this.name = name;
+	}
 
+	/*
+	@Override
+	public int hashCode() {
+		return id * age;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		return this.id == ((Person)obj).id;
+	}
+	 */
+}
 
 
 

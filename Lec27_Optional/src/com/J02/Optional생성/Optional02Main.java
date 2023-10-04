@@ -66,8 +66,8 @@ public class Optional02Main {
 		OptionalLong optLong = OptionalLong.of(1234L);
 		OptionalDouble optDouble = OptionalDouble.of(3.14);
 
-		System.out.println(optInteger.get());   // unboxing 발생
-		System.out.println(optInt.getAsInt());  // unboxing 발생 안함
+		System.out.println(optInteger.get() + 0);   // unboxing 발생
+		System.out.println(optInt.getAsInt() + 0);  // unboxing 발생 안함
 		System.out.println(optDouble.getAsDouble());
 		System.out.println(optLong.getAsLong());
 

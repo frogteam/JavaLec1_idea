@@ -58,6 +58,9 @@ public class File09Main {
 			for(var m : list) {
 				m.displayInfo();
 			}
+
+			//list.forEach( m -> m.displayInfo() );
+			//list.forEach(Member::displayInfo);
 			
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();

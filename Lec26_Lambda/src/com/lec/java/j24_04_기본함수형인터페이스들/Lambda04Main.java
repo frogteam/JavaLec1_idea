@@ -47,7 +47,7 @@ public class Lambda04Main {
 
         // Runnable
         {
-            Runnable r = () -> System.out.println("hello functional");
+            Runnable r = () -> System.out.println("hello runnable");
             r.run();
         }
 
@@ -118,7 +118,7 @@ public class Lambda04Main {
         {
             Comparator<String> c = (str1, str2) -> str1.compareTo(str2);
             int result = c.compare("aaa", "bbb");
-            System.out.println(result);
+            System.out.println(result);  // -1
         }
 
     } // end main

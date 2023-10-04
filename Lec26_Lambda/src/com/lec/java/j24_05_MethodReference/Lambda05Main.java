@@ -24,13 +24,33 @@ package com.lec.java.j24_05_MethodReference;
  */
 
 
+import java.util.Arrays;
+import java.util.List;
 import java.util.function.*;
 
 
 public class Lambda05Main {
     public static void main(String[] args) {
 
-        System.out.println("Static method reference");
+        {
+            List<String> list = Arrays.asList("이승호", "허지우", "권희수");
+
+            // 1.익명클래스 사용
+            list.forEach(new Consumer<String>() {
+                @Override
+                public void accept(String s) {
+                    System.out.println(s);
+                }
+            });
+
+            // 2. 람다 사용
+            list.forEach(s -> System.out.println(s));
+
+            // 3. 메소드레퍼런스 사용
+            list.forEach(System.out::println);
+        }
+
+        System.out.println("-".repeat(30) + "\n▶ Static method reference");
         {
             Function<String, Integer> f = str -> Integer.parseInt(str);  // 메소드호출 1회로 끝나는 람다표현식
 
@@ -53,7 +73,7 @@ public class Lambda05Main {
             c.accept("hello method reference");
         }
 
-        System.out.println("\nInstance method reference");
+        System.out.println("-".repeat(30) + "\n▶ Instance method reference");
         {
             Function<String, Boolean> f = str -> str.isEmpty(); // 메소드호출 1회로 끝나는 람다표현식
 
@@ -86,26 +106,27 @@ public class Lambda05Main {
             System.out.println(result);
         }
 
-        System.out.println("\nConstructor method reference");
+        System.out.println("-".repeat(30) + "\n▶ Constructor method reference");
         {
-            Supplier<String> s = () -> "";
+            Supplier<String> s = () -> new String();
 
             // 생성자 메소드 레퍼런스 사용
-            s = String::new;
+            s = String::new; // () -> new String();
 
             String result = s.get();
             System.out.println("결과 [" + result + "]");
         }
 
-        System.out.println("\nOuter Object method reference");
+        System.out.println("-".repeat(30) + "\n▶ Outer Object method reference");
         {
             String str = "hello";
+            //str = "헉";  // 에러다
             Predicate<String> p; 
             p = s -> str.equals(s);  // 외부 캡쳐링 (람다 내부에서 외부 인스턴스 참조)
 
             // 외부인스턴스 str 을 사용한 메소드 레퍼런스
             p = str::equals;
-            
+            //str = "hhh";   // 요렇게 하믄 에러난다 effective final!!
             boolean result = p.test("hello");
             System.out.println(result);
         }

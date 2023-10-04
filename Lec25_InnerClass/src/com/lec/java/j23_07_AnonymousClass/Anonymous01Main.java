@@ -69,7 +69,7 @@ public class Anonymous01Main {
 
 			@Override
 			int methodA(int c) {
-				return a + b + c + d;
+				return super.methodA(c) + d;
 			}
 			
 		}.methodA(30));
@@ -81,11 +81,11 @@ public class Anonymous01Main {
 		int result = new MyAbstract() {
 
 			@Override
-			int methodA(int a) {
-				return a + n + d + k;
+			int methodB(int a) {
+				return a + n + m + k;
 			}
 			
-		}.methodA(100);
+		}.methodB(100);
 		System.out.println("result = " + result);
 
 		System.out.println("\n프로그램 종료");
@@ -102,9 +102,9 @@ public class Anonymous01Main {
 
 abstract class MyAbstract{
 	int n = 10;
-	int d = 2;
+	int m = 2;
 	
-	abstract int methodA(int a);
+	abstract int methodB(int a);
 } // end class
 
 class MyClass {

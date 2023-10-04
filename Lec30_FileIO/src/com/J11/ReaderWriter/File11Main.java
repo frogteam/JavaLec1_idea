@@ -74,7 +74,7 @@ public class File11Main {
 
 			
 			fw.write(charArr);	// char[] 배열을 출력
-			fw.flush();   // write()로 출력 마무리 한후에는 flush() 메소드로 출력버퍼의 데이터를 완전히 출력.
+			fw.flush();   // Writer 로 출력 마무리 한후에는 flush() 메소드로 출력버퍼의 데이터를 완전히 출력.
 			
 			
 			// 읽기 read

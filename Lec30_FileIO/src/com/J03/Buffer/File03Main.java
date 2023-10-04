@@ -43,7 +43,7 @@ public class File03Main {
 				)
 		{
 			byte[] buff = new byte[1024];  // 버퍼 준비
-			int lengthRead = 0;  // 읽은 바이트수
+			int lengthRead = 0;  // 읽은 바이트 개수
 			int byteCopied = 0;
 			
 			long startTime = System.currentTimeMillis();

@@ -27,6 +27,8 @@ public class Generic02Main {
 		Test<Integer, String> t1 = 
 				new Test<>(123, "Hello, Java!");
 		t1.display();
+
+		Test t5 = new Test(10, "hhh");
 		
 		// TODO
 		// 정수값과 실수값을 건네받은 Test<T,U> 객체 생성

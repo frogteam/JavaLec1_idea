@@ -66,14 +66,34 @@ public class Lambda01Main {
 		Addable myAdder3 =  (a, b) -> a + b;
 		result = myAdder3.add(1.11, 2.22);
 		System.out.println("result = " + result);
-		
+
+		//------------------------------------------
+		System.out.println();
+		Addable[] arr = {
+				(a, b) -> a + b,
+				(a, b) -> a - b,
+				(a, b) -> a * b,
+				(a, b) -> a / b,
+		};
+		for(var a : arr){
+			System.out.println(a.add(10.0, 20.0));
+		}
+
+		showResult(100.0, 50.0, (r, t) -> r + t);
+		showResult(4.0, 3.0, (k, u) -> Math.pow(k, u));
+		showResult(2.0, 0.5, (k, u) -> Math.pow(k, u));
+
 		System.out.println("\n프로그램 종료");
 	} // end main()
+
+	public static void showResult(double x, double y, Addable func){
+		System.out.println(func.add(x, y));
+	}
 	
 } // end class
 
 
-// 함수영 인터페이스 정의
+// 함수형 인터페이스 정의
 @FunctionalInterface
 interface Addable {
 	public abstract double add(double x, double y);

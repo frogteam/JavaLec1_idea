@@ -67,9 +67,9 @@ public class File17Main {
 				conn.setRequestProperty("Content-Type", "application/x-www-form-urlencoded; charset=UTF-8");
 				conn.setUseCaches(false);      // 캐시 사용안함
 				
-				System.out.println("request시작: " + url_address);
+				System.out.println("connect시작: " + url_address);
 				conn.connect();          // request발생 --> 이후 response 받을때까지 delay
-				System.out.println("response 완료");
+				System.out.println("connect 완료");
 				
 				int responseCode = conn.getResponseCode();
 				System.out.println("response code : " + responseCode);

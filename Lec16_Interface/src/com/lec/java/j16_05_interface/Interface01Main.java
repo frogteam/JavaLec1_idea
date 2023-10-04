@@ -90,6 +90,31 @@ class TestImpl2 implements TestInterface, TestInterface2 {
 	}
 } // end class TestImpl2
 
+//-------------------------------
+/**
+ * class 가 class 를 상속받을때 -> extends
+ * class 가 interface 를 상속(구현)할때 -> implements
+ * interface 가 interface 를 상속할때 -> extends
+ */
+
+abstract class A {}
+
+class B extends A implements TestInterface{
+
+	@Override
+	public void testAAA() {
+
+	}
+
+	@Override
+	public void testBBB() {
+
+	}
+}
+
+interface C extends TestInterface {
+
+}
 
 
 
