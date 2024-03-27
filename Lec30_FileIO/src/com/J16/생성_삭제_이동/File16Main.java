@@ -21,7 +21,7 @@ public class File16Main {
 		System.out.println("절대경로: " + path);
 		
 		// 경로를 사용해서 File 인스턴스 생성
-		// -> 물리적인 파일/디렉토리가이 만들어 진 것은 아니다.
+		// -> 물리적인 파일/디렉토리가 만들어 진 것은 아니다.
 		File f = new File(path);
 		
 		System.out.println();

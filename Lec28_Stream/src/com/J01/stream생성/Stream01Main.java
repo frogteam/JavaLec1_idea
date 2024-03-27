@@ -58,6 +58,17 @@ public class Stream01Main {
 		Set<Integer> integerSet = Set.of(10, 20, 30);     // Set<Integer>
 		Map<String, Integer> person = Map.of("zayson", 28, "chaeyoung", 26);
 
+		// for 사용 vs. stream 사용
+//		{
+//			//기존의 값에  x 4 한뒤  -10  하기
+//			List<Integer> list;
+//			for(var i : intArr){
+//				//i * 4
+//			}
+//		}
+//		for vs. stream
+	// 	https://pamyferret.tistory.com/49
+// 			https://hyune-c.tistory.com/entry/for-vs-stream
 
 		// 배열의 스트림 생성
 		// Arrays.stream(int[]) => IntStream 생성
@@ -65,8 +76,8 @@ public class Stream01Main {
 		//IntStream stream2 = intList.stream();   // 이건 에러인데..
 		DoubleStream stream2 = Arrays.stream(doubleArr);
 
-		// 컬렉션 의 스트림 생성
-		Stream<String> stringStream = stringList.stream();  // Collection 의 Stream 생성
+		// Collection 의 Stream 생성
+		Stream<String> stringStream = stringList.stream();
 		Stream<Integer> intStream = intList.stream();
 
 		// toString() 이 딱히...  볼수 있는 형태로 제공되지 않는다.
@@ -75,14 +86,18 @@ public class Stream01Main {
 
 		// Map 의 Entry 들의 Stream
 		Stream<Map.Entry<String, Integer>> entryStream = person.entrySet().stream(); // 맵의 EntrySet 스트림 생성
+		var entryStream2 = person.entrySet().stream();
 
-		Stream<Integer> stream = integerSet.stream();   // Set 의 스트림 생성 ->  Integer이므로 Integer 스트림 생성
+		Stream<Integer> intStream2 = integerSet.stream();   // Set 의 스트림 생성 ->  Integer이므로 Integer 스트림 생성
 
 		// Stream.of() 팩토리 메서드로 스트림 생성
-		Stream<Integer> integerStream = Stream.of(20, 30);
+		Stream<Integer> integerStream = Stream.of(20, 30);  // boxing 발생!
+		IntStream intStream4 = IntStream.of(20, 30); // boxing 없슴
+
 		Stream<Customer> customerStream = Stream.of(
 				new Customer("zayson", 28)
-				, new Customer("chaeyoung", 26));
+				, new Customer("chaeyoung", 26)
+		);
 
 
 		System.out.println("\n프로그램 종료");

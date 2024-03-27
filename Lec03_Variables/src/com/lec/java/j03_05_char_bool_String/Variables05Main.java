@@ -20,7 +20,7 @@ public class Variables05Main {
 		System.out.println("ch3: " + ch3);
 		
 		char ch4 = 0xAE01;
-		System.out.println("ch4: " + ch4);
+		System.out.println("ch4: " + ch4);  // 긁
 		char ch5 = 1234;
 		System.out.println("ch5: " + ch5);  // Ӓ
 		

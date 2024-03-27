@@ -31,7 +31,7 @@ public class File12Main {
 	private static final String BIG_TEXT = "temp/big_eng.txt"; 
 	
 	public static void main(String[] args) {
-		System.out.println("FileReader / FileWriter");
+		System.out.println("BufferedReader / BufferedWriter");
 		
 		FileWriter fw = null;
 		FileReader fr = null; 

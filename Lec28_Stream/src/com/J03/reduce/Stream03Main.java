@@ -5,14 +5,24 @@ import common.Customer;
 import java.util.*;
 import java.util.function.BinaryOperator;
 
-/** reduce() 연산
- * 
+/** reduce() 연산 [최종연산]
+ *
  *  전달된 스트림의 데이터에서
- *  '2개'를 소모하며 결괏값 '1개' 리턴하며 reduce 되는 '연산' 을 반복 수행 → BinaryOperator
- *  최종적으로 한개 까지 reduce 되면 리턴한다.  리턴값은 Optional<T> 객체
+ *  '2개'를 소모하며 결괏값 '1개'를 리턴하는 'reduce 연산'(BinaryOperator)을 반복 수행 하며 개수를 감소시킨다.
+ *  최종적으로 '한개' 까지 reduce 되면 그 값을 리턴한다.
+ *
+ *  리턴값
+ * 		초깃값이 없으면 Optional<T> 리턴
+ * 		초깃값이 있으면 초깃값 타입 리턴
+ *
+ *  입력 =>  출력
+ *  n개 =>  1개
  *
  *  reduce(BinaryOperator<T>)
- * 	reduce(초깃값, BinaryOperator<T>)
+ * 	reduce(Identity, BinaryOperator<T>)
+ * 	  매개변수
+ * 	     Identity: 초깃값
+ * 	     BinaryOperator: reduce 연산로직
  *
  *  기존의 주어진 연산 (count, sum 등..) 이 아닌 연산을 Stream 에 수행할때 필요
  *
@@ -28,83 +38,72 @@ import java.util.function.BinaryOperator;
 public class Stream03Main {
 
 	public static void main(String[] args) {
-		//---------------------------------------------------------------
-		// Reduction   [최종연산]
-		//   Stream 요소들에 reduce 연산을 적용하여 개수를 감소시켜 가며
-		//   최종적으로 1개의 값을 리턴한다
-		//
-		//   입력 =>  출력
-		//    n개 =>  1개
-		//
-		//   매개변수
-		//     Identity : 초기값
-		//     accumulator : 누산 로직, 누산 로직을 통해 작은 컬렉션으로 감소시키는 것이 가능하다.
-		//     combinder : 병렬 스트림 연산에서 병렬 연산 이후 결과를 하나로 합치는 기능
-
-		//  리턴값
-		//     초깃값이 없으면 Optional 리턴
-		//     초깃값이 있으면 초깃값 타입 리턴
 		System.out.println("-".repeat(30) +"\n▶ reduce()");
+		{
+			int [] arr = {1, 2, 3, 4, 5};
 
-		int [] arr = {1, 2, 3, 4, 5};
+			// 초깃값을 안 준 경우
+			// 리턴값은 Optional
+			System.out.println(Arrays.stream(arr)
+					.reduce((a, b) -> a + b));  // 초깃값이 없는 경우 OptionalInt 리턴
 
-		// 초깃값을 안 준 경우
-		// 리턴값은 Optional
-		System.out.println(Arrays.stream(arr)
-				.reduce((a, b) -> a + b));  // 초깃값이 없는 경우 OptionalInt 리턴
+			System.out.println(Arrays.stream(arr)
+					.reduce((a, b) -> a + b) // 초깃값이 없는 경우 OptionalInt 리턴
+					.orElse(0)
+			);
 
-		System.out.println(Arrays.stream(arr)
-				.reduce((a, b) -> a + b) // 초깃값이 없는 경우 OptionalInt 리턴
-				.orElse(0)
-		);
-
-		// 1, 2, 3, 4, 5
-		// ↘ ↓
-		//    3, 3, 4, 5
-		//    ↘ ↓
-		//       6, 4, 5
-		//       ↘ ↓
-		//         10, 5
-		//          ↘ ↓
-		//            15   <-- 결국 최종값은 한개다
-
-
-		// 초깃값을 준 경우
-		// 리턴타입은 초깃값 타입!
-		System.out.println(Arrays.stream(arr)
-				.reduce(100, (a, b) -> a + b)
-		);  // 결과 115
+			// 1, 2, 3, 4, 5
+			// ↘ ↓
+			//    3, 3, 4, 5
+			//    ↘ ↓
+			//       6, 4, 5
+			//       ↘ ↓
+			//         10, 5
+			//          ↘ ↓
+			//            15   <-- 결국 최종값은 한개다
 
 
-		// 100, 1, 2, 3, 4, 5
-		//    101
-		//      103
-		//        106
-		//           110
-		//              115<-- 결국 최종값은 한개다
+			// 초깃값을 준 경우
+			// 리턴타입은 초깃값 타입!
+			System.out.println(Arrays.stream(arr)
+					.reduce(100, (a, b) -> a + b)
+			);  // 결과 115
+
+
+			// 100, 1, 2, 3, 4, 5
+			//    101
+			//      103
+			//        106
+			//           110
+			//              115<-- 결국 최종값은 한개다
+		}
 
 
 		System.out.println();
-		// 문자열에서 길이가 가장 긴 문자열을 뽑아내기
-		String [] greetings = {"안녕하세요~~~", "Hello", "Good morning", "반갑습니다"};
-		String result;
+		{
+			// 문자열에서 길이가 가장 긴 문자열을 뽑아내기
+			String [] greetings = {"안녕하세요~~~", "Hello", "Good morning", "반갑습니다"};
+			String result;
 
-		result = Arrays.stream(greetings)
-				.reduce("", (s1, s2) -> {
-					// System.out.println("s1:" + s1 + ", s2:" + s2);  // reduce 중간과정
-					return (s1.length() >= s2.length()) ? s1 : s2;
-				})
-		;
+			result = Arrays.stream(greetings)
+					.reduce("", (s1, s2) -> {
+						// System.out.println("s1:" + s1 + ", s2:" + s2);  // reduce 중간과정
+						return (s1.length() >= s2.length()) ? s1 : s2;
+					})
+			;
 
-		System.out.println(result);
+			System.out.println(result);
 
-		result = Arrays.stream(greetings)
-				.reduce(new CompareStirng())  // Optional<String> 리턴
-				.get()
-		;
-		System.out.println(result);
+			result = Arrays.stream(greetings)
+					.reduce(new CompareString())  // 직접 구현한 BinaryOperator, Optional<String> 리턴
+					.get()
+			;
+			System.out.println(result);
+		}
 
 		// 도전!
+		//		중간연산  map, filter 등.. 사용가능
+		//		최종연산은 reduce 로 결과 만들기!
 		{
 			List<Customer> personList = List.of(
 					new Customer("zayson", 28),
@@ -130,6 +129,7 @@ public class Stream03Main {
 					.reduce(6, (a, b) -> Integer.sum(a, b));
 			System.out.println("sum2 = " + sum2);
 
+			// 이름들만 묶어서 하나의 문자열 만들기
 			String result2 = personList.stream()
 					.map(Customer::getName)
 					.reduce((a, b) -> String.join("/", a, b)).get();
@@ -175,7 +175,7 @@ public class Stream03Main {
 
 
 // 직접 구현도 가능
-class CompareStirng implements BinaryOperator<String>{
+class CompareString implements BinaryOperator<String>{
 
 	// '두개'의 String 을 받아서 '한개'의 String 을 리턴하는 apply() 구현
 	@Override

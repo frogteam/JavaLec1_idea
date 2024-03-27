@@ -69,8 +69,6 @@ public class FirstJava {
         // 이스케이프 문자 (escape character)
         // " ~ " 문자열 안에서 특수 문자 출력
 
-
-
         // She says "Hi"  <-- 출력하려면?
         //System.out.println("She says "Hi"");  // 에러다
         System.out.println("She says \"Hi\"");  // "~" 안에서   \"

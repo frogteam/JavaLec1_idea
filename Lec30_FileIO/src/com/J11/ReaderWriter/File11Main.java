@@ -80,12 +80,14 @@ public class File11Main {
 			// 읽기 read
 			char [] buff = new char[100];   // char[] 배열이다!! 버퍼 준비
 			int charsRead = 0;  // 읽어들인 '문자'의 개수
-			charsRead = fr.read(buff);  // 더이상 읽어들일 문자데이터가 없으면 -1 리턴
-			for(int i = 0; i < charsRead; i++) {
-				System.out.print(buff[i]);
+			int totalRead = 0;
+			while((charsRead = fr.read(buff)) != -1) {  // 더이상 읽어들일 문자데이터가 없으면 -1 리턴
+				for (int i = 0; i < charsRead; i++) {
+					System.out.print(buff[i]);
+				}
 			}
 			System.out.println();
-			System.out.println("읽은 문자개수: " + charsRead);
+			System.out.println("읽은 문자개수: " + totalRead);
 			
 			
 			// 스트림 방식으로도 저장해보기

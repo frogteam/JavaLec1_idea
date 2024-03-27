@@ -13,7 +13,7 @@ public class Input01Main {
 		System.out.println("표준입력: Scanner 사용");
 		
 		Scanner sc = new Scanner(System.in);  // import 필요
-		// Scanner 를 통해 입력 작업 수행
+		// Scanner 를 통해 '입력' 작업 수행
 		int num1, num2;
 		
 		System.out.print("숫자1을 입력하세요: ");

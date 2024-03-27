@@ -89,8 +89,8 @@ public class Stream02Main {
 		//    n개 ->  <=n개
 		System.out.println("-".repeat(30) +"\n▶ filter(Predicate<T>)");
 		{
-			// 문자열의 길이 5이상인 요소만 출력하기
 			System.out.println(stringList);
+			// 문자열의 길이 5이상인 요소만 출력하기
 
 			// 1. 일반 for 문 사용
 			for(var str : stringList){
@@ -103,7 +103,7 @@ public class Stream02Main {
 			// 2. Stream 사용
 			stringList.stream()  // 컬렉션에서 스트림 생성, Stream<String> 리턴, 기존 컬렉션 데이터와는 별도의 데이터로 생성되기 때문에 원본데이터는 변경되지 않는다
 					.filter(s -> s.length() >= 5)  // 중간 연산  Stream<String>
-					.forEach(s -> System.out.println(s))  // 최종연산 (지금의 경우는 출력)
+					.forEach(System.out::println)  // 최종연산 (지금의 경우는 출력)
 					;
 
 			// 도전] 나이가 40살 이하인 사람만 출력
@@ -314,6 +314,7 @@ public class Stream02Main {
 		{
 			IntStream intStream = Arrays.stream(intArr);
 			Stream<Integer> boxedStream = intStream.boxed();
+			// boxedStream = intStream;  XXX
 		}
 
 		//-------------------------------------------------------------
@@ -361,6 +362,7 @@ public class Stream02Main {
 		//    리턴값 Optional:  Optional<T>, OptionalInt, OptionalDouble ..
 		System.out.println("-".repeat(30) +"\n▶ sum(), count(), average()");
 		{
+			customerList.forEach(System.out::println);  // 원본 확인
 			// 나이의 합
 			var result1 = customerList.stream()
 					.mapToInt(Customer::getAge)  // IntStream  (OK)
@@ -395,7 +397,7 @@ public class Stream02Main {
 		System.out.println("-".repeat(30) +"\n▶ min(), max()");
 		{
 			// 1-1) 최대 나이값  (primitive)
-			int maxAge1 = customerList.stream()   // Stream<Customer>
+			var maxAge1 = customerList.stream()   // Stream<Customer>
 					.mapToInt(Customer::getAge)   // IntStream
 					.max()    // OptionalInt
 					.getAsInt()
@@ -428,7 +430,7 @@ public class Stream02Main {
 		}
 
 		//---------------------------------------------------------------
-		// Match  [최종연산]
+		// **Match  [최종연산]
 		// 스트림 연산 결과에 대해서 조건을 검사해 true/false로 리턴한다.
 		//   매개변수: Predicate<T>
 		//   anyMatch() : 조건을 충족하는 요소가 하나라도 있는 경우 true
@@ -436,6 +438,8 @@ public class Stream02Main {
 		//   noneMatch() : 모든 요소가 조건을 충족하지 않는경우 true
 		System.out.println("-".repeat(30) +"\n▶ **Match(Predicate<T>)");
 		{
+			customerList.forEach(System.out::println);
+
 			// 1) 이름에 "o"가 들어가는 사람이 한명이라도 있습니까? (anyMatch 사용)
 			boolean anyMatch1 = customerList.stream()
 					.anyMatch(person -> person.getName().contains("o"));
@@ -513,6 +517,8 @@ public class Stream02Main {
 					new Customer("maeng", 30),
 					new Customer("joon", 28)
 			);
+			personList.forEach(System.out::println);
+
 			// 1) 이름만 List 로 뽑기
 			List<String> nameList1 = personList.stream()
 					.map(Customer::getName)
@@ -532,11 +538,11 @@ public class Stream02Main {
 
 			// 3) 이름-나이 로 Map 뽑기
 			Map<String, Integer> personMapByName = personList.stream()
-					.collect(Collectors.toMap(Customer::getName, Customer::getAge)); // Map으로 변환
+					.collect(Collectors.toMap(Customer::getName, Customer::getAge));  // Map<String, Integer> 로 변환
 			System.out.println("personMapByName = " + personMapByName);
 
 			// 나이:이름 의 Map 추출
-			// key 가 중복인 경우 예외 발생
+			// key 가 중복인 경우 예외 발생  IllegalStateException: Duplicate key 28 (attempted merging values zayson and joon)
 			Map<Integer, String> personMapByAge;
 
 //			personMapByAge = personList.stream()
@@ -556,7 +562,7 @@ public class Stream02Main {
 			// 연산한 문자열을 하나의 문자열로 이어붙힌다.
 			String name1 = personList.stream()
 					.map(Customer::getName)
-					.collect(Collectors.joining("/"));
+					.collect(Collectors.joining());
 			System.out.println("name1 = " + name1);
 
 			// 각각의 연산된 문자열에 구분자를 넣을 수 있다.
@@ -595,9 +601,10 @@ public class Stream02Main {
 			System.out.println("minAge = " + minAge);
 
 			// Collectors.groupingBy()는 파라미터로 그룹핑 할 기준을 정해주면 해당 기준으로 데이터를 그룹핑한다.
-			// 6) 데이터 그룹핑 (나이기준으로 데이터 그룹핑)
+			// 6) 데이터 그룹핑 (나이대 기준으로 데이터 그룹핑)
+			//  groupingBy(Function<T, R>)
 			Map<Integer, List<Customer>> collectByAge = personList.stream()
-					.collect(Collectors.groupingBy(Customer::getAge));
+					.collect(Collectors.groupingBy(c -> c.getAge() / 10 * 10));
 			System.out.println("collectByAge = " + collectByAge);
 
 			// Collectors.partitioningBy()는 파라미터로 Predicate를 받는다.
