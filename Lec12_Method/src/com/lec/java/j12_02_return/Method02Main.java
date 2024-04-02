@@ -30,14 +30,15 @@ public class Method02Main {
 		
 		// 메소드의 매개변수로 정수 두 개를 넘겨주면
 		// 그 결과로 더한 값을 되돌려 받고 싶다.
-		int sum = add(110, 220);  // add(int, int) 의 리턴값을 sum 에 대입
-		System.out.println("sum = " + sum);
+		int result;
+		result = add(110, 220);  // add(int, int) 의 리턴값을 result 에 대입
+		System.out.println("result = " + result);
 		
 		
 		System.out.println();
 		// 메소드의 매개변수로 정수 두 개를 넘겨주면
 		// 그 결과로 앞의 수에서 뒤의 수를 뺀 값을 되돌려 싶다.
-		int result = sub(100, 200);
+		result = sub(100, 200);
 		System.out.println("result = " + result);
 
 		result = sub(add(10, add(100, 300)), 100);

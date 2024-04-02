@@ -29,6 +29,8 @@ public class Input04Main {
 		// 정수 3개를 문자열로 입력 받고 합을 구하기
 		System.out.print("숫자 3개 (int, int, int)를 입력받으세요 >");
 		String in1 = sc.next();
+//		String in2 = sc.next();
+//		String in3 = sc.next();
 		int i1 = Integer.parseInt(in1);   // 문자열 in1  을  int 로 변환
 		
 		// 다음과 같이 한줄에 가능

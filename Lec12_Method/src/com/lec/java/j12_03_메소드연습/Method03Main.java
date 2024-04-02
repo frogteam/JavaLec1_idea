@@ -75,6 +75,9 @@ public class Method03Main {
 		//                        println(                     )
 		System.out.println("학점: " + calcGrade(calcAvg(calcTotal(korean, english, math))));
 
+		// refactor - introduce variable
+		// refactor - inline
+
 		System.out.println("\n프로그램 종료");
 	} // end main()
 	

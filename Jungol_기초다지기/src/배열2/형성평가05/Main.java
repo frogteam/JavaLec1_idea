@@ -45,7 +45,7 @@ public class Main {
         Scanner sc = new Scanner(System.in);
 
         int[][] arr = new int[4][3];  // 4개반 x 3학생
-        int[] sum = new int[4];
+        int[] sum = new int[4];  // 4개반의 제기차기 합계점수
 
         for (int ban = 0; ban < arr.length; ban++) {
             System.out.print((ban + 1) + "class? ");

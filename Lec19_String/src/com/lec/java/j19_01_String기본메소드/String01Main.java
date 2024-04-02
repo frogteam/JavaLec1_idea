@@ -5,7 +5,7 @@ import java.util.List;
 
 /* 문자열 (String) 관련 메소드들
  * 
- * https://docs.oracle.com/javase/8/docs/api/java/lang/String.html
+ * https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html
  * - 문자열 메소드는 꼭 정독해보세요.
  * - 매개변수의 의미, 동작의 의미, 리턴값의 의미 꼭 숙지해주세요
  * - 인스턴스 메소드 인지, 클래스 메소드(static) 인지 구분 
@@ -97,7 +97,7 @@ public class String01Main {
 
 		// 공백기준으로 쪼갤때는 정규표현식의 \s+  사용하기 : 공백, 탭, 줄바꿈
 		str4 = "    Hello\t  \n  \t MY \n\n WORLD";
-		arr = str4.split("\\s+");
+		arr = str4.trim().split("\\s+");
 		System.out.println(Arrays.toString(arr));  // [, Hello, MY, WORLD]
 		
 		// 단!  "|" 을 할경우는 주의,   ※ split(정규표현식) 을 사용하는 메소드임

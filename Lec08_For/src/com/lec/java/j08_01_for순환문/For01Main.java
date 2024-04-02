@@ -87,7 +87,16 @@ public class For01Main {
 		} // end for
 		// for 바깥에서 선언한 인덱스 변수는 for 종료후에 값 확인가능
 		System.out.println("for 종료후 i:" + i + " j:" + j);
-		
+
+		/*
+		 *     i     j
+		 *     0  < 10
+		 *     1  <  8
+		 *     2  <  6
+		 *     3  <  4
+		 *     4  <  2 (false)
+		 * */
+
 	} // end main()
 
 } // end class For01Main

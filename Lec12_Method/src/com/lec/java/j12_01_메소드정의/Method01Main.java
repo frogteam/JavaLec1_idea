@@ -11,8 +11,8 @@ package com.lec.java.j12_01_메소드정의;
 	 	메소드는 main 메소드 바깥에서!!, class 안에서 정의!!
 
 	 메소드 정의구문:
-		수식어      리턴타입    메소드이름  (매개변수, ...) { ... }    { 메소드 본체(body) }
-	    modifier return_type  method_name(parameter, ...) { ...             }
+		수식어     리턴타입     메소드이름 (매개변수, ...) { ...본체... }
+	    modifier return_type  method_name(parameter, ...) { ...body... }
 	
 		수식어(modifier) : public, static, private, ... (생략 가능)
 	   

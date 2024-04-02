@@ -35,8 +35,8 @@ public class Main {
 		}
 		
 		// 감소 방향
-		for(int i = n - 1; i > 0; i--){  // n-1 번 순환
-			for(int j = 0; j < i; j++){  // i 번 순환
+		for(int i = 0; i < n - 1; i++){  // n-1개의 행
+			for(int j = 0; j < n - 1 - i; j++){
 				System.out.print("*");
 			}
 			System.out.println();
