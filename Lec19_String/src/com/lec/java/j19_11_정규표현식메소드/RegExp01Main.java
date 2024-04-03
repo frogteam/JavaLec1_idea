@@ -161,9 +161,9 @@ public class RegExp01Main {
 		// 과연 "My...." 으로 몇개가 매칭되나?  : 예측해보자
 		// 기본적으로 대소문자를 구분하여 매칭한다
 		input = "-My98KK-myABCD--My1234567--MyZZ---My789";  // 3개 매칭
-		matcher = pat.matcher(input);  // Matcher 생성
-
 		System.out.println(input);
+
+		matcher = pat.matcher(input);  // Matcher 생성
 		while(matcher.find()) {
 			System.out.println(matcher.group() + " {" + matcher.start() + "~" + matcher.end() + "}");
 			// 결과 : 3개 매칭!

@@ -29,6 +29,14 @@ public class MyTV {
 		System.out.println("볼륨 상태: " + volume);
 		System.out.println("----------------");
 	}// end displayStatus()
+	/*
+	    System.out.println("TV 현재 상태");
+        System.out.println("----------------");
+        System.out.println("전원 상태: ");
+        System.out.println("채널 상태: ");
+        System.out.println("볼륨 상태: ");
+        System.out.println("----------------");
+	 */
 	
 	public void powerOnOff() {
 		if (isPowerOn) { // TV가 켜져 있으면

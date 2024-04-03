@@ -53,7 +53,7 @@ public class RegExp03Main {
 			"AquaMan",
 			"WonderWoman",
 			"WonderWoMan",
-			"PostMan "
+			"PostMan ",
 		};
 			
 		//─────────────────────────────────────────
@@ -63,7 +63,7 @@ public class RegExp03Main {
 				"SuperMan",
 				"Super Man",
 				" SuperMan",
-				"SuperMan "
+				"SuperMan ",
 			};
 		
 		//─────────────────────────────────────────
@@ -76,7 +76,7 @@ public class RegExp03Main {
 				"xz",
 				"90x zxx_zdf",
 				"xbz",				
-				"xyyz"
+				"xyyz",
 			};
 		
 		//─────────────────────────────────────────
@@ -132,7 +132,7 @@ public class RegExp03Main {
 		};
 
 		regex = "[a-zA-Z]+";  // a ~ z, A ~ Z
-		regex = "[^a-zA-Z]+";  // ^ 은 NOT
+		regex = "[^a-zA-Z]+";  // ^ 은 NOT    a~z, A~Z 를 뺀 모든 것에 매칭
 		regex = "[a-zA-Z0-9]+";  // a ~ z, A ~ Z, 0 ~ 9
 		regex = "[a-zA-Z0-9-]+";
 		regex = "[0-9]+";
@@ -212,7 +212,7 @@ public class RegExp03Main {
 		
 		//─────────────────────────────────────────
 		title = "escaped character 매칭 시키기";
-		//regex = ".+";  // 이렇게 하면 전체 문자가 된다.
+		//regex = ".+";  // 이렇게 하면 전체 문자가 매칭된다.
 		regex = "[.]+";  // 정말 . 을 매칭하려면
 		regex = "\\.+";  // 이렇게도 가능하다.
 		arrInput = new String[] {

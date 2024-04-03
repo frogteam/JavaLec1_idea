@@ -35,7 +35,7 @@ public class Class04Main {
 		System.out.println("n2: " + n2.getNum());
 		
 		System.out.println();
-		n1.setNum(100);
+		n1.setNum(200);
 		System.out.println("n1: " + n1.getNum());
 		n2.setNum(111);
 		System.out.println("n2: " + n2.getNum());
