@@ -1,6 +1,6 @@
 package com.lec.java.j15_04_상속과생성자;
 
-public class Vehicle {
+public class Vehicle {   // IntelliJ 에서 ALT + ENTER 누른뒤 'create subclass'
 	// 멤버 변수:
 	int speed;
 	

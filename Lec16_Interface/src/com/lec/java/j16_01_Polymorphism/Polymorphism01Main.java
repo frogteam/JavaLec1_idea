@@ -48,7 +48,7 @@ public class Polymorphism01Main {
 		// 하이브리드 자동차(HybridCar)는 자동차(Car)이다.   HybridCar IS-A Car
 		
 		// car1~car3 변수 타입에 관계없이
-		// 오버라이딩 된 메소드가 '알아서' 동작한다
+		// 인스턴스의 오버라이딩 된 메소드가 '알아서' 동작한다
 		car1.displayInfo();
 		car2.displayInfo();
 		car3.displayInfo();

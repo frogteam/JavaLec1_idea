@@ -14,7 +14,7 @@ public class Car extends Vehicle {
 	
 	public Car(int oil) {
 		// 명시적으로 super() 가능
-		super();   // super 는 반드시 첫번째 문장이어야 한다
+		super();   // super (...) 는 반드시 첫번째 문장이어야 한다
 		System.out.println("Car(int) 생성 : oil=" + oil);
 		this.oil = oil;
 	}

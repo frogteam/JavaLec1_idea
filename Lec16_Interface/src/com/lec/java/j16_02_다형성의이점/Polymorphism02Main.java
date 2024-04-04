@@ -12,7 +12,7 @@ public class Polymorphism02Main {
 	public static void main(String[] args) {
 		System.out.println("다형성의 사용 (유용성)");
 		
-		// 다형성에 의해서, 자식타입 객체가 부모타입으로 자동 형변환 가능!
+		// 다형성에 의해서, 자손타입 객체가 조상타입으로 자동 형변환 가능!
 		Vehicle car1 = new Vehicle();
 		Vehicle car2 = new Car();
 		Vehicle car3 = new HybridCar();
@@ -25,7 +25,7 @@ public class Polymorphism02Main {
 		cars[2] = new HybridCar();
 		
 		// car 라는 하나의 이름의 변수로 여러가지 타입의
-		// 오버라이딩 된 메소드가 각각 동작시킬수 있다!
+		// 오버라이딩 된 메소드를 각각 동작시킬수 있다!
 		for(var car : cars){
 			car.displayInfo();
 		}// 우왕! 한가지 타입으로 한꺼번에 처리 가능!!!
@@ -65,32 +65,29 @@ public class Polymorphism02Main {
 		System.out.println();
 		HybridCar car6 = new HybridCar();
 		driveCar(car6);
-		
+
+
+		// Car IS-A Vehicle
+		// HybridCar IS-A Vehicle
+		// HybridCar IS-A Car
 
 		// instanceof 연산자
-		// 용법: 변수/값 instanceof 클래스 
+		// 용법: 변수/값 instanceof 클래스
 		// 결과: true / false
-		if( car1 instanceof Vehicle){  // true
-			System.out.println("car1 은 Vehicle 의 instance");
-		}else{
-			System.out.println("car1 은 Vehicle 의 instance 가 아닙니다");
-		}
-		
-		if( car1 instanceof Car){  // false
-			System.out.println("car1 은 Car 의 instance");
-		}else{
-			System.out.println("car1 은 Car 의 instance 가 아닙니다");
-		}
-		
-		if( car2 instanceof Vehicle){  // true  Car IS-A Vehicle
-			System.out.println("car2 은 Vehicle 의 instance");
-		}else{
-			System.out.println("car2 은 Vehicle 의 instance 가 아닙니다");
-		}
 
-		if( car2 instanceof HybridCar) {  // false <---!!!
-			
-		}
+		System.out.println(car1 instanceof Vehicle);
+		System.out.println(car2 instanceof Vehicle);
+		System.out.println(car3 instanceof Vehicle);
+		System.out.println();
+		System.out.println(car1 instanceof Car);
+		System.out.println(car2 instanceof Car);
+		System.out.println(car3 instanceof Car);
+		System.out.println();
+
+		System.out.println(car1 instanceof HybridCar);
+		System.out.println(car2 instanceof HybridCar);
+		System.out.println(car3 instanceof HybridCar);
+		System.out.println();
 
 
 		System.out.println("\n 프로그램 종료");

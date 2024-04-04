@@ -15,7 +15,7 @@ public class PartTimer {
     }
 
     public PartTimer(String nickName, String workPlace){
-        this(nickName);
+        this(nickName);  // 생성자 위임 : 먼저 호출할 생성자 지정.  생성자 안에서 첫번째 문장으로 실행되어야 한다
         this.workPlace = workPlace;
     }
 
@@ -31,11 +31,13 @@ public class PartTimer {
         return workPlace;
     }
 
+    // 근무시간에 따른 급여계산
     public int calcTotalWage(int hour) {
         totalWage = HOUR_RATE * hour;
         return totalWage;
     }
 
+    // 근무시간 + 상여금에 따른 급여계산
     public int calcTotalWage(int hour, int bonus) {
         totalWage = HOUR_RATE * hour + bonus;
         return totalWage;

@@ -51,8 +51,11 @@ public class BusinessPerson extends Person {
 		return "BusinessPerson:" + getName() + " " + getCompany();
 	}
 
-	// IntelliJ 에선
-	// CTRL + O 를 누르면 Override 진행
+	// IntelliJ 에서 Override 코드 작성 방법들
+	// 1. 메소드 이름 타이핑하면서 자동완성 
+	// 2. CTRL + O 누르면 Override 창 뜬다.
+	// 3. ALT + INSERT, Override 실행
+
 	
 	
 	

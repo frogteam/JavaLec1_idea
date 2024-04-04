@@ -23,7 +23,16 @@ public class Interface01Main {
 		test1.testBBB();
 		
 		TestImpl2 test2 = new TestImpl2();
-		
+
+
+		TestInterface t1 = new TestImpl2();
+		TestInterface2 t2 = new TestImpl2();
+		t1.testAAA();
+		t1.testBBB();
+//		t1.testCCC();  // X
+		((TestImpl2)t1).testCCC();  // 다운캐스팅으로 가능
+
+
 		//System.out.println(test2.MIN); // compile error
 		System.out.println(TestInterface.MIN);
 		System.out.println(TestInterface2.MIN);

@@ -23,12 +23,24 @@ import java.util.regex.Pattern;
  * 	xX-1200-089-zuy
  *  Ab-a890-b86-zuy
  * 	p9-324-389-zopl
+ *  AAb-7890-786-zuyy
  * 
  * 쿠폰번호를 계속해서 입력 받으면서 
  * "유효한 쿠폰입니다"  혹은 "유효한 쿠폰이 아닙니다" 판정결과를 출력
  * 
  * 'quit' 입력하면 프로그램 종료
  *
+ */
+
+/*
+Ab-7890-786-zuy
+ki-2010-893-Zip
+xX-1200-089-zuy
+Ab-a890-b86-zuy
+p9-324-389-zopl
+AAb-7890-786-zuyy
+quit
+
  */
 public class RegExp04Main {
 
