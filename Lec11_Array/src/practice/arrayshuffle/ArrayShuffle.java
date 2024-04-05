@@ -3,6 +3,7 @@ package practice.arrayshuffle;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
+import java.util.stream.Collectors;
 
 // 초간단 배열 섞기
 
@@ -49,8 +50,11 @@ public class ArrayShuffle {
 // 상위 n개만 뽑을 경우 (즉 무착위로 n개만 뽑는경우)		
 //		int n = 4;
 //		list = list.subList(0, n);   
-		
+
 		//arr = (String[])list.toArray();  //  List --> 배열 로 변환
-		System.out.println(Arrays.toString(list.toArray()));
+//		System.out.println(Arrays.toString(list.toArray()));
+		System.out.println(list.stream().collect(Collectors.joining("\t")));
+
+
 	}
 }

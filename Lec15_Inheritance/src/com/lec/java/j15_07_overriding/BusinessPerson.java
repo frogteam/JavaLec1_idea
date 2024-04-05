@@ -56,7 +56,18 @@ public class BusinessPerson extends Person {
 	// 2. CTRL + O 누르면 Override 창 뜬다.
 	// 3. ALT + INSERT, Override 실행
 
-	
+	//--------------------------------------------------
+	// 리턴타입이 자손 타입으로는 오버라이딩 가능
+//	@Override
+//	public BusinessPerson myPerson() {
+//		return new BusinessPerson();
+//	}
+
+	// 리턴타입이 조상타입으로는 오버라이딩 불가
+//    @Override
+//    public Object myPerson() {  // 에러 incompatible return type
+//        return null;
+//    }
 	
 	
 } // end class BusinessPerson

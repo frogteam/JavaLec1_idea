@@ -30,7 +30,14 @@ public class Person {
 	
 	// final 클래스 : 더이상 상속 불가 
 	// final class Person     <-- 해보자, 어디에 에러나는가?
-	
+
+
+	//--------------------------------------------------
+	// 리턴타입이 자손 타입으로는 오버라이딩 가능
+	public Person myPerson(){
+		return new Person();
+	}
+
 } // end class Person
 
 

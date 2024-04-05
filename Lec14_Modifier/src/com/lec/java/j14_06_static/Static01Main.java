@@ -21,6 +21,7 @@ import java.util.Scanner;
 //   인스턴스를 생성하지 않아도 사용할 수 있는 메소드
 
 
+
 public class Static01Main {
 
 	static Scanner sc = new Scanner(System.in);
