@@ -95,16 +95,16 @@ public class String02Main {
 		// compareTo() 는 두 문자열의 문자코드량 의 비교 (lexicographical comparison based on the Unicode value)
 		// 이경우 유니코드 값을 비교하게 됨.
 		
-		System.out.println("compareTo: " + str3.compareTo(str4));
+		System.out.println("compareTo: " + str3.compareTo(str4));  // 0
 		String str5 = "A";
 		String str6 = "C";
-		System.out.println("compareTo: " + str5.compareTo(str6));
-		System.out.println("compareTo: " + str6.compareTo(str5));
+		System.out.println("compareTo: " + str5.compareTo(str6));  // -2
+		System.out.println("compareTo: " + str6.compareTo(str5));  // +2
 		
-		str5 = "AaAa";
-		str6 = "aAaA";
-		System.out.println("compareTo: " + str5.compareTo(str6));
-		System.out.println("compareTo: " + str6.compareTo(str5));
+		str5 = "AaAa";  // A 65
+		str6 = "aAaA";  // a 97
+		System.out.println("compareTo: " + str5.compareTo(str6)); // -32
+		System.out.println("compareTo: " + str6.compareTo(str5));  // 32
 
 		
 		System.out.println("\n프로그램 종료");

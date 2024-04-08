@@ -42,7 +42,7 @@ public class Generic01Main {
 		appleBox2.pullOut().displayWeight();
 		
 		Banana b2 = new Banana(300);
-		FruitBox<Banana> bananaBox2 = new FruitBox<Banana>(b2);
+		FruitBox<Banana> bananaBox2 = new FruitBox<>(b2);
 		bananaBox2.pullOut().displayNum();
 
 		System.out.println("\n프로그램 종료");

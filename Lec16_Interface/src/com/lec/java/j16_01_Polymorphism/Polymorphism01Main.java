@@ -48,12 +48,19 @@ public class Polymorphism01Main {
 		// 하이브리드 자동차(HybridCar)는 자동차(Car)이다.   HybridCar IS-A Car
 		
 		// car1~car3 변수 타입에 관계없이
-		// 인스턴스의 오버라이딩 된 메소드가 '알아서' 동작한다
+		// '인스턴스'의 오버라이딩 된 메소드가 '알아서' 동작한다
 		car1.displayInfo();
 		car2.displayInfo();
 		car3.displayInfo();
-		
-		//HybridCar car7 = new Vehicle();   // 자손 <- 조상 (불가) 
+		//HybridCar car7 = new Vehicle();   // 자손 <- 조상 (불가)
+
+		//------------------------------------------------------
+		// '타입'으로 식별 및 접근 가능  => ex) 클래스이름.static변수
+		System.out.println();
+		System.out.println(car1.NAME);  // car1 의 '타입' 이 Vehicle 이니까 => Vehicle.Name
+		System.out.println(car2.NAME);  // car2 의 '타입' 이 Vehicle 이니까 => Vehicle.Name
+		System.out.println(car3.NAME);  // car3 의 '타입' 이 Car 이니까 => Car.Name
+
 		
 		System.out.println("\n 프로그램 종료");
 	} // end main()

@@ -47,7 +47,7 @@ public class Polymorphism03Main {
 		
 		car2.displayInfo();  // 일단 출력 확인
 		
-		((Car) car1).setOil(10);
+		//((Car) car1).setOil(10);
 		// ClassCastException 발생:
 		// 실제로 Vehicle 클래스의 인스턴스로 생성된 car1을 
 		// 자식 클래스인 Car로 강제 형변환을 하게 되면 문제가 발생할 수 있다.
@@ -55,7 +55,22 @@ public class Polymorphism03Main {
 
 		((Car)car3).setOil(10);  // 가능
 		car3.displayInfo();
-		
+
+
+		//-----------------------------------------
+		// static 은 인스턴스와는 별개의 존재다.
+		// 해당 타입의 static 변수/메소드가 참조된다.
+		System.out.println();
+		System.out.println(car1.NAME);
+		//System.out.println(((Car)car1).NAME);   // ClassCastException
+
+		System.out.println(car3.NAME);    // => HybridCar.Name
+		System.out.println(((Car)car3).NAME); // => Car.Name
+		System.out.println(((Vehicle)car3).NAME);  // => Vehicle.Name
+		System.out.println(((Car)(Vehicle)car3).NAME);  // => Car.Name  결국 타입
+
+
+
 		
 	} // end main()
 

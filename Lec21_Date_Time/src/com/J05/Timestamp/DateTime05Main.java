@@ -54,7 +54,7 @@ public class DateTime05Main {
 	    Date parsedDate;
 		try {
 			SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss.SSS");
-			parsedDate = dateFormat.parse(now);
+			parsedDate = dateFormat.parse(now); // Date <- String
 			t = new Timestamp(parsedDate.getTime());
 			System.out.println(t);
 			System.out.println();

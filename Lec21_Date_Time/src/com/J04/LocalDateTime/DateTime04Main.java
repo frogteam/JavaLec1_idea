@@ -68,7 +68,7 @@ public class DateTime04Main {
                 datetime1 = LocalDateTime.now(),
                 datetime1.format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")),
                 datetime1.format(DateTimeFormatter.ofPattern("yyyy년MM월dd일 HH시mm분ss초")),
-                datetime1.format(DateTimeFormatter.ofPattern("yyyy-MM-dd a hh:mm:ss")),
+                datetime1.format(DateTimeFormatter.ofPattern("yyyy-MM-dd a hh:mm:ss")), // 2024-04-08일 오후 03:05:35
 
                 // String -> LocalDate
                 "\n[String → LocalDate ] LocalDate.parse(), DateTimeFormatter 사용",
