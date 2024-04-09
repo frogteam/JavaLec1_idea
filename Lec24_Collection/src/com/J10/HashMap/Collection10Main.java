@@ -76,6 +76,7 @@ public class Collection10Main {
 		// 2. 1에서 만들어진 Set에 있는 iterator() 메소드를 사용해서
 		// Iterator를 생성
 		System.out.println();
+		System.out.println(hmap.keySet());  // 확인
 		Set<Integer> keySet =  hmap.keySet();
 		Iterator<Integer> itr = keySet.iterator();
 		while (itr.hasNext()) {
@@ -176,10 +177,10 @@ public class Collection10Main {
 			{
 				Integer count = hmap.get(arr[i]);  // arr[i] 가 key
 
-				if (count == null)  // 기존에 해당 key값이 없었다면 (즉, 첫 등장이면)
+				if (count == null)  // 기존 Map 에 해당 key 가 없었다면 (즉, 첫 등장이라면!)
 					hmap.put(arr[i], 1);  // 등장 회수 1
-				else            // 기존에 key 값이 존재했던 (즉, 이전에 1번이상 등장했었다)
-					hmap.put(arr[i], count + 1);  // 기존 등장회수(v) 에 +1증가.
+				else            // 기존 Map 에 해당 key 가 존재했다면 (즉, 이전에 최소 1번이상 등장했다면!)
+					hmap.put(arr[i], count + 1);  // 기존 등장회수(count) 에 +1증가. (수정)
 			}
 
 			// ▶ 방법2 :  getOrDefault() 사용

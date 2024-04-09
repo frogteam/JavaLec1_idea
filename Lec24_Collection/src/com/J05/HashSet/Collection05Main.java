@@ -175,7 +175,7 @@ class Person {
 		this.name = name;
 	}
 
-	/*
+/*
 	@Override
 	public int hashCode() {
 		return id * age;
@@ -185,7 +185,8 @@ class Person {
 	public boolean equals(Object obj) {
 		return this.id == ((Person)obj).id;
 	}
-	 */
+*/
+
 }
 
 

@@ -138,10 +138,8 @@ public class Collection01Main {
 			List<String> list;
 
 			// List <- 배열
+			// immutable list 생성
 			list = Arrays.asList(new String[]{"반숙", "완숙"});
-			System.out.println(list);
-
-			list = Arrays.asList("반숙", "완숙");
 			System.out.println(list);
 
 			// List <- var args

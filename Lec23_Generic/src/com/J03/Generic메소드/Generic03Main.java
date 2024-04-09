@@ -30,12 +30,16 @@ public class Generic03Main {
 		System.out.println(test2("123").getClass());
 
 
-		Box<String> sBox = boxing("Apple");
+		Box<String> sBox = boxing("Apple");  // Box<String> 리턴
 		System.out.println(sBox.data);
 
-		Box<Integer> nBox = boxing(34);
+		Box<Integer> nBox = boxing(34); // Box<Integer> 리턴
 		System.out.println(nBox.data);
-		
+
+		var fBox = boxing(3.14f);   // Box<Float>
+		System.out.println(fBox.data);
+
+
 		System.out.println("\n프로그램 종료");
 
 	} // end main()
