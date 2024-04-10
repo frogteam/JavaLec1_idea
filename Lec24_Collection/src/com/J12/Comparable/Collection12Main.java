@@ -18,8 +18,8 @@ import java.util.List;
  */
 
 
-// Comparable 발음 : '캄퍼러블
-// Comparator 발음 : 컴'패러터
+// Comparable [kɑ́ːmpərəbl] 발음 : '캄퍼러블
+// Comparator [kəmpǽrətər]발음 : 컴'패러터
 //http://movefast.tistory.com/80
 
 public class Collection12Main {
@@ -27,12 +27,11 @@ public class Collection12Main {
 	public static void main(String[] args) throws ParseException {
 		System.out.println("Collections 메소드");
 
-		List<String> list1 = new LinkedList<String>();
+		List<String> list1 = Arrays.asList("장길산", "김철수", "구자철");
 
-		list1.add("장길산");
-		list1.add("김철수");
-		list1.add("구자철");
-		
+		// ※ Arrays.asList 로 만든 List 는 add() 불가.  그러나 sort() 는 된다!
+		// ※ List.of 로 만든 List 는 add(), sort() 모두 불가!
+
 		System.out.println(list1);
 		
 		System.out.println("sort()");
@@ -40,7 +39,6 @@ public class Collection12Main {
 		// 기본적으로 속도가 비교적 빠르고 안전성이 보장되는 Merge Sort 사용
 		Collections.sort(list1);  
 		System.out.println(list1);  // <-- 정렬후 결과는?
-		
 
 		
 		System.out.println();
