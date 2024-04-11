@@ -9,7 +9,7 @@ public class Local02Main {
 		person.readAge(10);
 		
 		MyReadable r = person.createInstance(16);
-		r.readInfo(); // 다른 클래스에서도 로컬 클래스의 메소드 사용 가능
+		r.readInfo(); // ★다른 클래스에서도 로컬클래스에서 구현(정의)된 메소드 사용 가능
 
 	} // end main()
 

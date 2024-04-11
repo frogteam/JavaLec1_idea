@@ -120,7 +120,7 @@ public class Lambda05Main {
         System.out.println("-".repeat(30) + "\n▶ Outer Object method reference");
         {
             String str = "hello";
-            //str = "헉";  // 에러다
+            //str = "헉";  // 에러다  effective final!!
             Predicate<String> p; 
             p = s -> str.equals(s);  // 외부 캡쳐링 (람다 내부에서 외부 인스턴스 참조)
 

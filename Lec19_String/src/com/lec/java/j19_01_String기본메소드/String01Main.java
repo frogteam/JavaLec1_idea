@@ -175,6 +175,13 @@ public class String01Main {
 		System.out.println(str13);
 		System.out.println(str14);
 
+		System.out.println();
+		System.out.println("isEmpty(), isBlank()");
+		System.out.println("".length() == 0);     // 빈 문자열인지 여부
+		System.out.println("".isEmpty());      // 위 방법보단 이것을 추천
+		System.out.println("   ".isEmpty());   // false
+		System.out.println("   ".isBlank());   // true
+
 		// 연습 : id /pw 입력받고요
 		//  로그인 성공 여부를 출력해주세요
 		

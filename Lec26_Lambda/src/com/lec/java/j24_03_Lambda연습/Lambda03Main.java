@@ -200,6 +200,15 @@ public class Lambda03Main {
 		Collections.sort(list3, (o1, o2) -> (int)(o2.point - o1.point));
 		System.out.println(list3);
 
+		// [도전]
+		// 이름 오름차순
+		Collections.sort(list3, (o1, o2) -> o1.name.compareTo(o2.name));
+		System.out.println(list3);
+
+		// 이름 내림차순
+		Collections.sort(list3, (o1, o2) -> o2.name.compareTo(o1.name));
+		System.out.println(list3);
+
 		//----------------------------------------
 		System.out.println("-".repeat(20));
 		{

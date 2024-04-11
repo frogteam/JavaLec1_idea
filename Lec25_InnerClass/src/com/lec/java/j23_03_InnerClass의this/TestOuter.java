@@ -20,8 +20,8 @@ public class TestOuter {
 		}
 		
 		public void printValue(int value) { // 3.
-			System.out.println("value = " + value);  // 지역변수 
-			System.out.println("this.value = " + this.value); // 내부클래스 멤버
+			System.out.println("value = " + value);  // 3. 지역변수
+			System.out.println("this.value = " + this.value); // 2, 내부클래스 멤버
 			System.out.println("TestOuter.this.value = " + TestOuter.this.value); // 외부클래스 멤버
 		} // end printValue()
 		

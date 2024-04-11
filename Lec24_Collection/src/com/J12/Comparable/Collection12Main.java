@@ -19,7 +19,7 @@ import java.util.List;
 
 
 // Comparable [kɑ́ːmpərəbl] 발음 : '캄퍼러블
-// Comparator [kəmpǽrətər]발음 : 컴'패러터
+// Comparator [kəmpǽrətər]발음 : 컴패'러터
 //http://movefast.tistory.com/80
 
 public class Collection12Main {
@@ -100,14 +100,18 @@ public class Collection12Main {
 		// Comparable<> 은 클래스 자체에 구현하는 인터페이스  compareTo(자기사진 vs 매개변수)
 		// Comparator<> 는 두개의 객체 비교하는 기능제공 인터페이스  compare(매개변수1 vs 매개변수2)
 		//      구현된 객체가 매개변수 등에 넘겨지는 형태로 많이 쓰임
-		
+
+		// ※ [정리]
+		// 객체의 '동일여부' ==> hashCode(), equals()  구현
+		// 객체의 '대소비교' ==> Comparable<> 구현, 혹은 Comparator<> 사용
+
 		// Shuffling 하기 (섞기)
 		System.out.println();
 		System.out.println("shuffle()");
 		Collections.shuffle(list1);
-		System.out.println(list1.toString());
+		System.out.println(list1);
 		Collections.shuffle(list1);
-		System.out.println(list1.toString());
+		System.out.println(list1);
 		
 		// 배열에서 랜덤으로 3명만 뽑기
 		String [] arr = {"aaa", "bbb", "ccc", "ddd", "eee", "fff", "ggg"};
@@ -165,7 +169,7 @@ class Student implements Comparable<Student>{
 		return this.name + ":" + this.point + "점";
 	}
 
-	//comparaTo() 메소드는 매개변수 객체를 현재의 객체와 비교하여 
+	//compareTo() 메소드는 매개변수 객체를 자신객체(this) 비교하여
 	// 정렬순위가 낮으면 음수, 같으면 0, 높으면 양수를 반환한다.
 	@Override
 	public int compareTo(Student o) {
@@ -220,7 +224,7 @@ class Desc implements Comparator<Student>{
 //		if(o1.point < o2.point) return 1;
 //		return 0;
 
-		// 이름
+		// 이름 내림차순
 		return -o1.name.compareTo(o2.name);
 	}	
 } // end Desc

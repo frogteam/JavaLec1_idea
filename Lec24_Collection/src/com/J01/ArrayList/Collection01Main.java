@@ -57,6 +57,9 @@ public class Collection01Main {
 		
 		// ArrayList 선언 - ArrayList 인스턴스 생성
 		List<Integer> list1 = new ArrayList<>();
+
+		// isEmpty(): 데이터가 없는지 여부 (boolean 리턴)
+		System.out.println("isEmpty(): " + list1.isEmpty());  // true
 		
 		// 데이터 추가(저장): add(element) 메소드 사용
 		//               add(index, element) -> index 번째 삽입
@@ -70,6 +73,10 @@ public class Collection01Main {
 		// 데이터 참조(읽기, 검색): get(index) 메소드 사용
 		// size(): ArrayList의 크기를 반환(리턴)
 		System.out.println("size() : " + list1.size());
+		System.out.println(list1.size() == 0);   // 비어있는지 여부.  그러나 아래와 같이 하는 것을 추천.
+		System.out.println("isEmpty(): " + list1.isEmpty());  // false
+
+
 		for (int i = 0; i < list1.size(); i++) {
 			System.out.println(list1.get(i));
 		}
