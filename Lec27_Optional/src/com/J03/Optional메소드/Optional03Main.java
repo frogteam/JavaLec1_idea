@@ -73,9 +73,9 @@ public class Optional03Main {
 //		optAddr2.orElseThrow(NullPointerException::new);
 
 		// Optional<T> filter(Predicate<>)
-		System.out.println(optAddr1.filter(s -> s.getStreet().equals("New York")));  // Optional[[Address: street=역삼로]]
-		System.out.println(optAddr1.filter(s -> s.getStreet().equals("강남대로"))); // Optional.Empty
-		System.out.println(optAddr2.filter(s -> s.getStreet().equals("강남대로")));   // Optional.Empty
+		System.out.println(optAddr1.filter(s -> s.getStreet().equals("New York")));   // Optional.Empty
+		System.out.println(optAddr1.filter(s -> s.getStreet().equals("역삼로")));   // Optional[[Address: street=역삼로]]
+		System.out.println(optAddr2.filter(s -> s.getStreet().equals("역삼로")));   // Optional.Empty
 
 
 		System.out.println(optAddr1.map(s -> s.getStreet()));  // Optional[String]  Optional[New York]

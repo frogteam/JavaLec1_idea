@@ -2,7 +2,7 @@ package com.J01.InputOutputStream;
 
 import java.util.Scanner;
 
-/* 스트림 (stream)
+/* I/O 스트림 (I/O stream)
 	[도착지]							[출발지]
 	Program <--- InputStream <--- Source(Keyboard, Mouse, File, Network)
 	

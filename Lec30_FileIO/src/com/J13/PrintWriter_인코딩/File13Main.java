@@ -105,7 +105,7 @@ public class File13Main {
 			
 			System.out.println();
 			
-			// 다른 인코딩으로 읽으면 글자 깨진다
+			// 다른 인코딩으로 한글 읽으면 글자 깨진다
 			//br = new BufferedReader(new InputStreamReader(new FileInputStream(FILE2)));
 			
 			// euc-kr 로 디코딩하여 읽기

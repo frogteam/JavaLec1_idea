@@ -31,7 +31,7 @@ public class File17Main {
 		StringBuffer sb = readFromUrl1(url_address);
 		System.out.println(sb.toString().substring(0, 200));
 
-		// stream 사용
+		// Stream<T> 사용
 		System.out.println(readFromUrl2(url_address));
 
 		System.out.println("\n프로그램 종료");
@@ -51,7 +51,7 @@ public class File17Main {
 		
 		InputStream in = null;
 		InputStreamReader reader = null;		// 스트림 기반의 reader
-		BufferedReader br = null;    // java.io.BufferedReader;   문자(character) 기반 reader
+		BufferedReader br = null;    // java.io.BufferedReader;   문자(character) 기반 reader + buffer
 		
 		char [] buf = new char[512];	// 입출력용 문자 버퍼 준비
 		
@@ -63,7 +63,7 @@ public class File17Main {
 				// 실제 접속하기 전에
 				conn.setConnectTimeout(2000);  // 2초 이내에 연결이 수립안되면 java.net.SocketTimeoutException  발생
 												// ** response 받는 시간이 아니다
-				conn.setRequestMethod("GET");
+				conn.setRequestMethod("GET"); // GET 방식 요청
 				conn.setRequestProperty("Content-Type", "application/x-www-form-urlencoded; charset=UTF-8");
 				conn.setUseCaches(false);      // 캐시 사용안함
 				
@@ -117,7 +117,7 @@ public class File17Main {
 		return sb;
 	} // end readFromUrl1()
 
-	// stream 을 사용하면 더욱 간단하게 해결 가능!
+	// Stream<T> 을 사용하면 더욱 간단하게 해결 가능!
 	private static String readFromUrl2(String urlStr){
 		try {
 			URL url = new URL(urlStr);

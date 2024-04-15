@@ -73,9 +73,10 @@ public class File16Main {
 		File f3 = new File(f, TEST_RENAME); // 변경될 이름
 		// 명심: File객체를 생성했다고 해서, 물리적으로 뭔가 한건 절대로 아닙니다.
 		System.out.println(f3.getAbsolutePath());
-		
+
+		// f2(dummy.txt) => f3(re_dummy.txt)
 		if (f2.exists()) { // 파일이 존재하는 지 체크
-			// 파일이 존재할 때만 이름 변경(renameTo)
+			// 원본 파일이 존재할 때만 이름 변경(renameTo)
 			
 			if (f2.renameTo(f3)) {
 				System.out.println("파일 이름 변경 성공!");
