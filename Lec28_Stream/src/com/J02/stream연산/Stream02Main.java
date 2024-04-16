@@ -6,7 +6,7 @@ import java.util.*;
 import java.util.stream.*;
 
 /**
- *   스트림 연산
+ *  스트림 연산
  *  스트림 연산은 기존자료를 변경하지 않음 (즉 배열에서 생성한 스트림이 원본 배열을 직접 건드리진 않음)
  *  스트림 연산은 '중간연산'과 '최종연산'으로 구분됨
  *
@@ -74,7 +74,7 @@ public class Stream02Main {
 			stream1.forEach(s -> System.out.println(s.getAge()));
 
 
-			// 문자열의 개수 출력하기
+			// 문자열의 문자 개수 출력하기
 			System.out.println();
 			stringList.stream()
 					.forEach(s -> System.out.print(s.length() + " "));
@@ -139,8 +139,8 @@ public class Stream02Main {
 			System.out.println();
 
 			// 위 내용을 method reference 사용하여 작성 가능
-			Arrays.stream(arrCustomer) // 배열에서 스트림 생성, Stream<T> 리턴
-					.map(Customer::getName) // 중간연산
+			Arrays.stream(arrCustomer) // 배열에서 스트림 생성, Stream<Customer> 리턴
+					.map(Customer::getName) // 중간연산   Stream<String> 리턴
 					.forEach(System.out::println); // 최종연산
 			System.out.println();
 
@@ -166,7 +166,7 @@ public class Stream02Main {
 			System.out.println();
 			// 사전순 정렬.  String 은 Comparable<>이 구현된 객체니까. sorted() 사용 가능
 			stringList.stream()
-					.sorted()
+					.sorted()   // Stream<String>  정렬된 결과
 					.forEach(System.out::println);
 
 			// Comparable<> 이 구현되지 않은 객체로 sorted() 하면
@@ -210,7 +210,7 @@ public class Stream02Main {
 			// customer 나이 오름차순으로 정렬
 
 
-			// Comparator 에서 제공하는 comparing() 사용
+			// Comparator 에서 제공하는 comparing(Function<T, U>) 사용
 			System.out.println();
 			customerList.stream()
 					.sorted(Comparator.comparing(Customer::getName))
@@ -335,14 +335,7 @@ public class Stream02Main {
 		}
 
 
-		//--------------------------------------------
-		// Stream 은 내부반복 로직 수행
-		// 기존 for, while 루프 대체
 
-		// 문자열에서 a를 포함했다면 true를 리턴하는 로직
-		System.out.println(match(stringList, "a"));
-		// 이를 stream 으로 작성하면.
-		System.out.println(stringList.stream().anyMatch(str -> str.contains("a")));
 
 		/*************************************************************/
 		System.out.println("■".repeat(30));
@@ -364,7 +357,7 @@ public class Stream02Main {
 		{
 			customerList.forEach(System.out::println);  // 원본 확인
 			// 나이의 합
-			var result1 = customerList.stream()
+			var result1 = customerList.stream()  // Stream<Customer>
 					.mapToInt(Customer::getAge)  // IntStream  (OK)
 					//.mapToLong(Customer::getAge)  // LongStream  (OK)
 					//.mapToDouble(x -> (double)x)  // DoubleStream (OK)
@@ -382,16 +375,26 @@ public class Stream02Main {
 			var result3 = customerList.stream()
 					.mapToInt(Customer::getAge)
 					.average().getAsDouble()
-					//.average().orElse(0)  // empty 처리 할라믄..
+
 					;
 			System.out.println("average() = " + result3);
+
+			//.average().orElse(0)  // empty 처리 할라믄..
+			List<Customer> emptyList = new ArrayList<>();
+			var result4 = emptyList.stream()
+					.mapToInt(Customer::getAge)
+					.average()  // OptionalDouble.empty
+//					.getAsDouble()  // 에러!
+					.orElse(0.0)
+					;
+			System.out.println("result4 = " + result4);
 		}
 
 		//---------------------------------------------------------------
 		// min(), max()   [최종연산]
 		//
 		//  min(), max() 는 primitive, boxed 스트림 양쪽에서 사용 가능
-		//    primitive 타입의 경우 max()에 파라미터가 없고, getAsInt()를 이용해 반환 받을 수 있다.
+		//    primitive 타입의 경우 max()에 파라미터가 없고, getXXX()를 이용해 반환 받을 수 있다.
 		//    reference 타입인 경우 max()에 Comparator가 파라미터로 들어간다.
 		// Optional 리턴:  Optional<T>, OptionalInt, OptionalDouble ..
 		System.out.println("-".repeat(30) +"\n▶ min(), max()");
@@ -405,10 +408,10 @@ public class Stream02Main {
 			System.out.println("maxAge1 = " + maxAge1);
 
 			// 1-2) 최대 나이값  (reference)
-			int maxAge2 = customerList.stream()   // Stream<Customer>
+			var maxAge2 = customerList.stream()   // Stream<Customer>
 					.map(Customer::getAge)   // Stream<Integer>
 					//.max((o1, o2) -> o1.compareTo(o2))    //  Optional<Integer>
-					.max(Integer::compare)
+					.max(Integer::compare) // int Integer.compare(o1, o2)
 					.get()
 					;
 			System.out.println("maxAge2 = " + maxAge2);
@@ -440,24 +443,36 @@ public class Stream02Main {
 		{
 			customerList.forEach(System.out::println);
 
+			//--------------------------------------------
+			// Stream 은 내부반복 로직 수행
+			// 기존 for, while 루프 대체
+			System.out.println(stringList);
+			// 문자열에서 a를 포함했다면 true를 리턴하는 로직
+			System.out.println(match(stringList, "a"));   // ※ 하단의 match() 메소드부터 보고오자.
+			// 이를 stream 으로 작성하면.
+			System.out.println(stringList.stream().anyMatch(str -> str.contains("a")));
+
+
+			customerList.forEach(System.out::println);  // 확인 출력
+
 			// 1) 이름에 "o"가 들어가는 사람이 한명이라도 있습니까? (anyMatch 사용)
 			boolean anyMatch1 = customerList.stream()
-					.anyMatch(person -> person.getName().contains("o"));
+					.anyMatch(customer -> customer.getName().contains("o"));
 			System.out.println("anyMatch1 = " + anyMatch1); // true
 
 			// 2) 모든 사람의 이름에 "o" 가 있습니까? (allMatch 사용)
 			boolean allMatch1 = customerList.stream()
-					.allMatch(person -> person.getName().contains("o"));
+					.allMatch(customer -> customer.getName().contains("o"));
 			System.out.println("allMatch1 = " + allMatch1);  // false
 
 			// 3)  모든 사람의 나이가 25살 이상입니까?  (allMatch 사용)
 			boolean allMatch2 = customerList.stream()
-					.allMatch(person -> person.getAge() >= 25);
+					.allMatch(customer -> customer.getAge() >= 25);
 			System.out.println("allMatch2 = " + allMatch2);  // false
 
 			// 4) 어떤 사람의 이름도 10글자이상이 아닙니까?  (noneMatch 사용)
 			boolean noneMatch = customerList.stream()
-					.noneMatch(person -> person.getName().length() >= 10);
+					.noneMatch(customer -> customer.getName().length() >= 10);
 			System.out.println("noneMatch = " + noneMatch);  // true
 		}
 
@@ -498,7 +513,7 @@ public class Stream02Main {
 		// Collecting   [최종연산]
 		//
 		// collect(Collector<T, A, R>)
-		//    스트린 중간 연산을 결과를 Collector 형태의 파라미터를 받아
+		//    스트림 중간 연산을 결과를 Collector 형태의 파라미터를 받아
 		//    다양한 형태로 결과를 만들어준다.
 		//
 		// Collector<T, A, R>

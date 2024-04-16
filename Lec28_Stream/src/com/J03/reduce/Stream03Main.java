@@ -32,7 +32,7 @@ import java.util.function.BinaryOperator;
  *  	reduce : n -> 1
  */
 
-// 중간 단게를 보여줄수 있으면 좋다!
+// 중간 단계를 보여줄수 있으면 좋다!
 
 
 public class Stream03Main {
@@ -44,7 +44,7 @@ public class Stream03Main {
 
 			// 초깃값을 안 준 경우
 			// 리턴값은 Optional
-			System.out.println(Arrays.stream(arr)
+			System.out.println(Arrays.stream(arr) // IntStream
 					.reduce((a, b) -> a + b));  // 초깃값이 없는 경우 OptionalInt 리턴
 
 			System.out.println(Arrays.stream(arr)
@@ -61,6 +61,14 @@ public class Stream03Main {
 			//         10, 5
 			//          ↘ ↓
 			//            15   <-- 결국 최종값은 한개다
+
+			var result = Arrays.stream(arr)   // IntStream
+					.reduce((a, b) -> {
+						System.out.println("reduce[" + a + ", " + b +"]");  // 중간과정 출력
+						return a + b;
+					})  // 초깃값이 없는 경우 OptionalInt 리턴
+			;
+			System.out.println("result = " + result);
 
 
 			// 초깃값을 준 경우
@@ -83,9 +91,7 @@ public class Stream03Main {
 		{
 			// 문자열에서 길이가 가장 긴 문자열을 뽑아내기
 			String [] greetings = {"안녕하세요~~~", "Hello", "Good morning", "반갑습니다"};
-			String result;
-
-			result = Arrays.stream(greetings)
+			var result = Arrays.stream(greetings)
 					.reduce("", (s1, s2) -> {
 						// System.out.println("s1:" + s1 + ", s2:" + s2);  // reduce 중간과정
 						return (s1.length() >= s2.length()) ? s1 : s2;
@@ -99,6 +105,15 @@ public class Stream03Main {
 					.get()
 			;
 			System.out.println(result);
+
+			// 아래 배열에서 최솟값 출력 (reduce 사용)
+			int [] values = {10, 20, 45, 65, 3, 7, 9, 25};
+			var result2 = Arrays.stream(values)
+					.reduce((v1, v2) -> (v1 < v2) ? v1 : v2)
+					.getAsInt()
+					;
+			System.out.println("result2 = " + result2);
+
 		}
 
 		// 도전!
@@ -131,7 +146,7 @@ public class Stream03Main {
 
 			// 이름들만 묶어서 하나의 문자열 만들기
 			String result2 = personList.stream()
-					.map(Customer::getName)
+					.map(Customer::getName)  // Stream<String> {"zayson", "chaeyoung", "maeng"}
 					.reduce((a, b) -> String.join("/", a, b)).get();
 			System.out.println("result2 = " + result2);  // zayson/chaeyoung/maeng
 		}
