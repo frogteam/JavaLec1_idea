@@ -73,6 +73,12 @@ public class DateTime04Main {
                 // String -> LocalDate
                 "\n[String → LocalDate ] LocalDate.parse(), DateTimeFormatter 사용",
                 LocalDate.parse("2023-04-05", DateTimeFormatter.ofPattern("yyyy-MM-dd")),
+                // 이 경우 single digit month/day 는 에러다
+//                LocalDate.parse("2023-4-5", DateTimeFormatter.ofPattern("yyyy-MM-dd")),
+
+                // single digit month/day 다룰때.
+                LocalDate.parse("2023-4-5", DateTimeFormatter.ofPattern("yyyy-M-d")),
+                LocalDate.parse("2023-04-05", DateTimeFormatter.ofPattern("yyyy-M-d")),
         };
         for (var d : arr) System.out.println(d);
 

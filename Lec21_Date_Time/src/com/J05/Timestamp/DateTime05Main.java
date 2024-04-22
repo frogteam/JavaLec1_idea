@@ -27,19 +27,19 @@ public class DateTime05Main {
 	public static void main(String[] args) {
 		System.out.println("java.sql.Timestamp");
 		Timestamp t;
-		
-		
+
+
 		System.out.println("Timestamp(0)");
 		t = new Timestamp(0L);
 		System.out.println(t);  //1970.01.01 00:00:00  GMT 기준 --> 한국 KST 1970-01-01 09:00:00.0
 		System.out.println();
-		
+
 		System.out.println("Timestamp(현재ms)");
 		System.out.println(System.currentTimeMillis());    // 현재 timestamp ms 값
 		t = new Timestamp(System.currentTimeMillis());
 		System.out.println(t);
 		System.out.println();
-		
+
 		//----------------------------------------------
 		// 문자열 -> Timestamp
 		// 	방법1 : 정해진 형식 + Timestamp.valueOf()
@@ -49,8 +49,8 @@ public class DateTime05Main {
 		t = Timestamp.valueOf(now);
 		System.out.println(t);
 		System.out.println();
-		
-		// 	방법2 : String -> Date -> Timestamp 
+
+		// 	방법2 : String -> Date -> Timestamp
 	    Date parsedDate;
 		try {
 			SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss.SSS");

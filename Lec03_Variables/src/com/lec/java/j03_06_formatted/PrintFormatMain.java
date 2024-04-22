@@ -1,5 +1,7 @@
 package com.lec.java.j03_06_formatted;
 
+import java.text.NumberFormat;
+
 /* 서식화된 문자열 (formatted string)
  *  ● 화면에 출력할때는 -> printf()
  *    
@@ -104,6 +106,25 @@ public class PrintFormatMain {
         """.formatted("hi", "김자까", 2);
 
 		System.out.println(textBlock);
+
+		//---------------------------------------------
+		// 숫자에 천단위 콤마(,) 찍기
+		// NumberFormat.getInstance().format(long)
+		//   : 주어진 정수에 천단위 콤마를 붙인 String 생성
+		System.out.println();
+		{
+			int num1 = 456;
+			int num2 = 1234567;
+			int num3 = 76543;
+
+			String str1 = NumberFormat.getInstance().format(num1);
+			String str2 = NumberFormat.getInstance().format(num2);
+			String str3 = NumberFormat.getInstance().format(num3);
+
+			System.out.printf("|%8d|%10s|\n", num1, str1);
+			System.out.printf("|%8d|%10s|\n", num2, str2);
+			System.out.printf("|%8d|%10s|\n", num3, str3);
+		}
 		
 	} // end main
 
