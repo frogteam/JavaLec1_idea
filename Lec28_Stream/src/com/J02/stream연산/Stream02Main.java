@@ -633,6 +633,18 @@ public class Stream02Main {
 			Map<Boolean, List<Customer>> ageCollect = personList.stream()
 					.collect(Collectors.partitioningBy(person -> person.getAge() != 28));
 			System.out.println("ageCollect = " + ageCollect);
+
+			// 8)
+			//    String 을 쪼개어 List 로 만들기
+			//    List 를 묶어서 String 으로 만들기
+			String str = "GUEST,MEMBER,ADMIN";
+			List<String> list = List.of("GUEST", "MEMBER", "ADMIN");
+
+			List<String> listCollect = Arrays.stream(str.split(",")).toList();
+			System.out.println("String -> List: " + listCollect);
+
+			String strCollect = list.stream().collect(Collectors.joining(","));
+			System.out.println("List -> String: " + strCollect);
 		}
 
 		System.out.println("\n프로그램 종료");

@@ -60,6 +60,7 @@ public class Stream04Main {
          */
         customerList.stream().filter(c->c.getAge() >= 20).map(c->c.getName()).sorted().forEach(s->System.out.println(s));
 
+
         System.out.println("\n프로그램 종료");
     } // end main()
 } // end class
