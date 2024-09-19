@@ -47,7 +47,7 @@ public class Variables05Main {
 		// 4. "AAaa"
 		// 4 > 2 > 3 > 1
 		
-		// 알파벳은 대문자 코드값보다 소문자 코드값이 크가
+		// 알파벳은 대문자 코드값보다 소문자 코드값이 크다
 		char ch8 = 'A';
 		char ch9 = 'a';
 		System.out.println("'A': " + (int)ch8);		// 65
@@ -69,7 +69,7 @@ public class Variables05Main {
 		// String 타입
 		// String 은 primitive 타입은 아닙니다
 		String name = "Hong";   // String literal 은 " ~ " 
-		String nick = "thnuder";
+		String nick = "thunder";
 		System.out.println("이름은:" + name + "\n별명은:" + nick);
 
 		// ---------------------------------------------

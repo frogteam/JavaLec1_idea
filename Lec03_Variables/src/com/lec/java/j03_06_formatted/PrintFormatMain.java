@@ -18,7 +18,7 @@ import java.text.NumberFormat;
  *  	%c  :  '문자하나' 출력
  *  	%x  :  16진수 정수로 출력
  *  	%%  :  % 출력
-*/
+ */
 public class PrintFormatMain {
 
 	public static void main(String[] args) {

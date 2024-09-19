@@ -28,7 +28,7 @@ package com.lec.java.j13_07_Lombok;
  *   Structure 창(ALT+7)을 열고 적용되는 내용을 확인해볼수 있다.
  **/
 
-public class Class10Main {
+public class Class07Main {
 
 	public static void main(String[] args) {
 		System.out.println("\nLombok 라이브러리 사용");

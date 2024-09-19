@@ -20,7 +20,7 @@ public class Array12Main {
 		int [] arrA = new int[]{10, 10, 10};
 		int [] arrB = new int[]{20, 20, 20};
 		System.out.println("A:" + Arrays.toString(arrA) + ", B:" + Arrays.toString(arrB));
-		arrA = arrB;  // 이것도 '값' 의 복사다
+		arrA = arrB;  // 이것도 '값'의 복사다.  단! reference type 이기에 '주소값' 의 복사 발생!
 		System.out.println(Arrays.toString(arrA) + " " + Arrays.toString(arrB));
 		arrA[0] = 500;  // 무엇을 바꾸는 건가?
 		System.out.println(Arrays.toString(arrA) + " " + Arrays.toString(arrB)); // 결과는?

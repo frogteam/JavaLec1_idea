@@ -26,10 +26,10 @@ public class Method02Main {
 		int total = 56;
 		showResult(total);
 		System.out.println();
-		
-		
-		// 메소드의 매개변수로 정수 두 개를 넘겨주면
-		// 그 결과로 더한 값을 되돌려 받고 싶다.
+
+
+		// 메소드의 매개변수로 정수 두 개를 넘겨주면 (입력값 이라고도 표현함)
+		// 그 결과로 더한 값을 되돌려 받고 싶다. (출력값 이라고도 표현함)
 		int result;
 		result = add(110, 220);  // add(int, int) 의 리턴값을 result 에 대입
 		System.out.println("result = " + result);

@@ -42,11 +42,15 @@ public class Method01Main {
 
 		System.out.println();
 		System.out.println("메소드 호출(사용)");
+		sayAnthem();  // sayAnthem 메소드 호출
 		
 		// 메소드 sayHello(String) 호출 (method call, method invoke)
 		sayHello("정예경");
 		sayHello("김진후");
-		
+//		sayHello();  // 에러
+//		sayHello(123);  // 에러
+
+
 		System.out.println();
 		// 메소드 sayAge() 호출
 		sayAge(16);
@@ -120,8 +124,8 @@ public class Method01Main {
 	 * 리턴값 : void
 	 */
 	public static void sayHello3(String name, int age) {
-		sayHello(name);
-		sayAge(age);
+		sayHello(name); // sayHello3 가 sayHello 를 호출
+		sayAge(age); // sayHello3 가 sayAge 를 호출
 	} // end sayHello3()
 
 } // end class

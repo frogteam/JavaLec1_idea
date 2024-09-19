@@ -15,7 +15,7 @@ public class Input03Main {
 		System.out.println("in : " + in);     // //  aaa bbb ccc   
 		
 		// next()
-		// 다음 단어 (token) 을 받아서 String 으로 돌려준다
+		// 입력버퍼의 다음 단어 (token) 을 꺼내와서 String 으로 돌려준다
 		System.out.print("여러 단어의 문장을 입력하세요 >");
 		// > aaa bbb ccc   <- 입력
 		String in1 = sc.next();

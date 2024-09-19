@@ -16,7 +16,7 @@ public class Input02Main {
 		// line 단위 String 입력
 		System.out.print("이름을 입력하세요: ");
 		String name = sc.nextLine();  // ENTER 를 입력할때까지의 모든 문자들이 문자열(String)로 리턴
-		
+		// George Herbert Walker Prescott III)[
 		System.out.print("별명을 입력하세요: ");
 		String nick = sc.nextLine();
 		

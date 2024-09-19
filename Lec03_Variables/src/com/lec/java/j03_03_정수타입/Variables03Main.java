@@ -53,8 +53,11 @@ public class Variables03Main {
 		long num13 = 12L; // 12라는 long을 long 타입에 저장
 		int num14 = 12;
 		//int num15 = 12L; // 컴파일 에러: long 타입 숫자를 int에 저장하려고 했을 때
-		
-		
+
+		// underscore 표기도 가능.
+		num11 = 9_876_543_210L;
+		num11 = 98_7654_3210L;    // 꼭 세자리 단위일 필요는 없다.
+
 		// 값의 경계선에선?
 		// overflow!  underflow! 발생
 		byte num15 = Byte.MAX_VALUE;

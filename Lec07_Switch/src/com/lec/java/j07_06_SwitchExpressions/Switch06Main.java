@@ -13,7 +13,7 @@ import com.lec.java.j07_05_EnhancedSwitch.Day;
 
 public class Switch06Main {
     public static void main(String[] args) {
-        Day day = Day.THURSDAY;  // 외부 클래스 니까 import 필요
+        Day day = Day.THURSDAY;  // 외부 클래스(다른 패키지의 클래스) 니까 import 필요
 
         // 기본 switch 문 방식으로 day 의 길이를 변수에 저장
         {
@@ -51,6 +51,7 @@ public class Switch06Main {
                 case TUESDAY				-> 7;
                 case THURSDAY, SATURDAY		-> 8;
                 case WEDNESDAY				-> 9;
+                // 이때 모든 enum 값들이 case 라벨에 명시 되어야 한다.  하나라도 빠지면 에러.
             };
             System.out.println("numLetters: " + numLetters);
         }

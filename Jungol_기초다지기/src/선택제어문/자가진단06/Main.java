@@ -22,26 +22,25 @@ public class Main {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-//		String gender = sc.next();
-//		int age = sc.nextInt();
-		
+		String gender = sc.next();
+		int age = sc.nextInt();
+
+		// ※ switch + 삼항연산자 버젼
+		//  jungol OpenJDK 21 에선 switch expression 지원안함 ㅜㅜ
 //		switch(gender) {
-//		case "F":
-//			if(age >= 18) {
-//				System.out.println("WOMAN");
-//			}else {
-//				System.out.println("GIRL");
-//			}
-//			break;
-//		case "M":
-//			if(age >= 18) {
-//				System.out.println("MAN");
-//			}else {
-//				System.out.println("BOY");
-//			}
-//			break;
+//			case "F" -> System.out.println((age >= 18) ? "WOMAN" : "GIRL");
+//			case "M" -> System.out.println((age >= 18) ? "MAN" : "BOY");
 //		}
-		
+
+		switch(gender) {
+			case "F":
+				System.out.println((age >= 18) ? "WOMAN" : "GIRL");
+				break;
+			case "M":
+				System.out.println((age >= 18) ? "MAN" : "BOY");
+				break;
+		}
+
 		
 		// ※ if ~ else 버젼
 //		char gender = sc.next().charAt(0);

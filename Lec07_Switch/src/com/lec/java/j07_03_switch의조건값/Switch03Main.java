@@ -16,14 +16,16 @@ public class Switch03Main {
         char ch = 'C';
         switch (ch) {
             case 'a':
+            case 'A':
                 System.out.println('A');
                 break;
 
             case 'b':
+            case 'B':
                 System.out.println('B');
                 break;
 
-            case 'c':
+            case 'c', 'C':  // 이런식으로도 가능
                 System.out.println('C');
                 break;
 
