@@ -9,17 +9,17 @@ import java.util.Scanner;
 public class Gugu2 {
 	public static void main(String[] args) {
 
-		Scanner in = new Scanner(System.in);
+		Scanner sc = new Scanner(System.in);
 		System.out.println("시작단");
-		int startDan = in.nextInt();
+		int startDan = sc.nextInt();
 		System.out.println("끝단");
-		int endDan = in.nextInt();
+		int endDan = sc.nextInt();
 		System.out.println("시작 피승수");
-		int startMul = in.nextInt();
+		int startMul = sc.nextInt();
 		System.out.println("끝 피승수");
-		int endMul = in.nextInt();
+		int endMul = sc.nextInt();
 		System.out.println("출력할 열의수 ");
-		int maxCol = in.nextInt();
+		int maxCol = sc.nextInt();
 
 		for (int dan = startDan; dan <= endDan; dan += maxCol) {
 			for (int mul = startMul; mul <= endMul; mul++) {
