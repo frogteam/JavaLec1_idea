@@ -29,7 +29,7 @@ public class Method09Main {
 		
 		int[] arr = {10}; 
 		incNum(arr);
-		System.out.println("incNum(int) 호출후 arr[0] : " + arr[0]);
+		System.out.println("incNum(int[]) 호출후 arr[0] : " + arr[0]);
 
 		System.out.println("\n프로그램 종료");
 	} // end main()

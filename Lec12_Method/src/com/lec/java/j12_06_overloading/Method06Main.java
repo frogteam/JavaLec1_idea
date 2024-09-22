@@ -41,6 +41,12 @@ public class Method06Main {
 		System.out.println(3.14);
 		System.out.println("hello");
 		System.out.println(new int[10]);
+
+		// printInt(10)
+		// printDouble(3.14);
+		// printString("Hello");
+		// ...
+		// 위와 같이 매개변수마다 익혀야 하는 메소드들의 이름이 서로 다르면... 개발자는 힘들다.
 		
 		System.out.println("\n프로그램 종료");
 	} // end main()

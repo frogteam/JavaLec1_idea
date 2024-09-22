@@ -1,6 +1,7 @@
 package practice.isogram;
 
 import java.util.Arrays;
+import java.util.HashSet;
 import java.util.Scanner;
 
 /*	Isogram
@@ -32,42 +33,47 @@ public class Isogram {
     // main 은 수정하지 마세요
     public static void main(String[] args) 
     {
-//    	Scanner sc = new Scanner(System.in);
-//    	String word;
-//    	while(true) {
-//    		word = sc.next();
-//    		if(word.equalsIgnoreCase("quit")) break;
-//    		System.out.println(is_isogram2(word));
-//    	}
-//    	sc.close();
-
         for(var word : input){
             System.out.println(is_isogram(word));
         }
     }
 
     static boolean is_isogram(String str) {
-        str = str.toLowerCase();
-        int len = str.length();
 
-        char arr[] = str.toCharArray();
+        // 방법1  Arrays.sort() 사용
+//        str = str.toLowerCase();
+//        int len = str.length();
+//
+//        char arr[] = str.toCharArray();
+//
+//        Arrays.sort(arr);
+//        for (int i = 0; i < len - 1; i++) {
+//            if (arr[i] == arr[i + 1])
+//                return false;
+//        }
+//        return true;
 
-        Arrays.sort(arr);
-        for (int i = 0; i < len - 1; i++) {
-            if (arr[i] == arr[i + 1])
-                return false;
-        }
-        return true;
-    }
-
-    // substring() 과 indexOf(), charAt() 사용
-    static boolean is_isogram2(String str) {
+        // 방법2 : substring() 과 indexOf(), charAt() 사용
         str = str.toLowerCase();
         for(int i = 0; i < str.length() - 1; i++) {
             // 같은 문자 발견되면 무조건 false
             if(str.substring(i + 1).indexOf(str.charAt(i)) != -1) return false;
         }
         return true;
+
+        // 방법3: Set<> 사용
+//        str = str.toLowerCase();
+//        HashSet<Character> charSet = new HashSet<>();
+//
+//        for (char c : str.toCharArray()) {
+//            // 이미 존재하면 중복이므로 false 반환
+//            if (!charSet.add(c)) {
+//                return false;
+//            }
+//        }
+//
+//        return true; // 중복이 없으면 true 반환
     }
-}
+
+} // end class
 

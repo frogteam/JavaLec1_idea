@@ -16,13 +16,17 @@ public class Method08Main {
 		Scanner sc = new Scanner(System.in);
 		
 		while(true) {
+			// 메뉴 보여주기
 			showMenu();
 			
+			// 사용자 입력
 			int userChoice = inputChoice(sc);
 			if(userChoice == 0) break;
 			
+			// 컴퓨터 생각 (난숫값)
 			int com = new Random().nextInt(3) + 1;  // 1, 2, 3
 			
+			// 판정결과 출력
 			if(com == userChoice) {
 				System.out.println("맞췄습니다");
 			} else {
@@ -38,14 +42,15 @@ public class Method08Main {
 	// 메뉴 보여주기
 	// 메소드 이름 : showMenu()
 	public static void showMenu() {
-		System.out.println("-------------");
-		System.out.println("COM의 생각을 맞춰보세요");
-		System.out.println("1]");
-		System.out.println("2]");
-		System.out.println("3]");
-		System.out.println("0] 종료");
-		System.out.println("-------------");
-		System.out.print("선택:");
+		System.out.print("""
+				---------------------
+				COM 의 생각을 맞춰보세요
+				1]
+				2]
+				3]
+				0] 종료
+				--------------------
+				선택:""");
 	} // end showMenu
 	
 	// 메소드 이름 : inputChoice

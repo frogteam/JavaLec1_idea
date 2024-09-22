@@ -24,6 +24,15 @@ public class Method07Main {
 		// 1.2 == 1 < 1.2 < 2 == floor: 1, ceil: 2
 		// -1.2 == -2 < -1.2 < -1 == floor: -2, ceil: -1
 
+		/*
+				floor   ceil   round
+		2.7]   2.0    3.0    3
+				floor   ceil   round
+		-1.2]  -2.0   -1.0   -1
+				floor   ceil   round
+		-2.8]  -3.0   -2.0   -3
+		*/
+
 		for(var d : new double[]{2.7, -1.2, -2.8}){
 			System.out.println("        floor   ceil   round");
 			System.out.printf("%5.1f]  %5.1f  %5.1f  %3d\n", d, Math.floor(d), Math.ceil(d), Math.round(d));

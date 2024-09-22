@@ -1,7 +1,9 @@
-package com.lec.java.j41_01_record;
+package com.lec.java.j41_01_immutable_class;
 
 // 선행
-//  상속, override, equals()
+//  상속, override, equals(), toString(), hashCode()
+//  Set<>
+//  생성자 delegate
 
 
 import java.util.Objects;
@@ -86,6 +88,13 @@ public class Record01Main {
      *     추가 코드로 인해 클래스가 단순히 이름과 주소라는 두 개의 String 필드가 있는 데이터 클래스라는 사실이 모호해집니다.
      *
      */
+
+    public static void main(String[] args) {
+        System.out.println("immutable class");
+
+
+        System.out.println("\n프로그램 종료");
+    } // end main()
 
 } // end class
 
