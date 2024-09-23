@@ -45,7 +45,6 @@ public class MyTV {
 		} else { // TV가 꺼져 있으면
 			isPowerOn = true;
 			System.out.println("TV가 켜졌습니다.");
-			
 		}
 	} // end powerOnOff()
 	

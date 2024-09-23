@@ -20,7 +20,17 @@ public class Rectangle {
 		System.out.println("가로: " + width);
 		System.out.println("세로: " + height);
 	}
-	
+
+	public Rectangle(double h){
+		this(); // 생성자 위임 (constructor delegation)
+			// this 키워드 사용하여, 특정 생성자를 먼저 호출하여 초기화 함
+			// 생성자 위임은 생성자 의 '첫 문장' 이어야 한다!
+		System.out.println("Rectangle(double) 생성");
+		height = h;
+		System.out.println("가로: " + width);
+		System.out.println("세로: " + height);
+	}
+
 	// 메소드
 	// 1) calcPerimeter: 사각형의 둘레
 	public double calcPerimeter() {

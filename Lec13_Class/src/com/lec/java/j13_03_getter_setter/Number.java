@@ -39,6 +39,9 @@ public class Number {
 	// realNumber => getRealNumber
 	//            => setRealNumber
 
+	// bool 타입의 경우
+	//  activated => isActivated
+	//               setActivated
 
 } // class Number
 

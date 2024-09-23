@@ -59,8 +59,8 @@ public class RegExp01Main {
 	public static void main(String[] args) {
 		System.out.println("정규표현식 regular expression");
 		
-		String input;
-		String regex;
+		String input; // 입력문자열
+		String regex; // 정규표현식 문자열
 		Pattern pat;
 		Matcher matcher;
 		
