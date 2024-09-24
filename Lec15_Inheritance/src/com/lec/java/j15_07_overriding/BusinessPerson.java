@@ -23,7 +23,9 @@ public class BusinessPerson extends Person {
 	//void showInfo() { // 에러 접근권한범위가 더 좁아질수는 없다.
 	protected void showInfo() {  // OK  동일한 접근권한 
 //	public void showInfo() {  //  OK  더 넓은 접근권한
+		//System.out.println("이름: " + name);
 		super.showInfo();
+
 		System.out.println("회사: " + company);
 	} // end showInfo()
 	

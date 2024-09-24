@@ -75,9 +75,9 @@ public class Polymorphism02Main {
 		// 용법: 변수/값 instanceof 클래스
 		// 결과: true / false
 
-		System.out.println(car1 instanceof Vehicle);
-		System.out.println(car2 instanceof Vehicle);
-		System.out.println(car3 instanceof Vehicle);
+		System.out.println(car1 instanceof Vehicle);  // Vehicle is-a Vehicle
+		System.out.println(car2 instanceof Vehicle);  // Car is-a Vehicle
+		System.out.println(car3 instanceof Vehicle);  // HybridCar is-a Vehicle
 		System.out.println();
 		System.out.println(car1 instanceof Car);
 		System.out.println(car2 instanceof Car);

@@ -64,10 +64,10 @@ public class Polymorphism03Main {
 		System.out.println(car1.NAME);
 		//System.out.println(((Car)car1).NAME);   // ClassCastException
 
-		System.out.println(car3.NAME);    // => HybridCar.Name
-		System.out.println(((Car)car3).NAME); // => Car.Name
-		System.out.println(((Vehicle)car3).NAME);  // => Vehicle.Name
-		System.out.println(((Car)(Vehicle)car3).NAME);  // => Car.Name  결국 타입
+		System.out.println(car3.NAME);    // => HybridCar.NAME
+		System.out.println(((Car)car3).NAME); // => Car.NAME
+		System.out.println(((Vehicle)car3).NAME);  // => Vehicle.NAME
+		System.out.println(((Car)(Vehicle)car3).NAME);  // => Car.NAME  결국 타입
 
 
 

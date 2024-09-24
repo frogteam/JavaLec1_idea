@@ -57,9 +57,9 @@ public class Polymorphism01Main {
 		//------------------------------------------------------
 		// '타입'으로 식별 및 접근 가능  => ex) 클래스이름.static변수
 		System.out.println();
-		System.out.println(car1.NAME);  // car1 의 '타입' 이 Vehicle 이니까 => Vehicle.Name
-		System.out.println(car2.NAME);  // car2 의 '타입' 이 Vehicle 이니까 => Vehicle.Name
-		System.out.println(car3.NAME);  // car3 의 '타입' 이 Car 이니까 => Car.Name
+		System.out.println(car1.NAME);  // car1 의 '타입' 이 Vehicle 이니까 => Vehicle.NAME
+		System.out.println(car2.NAME);  // car2 의 '타입' 이 Vehicle 이니까 => Vehicle.NAME
+		System.out.println(car3.NAME);  // car3 의 '타입' 이 Car 이니까 => Car.NAME
 
 		
 		System.out.println("\n 프로그램 종료");
