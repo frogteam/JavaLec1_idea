@@ -40,7 +40,7 @@ public class Wrapper01Main {
 			System.out.println("== 다르다!!");  //
 		}
 		
-		if (num1.equals(num2)) { // Wrapper 끼리의 값을 비교하려면 equals
+		if (num1.equals(num2)) { // Wrapper 가 가지고 있는 값을 비교하려면 equals 사용하자!
 			System.out.println("equals 같다...");  // 같다!
 		} else {
 			System.out.println("equals 다르다!!");
@@ -75,6 +75,7 @@ public class Wrapper01Main {
 		// 4. 산술 연산 가능
 		num6 *= 2;
 		System.out.println(num6);
+		System.out.println(num6 == num5);  // false  !!
 
 		// 5. Wrapper 는 null  값을 가질수 있다 (당연!)  primitive 는 가질수 없는 값!
 		Integer num3 = null;

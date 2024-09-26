@@ -10,14 +10,24 @@ import java.time.format.DateTimeFormatter;
  * 	- JAVA8 부터 도입
  * 	- 날짜 + 시간을 '조작' '비교' 등을 하는 기능을 추가한 객체들
  *
- *  날짜와 시간을 표현하는 클래스들
- *  LocalDate	로컬 날짜 클래스
- *  LocalTime	로클 시간 클래스
- *  LocalDateTime  로컬 날짜 및 시간클래스 (LocalDate + LocalTime)
+ *  ▶날짜와 시간을 표현하는 클래스들
+ *    LocalDate	로컬 날짜 클래스
+ *    LocalTime	로컬 시간 클래스
+ *    LocalDateTime  로컬 날짜 및 시간클래스 (LocalDate + LocalTime)
+ *
+ *    위 클래스들은 아래 인터페이스를 구현한다.
+ *       java.time.temporal.Temporal(I),
+ *       java.time.temporal.TemporalAdjuster(I)
+ *       java.time.chrono.ChronoLocalDateTime(I)
+ *                        ChronoLocalDate(I)
+ *
+ *  ▶날짜및 시간 포맷객체
+ *    DateTimeFormatter
  *
  *  https://docs.oracle.com/javase/8/docs/api/java/time/package-summary.html
- *
- *
+ */
+
+/*
  *  ★이제 가급적 java.time 객체를 사용하자!  구 Date, Calendar 의 문제점!★
  *
  *  - Date 클래스: time zone 기능 없슴.. format 기능 없슴.. calendar 기능 없슴.
@@ -58,20 +68,20 @@ public class DateTime04Main {
                 "주어진시간: " + LocalTime.of(23, 12, 22, 1234567),  // 23:12:22.001234567
 
                 "\n[LocalDateTime]",
-                "현재날짜시간: " + LocalDateTime.now(),  // 2023-09-21T14:43:15.685732500
+                "현재날짜시간: " + (datetime1 = LocalDateTime.now()),  // 2023-09-21T14:43:15.685732500
                 "주어진날짜시간: " + LocalDateTime.of(2023, 9, 21, 14, 44, 23, 123456789),
 
                 // LocalDateTime => String
                 "\n[LocalDateTime → String] format(), DateTimeFormatter 사용",
                 // java.time.DateTimeFormatter 를 사용하여 원하는 포맷으로 출력
                 // https://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html
-                datetime1 = LocalDateTime.now(),
                 datetime1.format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")),
                 datetime1.format(DateTimeFormatter.ofPattern("yyyy년MM월dd일 HH시mm분ss초")),
                 datetime1.format(DateTimeFormatter.ofPattern("yyyy-MM-dd a hh:mm:ss")), // 2024-04-08일 오후 03:05:35
 
                 // String -> LocalDate
                 "\n[String → LocalDate ] LocalDate.parse(), DateTimeFormatter 사용",
+                // ※ parse: 파싱한다.   문자열 데이터를 해석하여 원하는 정보획득, 변환등의 작업...
                 LocalDate.parse("2023-04-05", DateTimeFormatter.ofPattern("yyyy-MM-dd")),
                 // 이 경우 single digit month/day 는 에러다
 //                LocalDate.parse("2023-4-5", DateTimeFormatter.ofPattern("yyyy-MM-dd")),

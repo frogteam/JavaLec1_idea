@@ -27,6 +27,7 @@ public class Generic02Main {
 		Test<Integer, String> t1 = 
 				new Test<>(123, "Hello, Java!");
 		t1.display();
+		System.out.println(Test.num); // static
 
 		Test t5 = new Test(10, "hhh");
 		
@@ -47,6 +48,7 @@ class Test<T, U> {
 	T item1;
 	U item2;
 
+	static int num = 111;
 	// static T item3;    // static 필드에는 generic 사용 불가.
 	
 	public Test(T item1, U item2) {

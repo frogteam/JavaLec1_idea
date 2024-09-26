@@ -8,7 +8,7 @@ import java.util.Date;
 
 /*
  * java.sql.Timestamp;
- * 1970.01.01 00:00:00  GMT 기준 의 경과 시간을 ms (정수)로 계산해 담은 객체
+ *  1970.01.01 00:00:00  GMT 기준 의 경과 시간을 ms (정수)로 계산해 담은 객체
  */
 
 /**
@@ -24,11 +24,51 @@ import java.util.Date;
 
 public class DateTime05Main {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws ParseException {
 		System.out.println("java.sql.Timestamp");
-		Timestamp t;
+
+		Timestamp timeStamp; // java.sql.Timestamp
+		String str;
+		Date date;
+		SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss.SSS");
+		LocalDateTime datetime;
+
+		Object[] arr = {
+				"[Timestamp(0)]",
+				timeStamp = new Timestamp(0L),  //1970.01.01 00:00:00  GMT 기준 --> 한국 KST 1970-01-01 09:00:00.0
+
+				"\n[Timestamp(현재ms)]",
+				System.currentTimeMillis(),    // 현재 timestamp ms 값
+				timeStamp = new Timestamp(System.currentTimeMillis()),
+
+				//----------------------------------------------
+				// 문자열 -> Timestamp
+				// 	방법1 : 정해진 형식 + Timestamp.valueOf()
+				"\n[String -> Timestamp]",
+				str = "2009-03-20 10:20:30.0", // 형식을 지켜야 함
+				timeStamp = Timestamp.valueOf(str),
+
+				// 	방법2 : String -> Date -> Timestamp
+				date = dateFormat.parse(str), // Date <- String
+				timeStamp = new Timestamp(date.getTime()), // Timestamp <- Date
+
+				//----------------------------------------------
+				// Timestamp -> 문자열
+				// SimpleDateFormat + Timestamp:getTime()
+				"\n[Timestamp -> String]",
+				str = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss.SSS").format(timeStamp.getTime()),
 
 
+				"\n[Timestamp <-> java.time.*]",
+				// Timestamp -> LocalDateTime
+				datetime = timeStamp.toLocalDateTime(),
+
+				// LocalDateTime -> Timestamp
+				timeStamp = Timestamp.valueOf(datetime),
+		};
+		for(var obj : arr) System.out.println(obj);
+
+/*
 		System.out.println("Timestamp(0)");
 		t = new Timestamp(0L);
 		System.out.println(t);  //1970.01.01 00:00:00  GMT 기준 --> 한국 KST 1970-01-01 09:00:00.0
@@ -55,7 +95,7 @@ public class DateTime05Main {
 		try {
 			SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss.SSS");
 			parsedDate = dateFormat.parse(now); // Date <- String
-			t = new Timestamp(parsedDate.getTime());
+			t = new Timestamp(parsedDate.getTime()); // Timestamp <- Date
 			System.out.println(t);
 			System.out.println();
 		} catch (ParseException e) {
@@ -76,7 +116,41 @@ public class DateTime05Main {
 		// LocalDateTime -> Timestamp
 		t = Timestamp.valueOf(datetime);
 		System.out.println(t);
-		
-	}
+		*/
+	} // end main
 
-}
+} // end class
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

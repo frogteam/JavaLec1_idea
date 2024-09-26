@@ -14,7 +14,7 @@ public class Wrapper02Main {
 		System.out.println("auto-boxing, auto-unboxing");
 		// Java 5부터 wrapper 클래스의 auto-boxing/unboxing 기능 제공
 		
-		Integer num1 = 10; // Integer.valueOf(10); // auto-boxing
+		Integer num1 = 10; // Integer.valueOf(10); <- auto-boxing
 		Integer num2 = 20;
 		Integer num3 = num1 + num2;  // num1.intValue() <- auto-unboxing
 		Integer num30 = Integer.valueOf(num1.intValue() + num2.intValue());

@@ -20,9 +20,6 @@ import java.util.ArrayList;
 /*
     타입 계층 관계가 존재하는 타입 시스템에는
     Covariance(공변선)와 Contravariance(반공변성)라는 개념(+ Invariance, Bivariance)이 존재한다.
-
-
-
  */
 
 public class Generic04Main {
@@ -40,9 +37,10 @@ public class Generic04Main {
         test2(new Box<C>());
         test2(new Box<D>());
 
+        // test3, test4 가 generic method 는 아니지만, 매개변수인 generic class  에 타입 파라미터 제한을 줄수 있다
         System.out.println();
         //test3(new Box<A>());
-        test3(new Box<B>());
+        test3(new Box<B>());  // new Box<>()  해도 동작.
         test3(new Box<C>());
         test3(new Box<D>());
 

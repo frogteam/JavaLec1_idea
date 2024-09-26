@@ -27,7 +27,7 @@ public class Wrapper03Main {
 			System.out.println(elm);   // 사실 toString() 이다
 		}
 
-		//int num = obj[3];  // 에러
+		//int num = obj[3];  // 에러, Object 타입인지라 unboxing 동작 안함.
 		int num = (Integer)obj[3];
 		// ↑ 실제 담고 있는게 Integer 다 하더라도,
 		//  원소타입이 Object 이기 때문에  일단 Wrapper 로 형변환 하여 auto-unboxing 이 발생하게 해야 한다

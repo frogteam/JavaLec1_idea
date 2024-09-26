@@ -19,7 +19,7 @@ public class Exception07Main {
 			//ScoreException ex = new ScoreException( score + "값은 입력할수 없는 점수입니다" );
 			
 			
-			throw ex;  // 예외 객체를 인위적으로 throw
+			throw ex;  // 예외 객체를 인위적으로 throw, throw 하면 메소드는 종료된다.
 		}
 		
 		return score;

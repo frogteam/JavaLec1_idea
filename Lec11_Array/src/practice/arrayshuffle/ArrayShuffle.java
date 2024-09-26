@@ -9,39 +9,24 @@ import java.util.stream.Collectors;
 
 public class ArrayShuffle {
 	public static void main(String[] args) {
-		String str = "강진\r\n"
-				+ "곽기환\r\n"
-				+ "권혁찬\r\n"
-				+ "김경민\r\n"
-				+ "김민수\r\n"
-				+ "김민지\r\n"
-				+ "김선철\r\n"
-				+ "김승민\r\n"
-				+ "김영은\r\n"
-				+ "김종원\r\n"
-				+ "김진섭\r\n"
-				+ "김하은\r\n"
-				+ "노수빈\r\n"
-				+ "박성민\r\n"
-				+ "박진우\r\n"
-				+ "박해연\r\n"
-				+ "배서하\r\n"
-				+ "서준원\r\n"
-				+ "신동민\r\n"
-				+ "신현담\r\n"
-				+ "윤솔비\r\n"
-				+ "윤은경\r\n"
-				+ "이상빈\r\n"
-				+ "장윤호\r\n"
-				+ "장은총\r\n"
-				+ "정요셉\r\n"
-				+ "정은수\r\n"
-				+ "정재욱\r\n"
-				+ "조성훈\r\n"
-				+ "최민석\r\n"
-				+ "최정민\r\n"
-				+ "하병노\r\n"
-				+ "홍영기";
+		String str = """
+				김민혁
+				김범순
+				노경민
+				박동신
+				박준우
+				신창영
+				윤가희
+				이경원
+				이동희
+				이석
+				이유나
+				장준영
+				정문선
+				최시후
+				현지윤
+				황예은
+				""";
 		String [] arr = str.split("\\s+");
 		
 		List<String> list = Arrays.asList(arr);  // 배열 --> List 로 변환
@@ -56,5 +41,38 @@ public class ArrayShuffle {
 		System.out.println(list.stream().collect(Collectors.joining("\t")));
 
 
+		{ // JAVA QUIZ
+			// 1조
+//			shuffle("현지윤 이동희 윤가희 이경원", 1);
+//			shuffle("B58 A14 D21 C06 B04", 1);
+
+			// 2조
+//			shuffle("신창영 황예은 이석 김범순", 1);
+//			shuffle("A52 A09 D04 C03 A31", 1);
+
+			// 3조
+//			shuffle("박준우 최시후 이유나 장준영", 1);
+//			shuffle("A47 B20 D26 C59 A08", 1);
+
+			// 4조
+//			shuffle("노경민 박동신 김민혁 정문선", 1);
+//			shuffle("B41 A18 D28 C13 C14", 1);
+		}
+	} // end main()
+
+	// 메소드로 준비
+	public static void shuffle(String str){
+		String[] arr = str.trim().split("\\s+");
+		List<String> list = Arrays.asList(arr);  // 배열 --> List 로 변환
+		Collections.shuffle(list);   // shuffle() 무작위로 섞기
+		System.out.println(list.stream().collect(Collectors.joining("\t")));
+	}
+
+	public static void shuffle(String str, int top){
+		String[] arr = str.trim().split("\\s+");
+		List<String> list = Arrays.asList(arr);  // 배열 --> List 로 변환
+		Collections.shuffle(list);   // shuffle() 무작위로 섞기
+		list = list.subList(0, top);
+		System.out.println(list.stream().collect(Collectors.joining("\t")));
 	}
 }

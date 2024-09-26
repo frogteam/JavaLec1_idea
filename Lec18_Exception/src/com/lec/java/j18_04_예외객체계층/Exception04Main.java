@@ -77,7 +77,7 @@ public class Exception04Main {
 			int n = 123 / 0;
 
 		} catch (ArithmeticException
-				 //| Exception    // 다른 레벨의 예외를 같이 나열하면 앙되요.
+				 //| Exception    // 다른 계층 레벨의 예외를 같이 나열하면 앙되요.
 				 | NullPointerException
 				 | ArrayIndexOutOfBoundsException ex) {
 			System.out.println(ex.getClass());

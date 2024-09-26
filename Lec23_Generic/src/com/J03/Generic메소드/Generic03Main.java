@@ -3,7 +3,9 @@ package com.J03.Generic메소드;
 /* Generic메소드
  *
  *   제네릭 메소드는 메소드의 선언부에 적은 타입 파라미터로
- *    '리턴 타입' 이나 '파라미터 타입'이 정해지는 메소드
+ *    '호출'할때! 타입 파라미터가 정해진다
+ *
+ *    이를 사용하여 '리턴 타입' 이나 '파라미터 타입'을 정할수 있다.
  *
  *   <타입파라미터..> 리턴타입 메소드명(매개변수) {...}
  *
@@ -18,7 +20,7 @@ public class Generic03Main {
 	public static void main(String[] args) {
 		System.out.println("Generic 메소드");
 
-		test1(123);
+		test1(123); // 호출할때 T 가 결정된다!  123 : class java.lang.Integer
 		test1(123.);
 		test1(123.f);
 		test1("123");
@@ -32,6 +34,7 @@ public class Generic03Main {
 
 		Box<String> sBox = boxing("Apple");  // Box<String> 리턴
 		System.out.println(sBox.data);
+		// ↑ Box<> 는 안된다...
 
 		Box<Integer> nBox = boxing(34); // Box<Integer> 리턴
 		System.out.println(nBox.data);
@@ -55,9 +58,9 @@ public class Generic03Main {
 
 
 	// ※ 우선 아래 class Box<K> 부터 생성
-	public static <T> Box<T> boxing(T t){
+	public static <T> Box<T> boxing(T param){
 		Box<T> box = new Box<>();
-		box.setData(t);
+		box.setData(param);
 		return box;
 	} // end boxing()
 
