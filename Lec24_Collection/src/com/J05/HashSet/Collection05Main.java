@@ -18,7 +18,7 @@ import java.util.stream.Stream;
 	 (예) {1, 2, 3} = {1, 1, 2, 2, 3} : 중복 저장이 안되기 때문에 같은 Set
 	 (예) {1, 2, 3} = {1, 3, 2}: 저장 순서가 중요하지 않기 때문에 같은 Set
 	
-	 HashSet: 매우 빠른 검색 속도를 제공
+	 HashSet: 매우 빠른 검색(조회) 속도를 제공
 
 	 	(※ HashXXX ← '검색속도 향상'을 쓰는 자료구조 입니다)
 */
@@ -106,21 +106,22 @@ public class Collection05Main {
 			Set<String> set = new HashSet<>();
 
 			// List, 배열로부터 생성
-			set = new HashSet<>(Arrays.asList("a", "a", "b"));
+			set = new HashSet<>(Arrays.asList("a", "a", "b"));  // mutable 이다
 			System.out.println(set);
 
 			// Collections utility 클래스 하용
-			Collections.addAll(set, "a", "a", "b");
+			Collections.addAll(set, "a", "a", "b");  // 기존 set 에 추가됨.
 			System.out.println(set);
 
 			// Stream 사용 (Java8 이상)
 			set = Stream.of("a", "a", "b")
 					.collect(Collectors.toCollection(HashSet::new));
-					//.collect(Collectors.toSet());  // 가능
+					//.collect(Collectors.toSet());  // 이것도 가능!
 			System.out.println(set);
 
 			// Factory method (Java9 이상)
-			set = Set.of("a", "b");  // 중복된 값 불가.
+//			set = Set.of("a", "a,", "b");  // 중복된 값 불가.  IllegalArgumentException
+			set = Set.of("a", "b");
 			System.out.println(set);
 
 			// Double-brace initialization
@@ -148,13 +149,33 @@ public class Collection05Main {
 			Person p2 = new Person(1, 20, "Mike");
 			Person p3 = new Person(3, 20, "Susan");
 
-			HashSet<Person> scoreSet = new HashSet<>();
-			scoreSet.add(p1);
-			scoreSet.add(p2);
-			scoreSet.add(p3);
+			HashSet<Person> personSet = new HashSet<>();
+			personSet.add(p1);
+			personSet.add(p2);
+			personSet.add(p3);
 
 			// 과연?
-			System.out.println(scoreSet.size());
+			System.out.println(personSet.size());
+
+			// Java 에서 두 객체가 '같다' 라는 것은 어케 정의되나?
+			// 주소값에 따라 결정되나???  ==> 아니다!
+			{
+				HashSet<String> strSet = new HashSet<>();
+
+				String s1 = new String("이유나");
+				String s2 = new String("이유나");
+				String s3 = new String("이유나");
+
+				System.out.println(s1 == s2);  // f
+				System.out.println(s3 == s2);
+
+				strSet.add(s1);
+				strSet.add(s2);
+				strSet.add(s3);
+
+				System.out.println(strSet.size());
+				System.out.println(strSet);
+			}
 		}
 
 
@@ -173,6 +194,15 @@ class Person {
 		this.id = id;
 		this.age = age;
 		this.name = name;
+	}
+
+	@Override
+	public String toString() {
+		return "Person{" +
+				"id=" + id +
+				", age=" + age +
+				", name='" + name + '\'' +
+				'}';
 	}
 
 /*

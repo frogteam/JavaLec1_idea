@@ -59,14 +59,15 @@ public class Generic04Main {
         a = b;  // 가능 (공변성?)
 
         // 배열의 경우
-        // 공변성
+        // 배열은 공변성이 있다!
         Object[] Covariance = new Integer[10];  // 가능
-        // 반공변성
+        // 배열은 반공변성이 있다!
         Integer[] Contravariance = (Integer[]) Covariance;
 
+        // Generic 클래스의 경우
         Box<A> boxA = new Box<>();
         Box<B> boxB = new Box<>();
-        // boxA = boxB;  // 불가
+        // boxA = boxB;  // 불가.  Generic 클래스는 공변성이 없다.
 
 //        ArrayList<Object> Covariance = new ArrayList<Integer>();  // 불가
         System.out.println("\n프로그램 종료");

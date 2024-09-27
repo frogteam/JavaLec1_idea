@@ -41,11 +41,18 @@ public class Collection09Main {
 			System.out.println(itr2.next());
 		}
 
+		TreeSet<Person> tset2 = new TreeSet<>();
+//		tset2.add(new Person());  // Comparable<> 이 구현안된 객체는 대소비교 불가!
+
 		System.out.println("\n프로그램 종료");
 	} // end main
 
 } // end class Collection12Main
 
+class Person {
+	int id;
+	String name;
+}
 
 
 

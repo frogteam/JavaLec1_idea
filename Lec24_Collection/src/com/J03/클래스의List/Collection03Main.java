@@ -21,6 +21,9 @@ public class Collection03Main {
 		// 김동혁 학생의 정보 수정 (김동혁 학생이 List의 몇번째 저장되었는지 모른다고 하면?)
 		// id 값 -> "D002"
 		// 국어, 영어, 수학 -> 99, 88, 76
+		// 출력예시]
+		//  수정전: Student{id='D001', name='김동혁', grade=3, major='Design', score=[국: 80,영:100,수: 90]}
+		//  수정후: Student{id='D002', name='김동혁', grade=3, major='Design', score=[국: 99,영: 88,수: 76]}
 		System.out.println("\n학생 정보 수정");
 		{
 			for(int i = 0; i < students.size(); i++) {

@@ -83,7 +83,7 @@ public class Collection01Main {
 		
 		// System.out.println(list1.get(100));  // IndexOutOfBoundsException
 		
-		// 데이터 삭제: remove(index) 메소드 사용
+		// 데이터 삭제: remove(index) 메소드 사용, 삭제된 element 리턴함
 		list1.remove(2);
 		System.out.println("삭제 후");
 		for (int i = 0; i < list1.size(); i++) {
@@ -97,11 +97,11 @@ public class Collection01Main {
 			System.out.println(list1.get(i));
 		}
 
-		// 데이터 존재여부: contains() => true/false
+		// 데이터 존재여부: contains(E) => true/false
 		System.out.println(list1.contains(400));
 		System.out.println(list1.contains(600));
 
-		// ArrayList 출력 방법
+		// ArrayList 순환(iteration) 방법
 		// 1) for
 		// 2) Enhanced-for 사용
 		// 3) Iterator(반복자) 사용
@@ -162,7 +162,7 @@ public class Collection01Main {
 			// ★ immutable list(unmodifiable list) 가 생성된다.
 			list = List.of("소금장", "기름장", "쌈장");
 			System.out.println(list);
-			//list.add("된장");  //  불가
+			//list.add("된장");  //  불가 UnsupportedOperationException
 
 			// Double-brace initialization
 			// 그러나 이 방법은 가급적 비추함. 매번 내부적으로 익명 클래스를 생성하고,

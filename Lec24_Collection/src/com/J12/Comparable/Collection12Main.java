@@ -17,9 +17,32 @@ import java.util.List;
 	 탐색(search)
  */
 
+/**
+ *  ■ Comparable<T> (I)    ※ 발음 : [kɑ́ːmpərəbl]  '캄퍼러블
+ * 	 객체의 우선순위 비교(크기 비교) 를 위해 구현하는 인터페이스
+ * 	  Comparable<> 이 구현된 객체만이 대소 비교를 위한 동작에서 사용할수 있다
+ * 	  	  ex) TreeMap, TreeSet, Collections.sort() ...
+ *
+ * 	   String, Date, Calendar, java.time.*, Wrapper객체는 기본적으로 구현되어 있다.
+ *
+ *    @Override
+ *    int compareTo(T o) 메소드
+ * 	     매개변수 객체 o 를 자신객체(this)와 비교하여
+ * 	     우선순위가 낮으면 음수, 같으면 0, 높으면 양수를 반환하도록 한다.
+ *
+ * 	■ Comparator<T> (I)  ※ 발음 : [kəmpǽrətər] 컴패'러터
+ * 	  일부 메소드에선 Comparator 를 사용할수 있도록 제공된다. ex) Collections.sort()
+ * 	  Comparable<> 이 구현되어 있지 않거나, 혹은 구현되어 있더라도
+ * 	  Comparable<> 과는 '다른규칙의 대소비교' 를 할수 있도록 할수 있다.
+ *
+ * 	  @Override
+ *    int compare(T o1, T o2) 메소드
+ * 	    o1 이 o2 보다 우선순위 낮으면 음수 리턴
+ * 	    o1 이 o2 보다 우선순위 높으면 양수 리턴
+ * 	    o1 과 o2 가 같으면 0 리턴
+ *
+ */
 
-// Comparable [kɑ́ːmpərəbl] 발음 : '캄퍼러블
-// Comparator [kəmpǽrətər]발음 : 컴패'러터
 //http://movefast.tistory.com/80
 
 public class Collection12Main {

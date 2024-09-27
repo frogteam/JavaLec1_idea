@@ -69,6 +69,11 @@ public class Collection10Main {
 		System.out.println("삭제 : " + hmap.remove(2));
 		System.out.println("삭제 : " + hmap.remove(2)); // null
 
+		//  remove 정리
+//		List의 remove(index)
+//		Set 의 remove(element)
+//		Map의  remove(key)
+
 
 		// 방법1 HashMap에서 Iterator 사용
 		// 1. HashMap의 keySet() 메소드를 사용해서
@@ -91,6 +96,7 @@ public class Collection10Main {
 
 		// 방법2 : Map.Entry 사용
 		// entrySet() 은 Set<Map.Entry<K, V>> 리턴함
+		//   Entry 객체는 Key 와 Value 를 가지고 있다 -> getter 제공!
 		for(Map.Entry<Integer, String> entry : hmap.entrySet()) {
 			System.out.println(entry.getKey() + ":" + entry.getValue());
 		}
@@ -125,7 +131,7 @@ public class Collection10Main {
 					{ "data1", 1 },
 					{ "data2", 2 },
 			}).collect(Collectors.toMap(data -> (String) data[0], data -> (Integer) data[1]));
-			System.out.println(map2);
+			System.out.println(map2);           // ↑ 형변환 꼭!            ↑ 형변환 꼭!
 
 			// Java9 방식
 			// Map.of( .. ) <= 최대 10개까지의 key, value 쌍 지정 가능
@@ -178,9 +184,9 @@ public class Collection10Main {
 				Integer count = hmap.get(arr[i]);  // arr[i] 가 key
 
 				if (count == null)  // 기존 Map 에 해당 key 가 없었다면 (즉, 첫 등장이라면!)
-					hmap.put(arr[i], 1);  // 등장 회수 1
+					hmap.put(arr[i], 1);  // 등장 회수 1  (key-value 추가)
 				else            // 기존 Map 에 해당 key 가 존재했다면 (즉, 이전에 최소 1번이상 등장했다면!)
-					hmap.put(arr[i], count + 1);  // 기존 등장회수(count) 에 +1증가. (수정)
+					hmap.put(arr[i], count + 1);  // 기존 등장회수(count) 에 +1증가.(value 수정)
 			}
 
 			// ▶ 방법2 :  getOrDefault() 사용

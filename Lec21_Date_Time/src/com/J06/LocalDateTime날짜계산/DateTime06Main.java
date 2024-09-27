@@ -16,10 +16,16 @@ import java.util.stream.Stream;
  * 	plusMonths(long)
  * 	plusWeeks(long)
  * 	plusYears(long)
+ * 	...
  *
  *  ■ 경과 시간 계산
  * 		java.time.Duration  (경과 시간 객체)
  * 		java.time.Period (경과 일자 객체)
+ * 		java.time.temporal.ChronoUnit (특정시간단위로 계산)
+ * 	
+ * 	■ 날짜 및 시간 조절
+ * 		with(TemporalAdjusters) 날짜및 시간 조절
+ * 			
  */
 
 public class DateTime06Main {
@@ -72,9 +78,9 @@ public class DateTime06Main {
 				"WEEKS: " + ChronoUnit.WEEKS.between(datetime1, nowDateTime),
 				"MINUTES: " + ChronoUnit.MINUTES.between(datetime1, nowDateTime),
 
-				"\n[with() 와 TemporalAdjusters]",
+				"\n[with(TemporalAdjusters) 날짜및 시간 조절]",
 				// 오늘 기준으로 다음달 마지막날
-				nowDate.plusMonths(1).with(TemporalAdjusters.lastDayOfMonth()),
+				date2 = nowDate.plusMonths(1).with(TemporalAdjusters.lastDayOfMonth()),
 				// 오늘을 기준으로 직전 월요일
 				nowDate.with(TemporalAdjusters.previous(DayOfWeek.MONDAY)),
 				// 오늘을 기준으로 지난주 월요일

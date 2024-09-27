@@ -23,9 +23,8 @@ public class Collection11Main {
 		tmap.put(3, "asdf");
 		tmap.put(4, "zxcv");
 		tmap.put(2, "qwerty");
-		
-		
-		// values() : value 들로 이루어진 Collection 리턴
+
+		// values() : value 들로 이루어진 Collection<> 리턴
 		System.out.println("values()");
 		//tmap.values();   
 		for(String value :tmap.values()) {
@@ -37,6 +36,7 @@ public class Collection11Main {
 		// 데이터 검색: get(key) 메소드를 사용
 		// 1. 키값들로만 이루어진 Set을 만듬
 		Set<Integer> kset = tmap.keySet();
+		System.out.println(kset);  // key 오름차순으로 정렬되어 있다.
 		// 2. keySet을 가지고 iterator를 만듬
 		Iterator<Integer> itr = kset.iterator();
 		while (itr.hasNext()) {
