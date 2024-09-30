@@ -79,7 +79,7 @@ public class Lambda01Main {
 			System.out.println(a.add(10.0, 20.0));
 		}
 
-		showResult(100.0, 50.0, (r, t) -> r + t);
+		showResult(100.0, 50.0, (r, t) -> r + t); // 마치 메소드(함수)를 매개변수로 전달하는것 같은 개발 가능.
 		showResult(4.0, 3.0, (k, u) -> Math.pow(k, u));
 		showResult(2.0, 0.5, (k, u) -> Math.pow(k, u));
 

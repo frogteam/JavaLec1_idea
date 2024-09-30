@@ -64,6 +64,8 @@ public class Inner01Main {
 		in6.printOuterValue();
 		in6.printInnerValue();
 
+		// ※ Map.Entry<K,V>
+
 		// 다음과 같이 한번에 outer/inner 생성 가능
 		TestOuter.TestInner in7 = new TestOuter(30).new TestInner(330);
 		in7.printOuterValue();

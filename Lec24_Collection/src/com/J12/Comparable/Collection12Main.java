@@ -229,9 +229,12 @@ class Asc implements Comparator<Student>{
 	// o1 과 o2 가 같으면 0 리턴
 	@Override
 	public int compare(Student o1, Student o2) {
+		// 성적(point) 오름차순
 //		if(o1.point < o2.point) return -1;
 //		if(o1.point > o2.point) return 1;
 //		return 0;
+
+//		return (int)(o1.point - o2.point);
 		
 		// 이름(name) 오름차순
 		return o1.name.compareTo(o2.name);
@@ -243,9 +246,12 @@ class Desc implements Comparator<Student>{
 
 	@Override
 	public int compare(Student o1, Student o2) {
+		// 성적(point) 내림차순
 //		if(o1.point > o2.point) return -1;
 //		if(o1.point < o2.point) return 1;
 //		return 0;
+
+//		return (int)(o2.point - o1.point);
 
 		// 이름 내림차순
 		return -o1.name.compareTo(o2.name);

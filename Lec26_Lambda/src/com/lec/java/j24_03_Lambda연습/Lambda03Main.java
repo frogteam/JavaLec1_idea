@@ -203,6 +203,7 @@ public class Lambda03Main {
 		// [도전]
 		// 이름 오름차순
 		Collections.sort(list3, (o1, o2) -> o1.name.compareTo(o2.name));
+//		Collections.sort(list3, Comparator.comparing(o -> o.name));   // 이와 같이도 가능.  이미 String 은 Comparable<> 구현체니까 가능
 		System.out.println(list3);
 
 		// 이름 내림차순
@@ -222,10 +223,16 @@ public class Lambda03Main {
 			// 실습 : lambda 활용
 			// 1. 횟수 오름차순 출력
 			List<Map.Entry<String, Integer>> list = new ArrayList<>(hmap.entrySet());
+			System.out.println(list);// [AAA=400, CCC=100, BBB=200]
 
 			Collections.sort(list, (o1, o2) -> (o1.getValue() - o2.getValue()));
 			System.out.println(list);
 
+			// 동일한 결과
+			Collections.sort(list, Comparator.comparing(e -> e.getValue()));  // Comparable<> 사용
+			System.out.println(list);
+
+			// 동일한 결과
 			Collections.sort(list, Comparator.comparingInt(Map.Entry::getValue));
 			System.out.println(list);
 
