@@ -6,7 +6,7 @@ import java.util.*;
 import java.util.stream.*;
 
 /**
- *  스트림 연산
+ *  스트림 2연산
  *  스트림 연산은 기존자료를 변경하지 않음 (즉 배열에서 생성한 스트림이 원본 배열을 직접 건드리진 않음)
  *  스트림 연산은 '중간연산'과 '최종연산'으로 구분됨
  *
@@ -69,7 +69,7 @@ public class Stream02Main {
 			// ★한번 최종연산한 스트림은 다시 사용 불가 --> IllegalStateException
 			// stream1.forEach(s -> System.out.println(s));
 
-			// 다시 Stream 을 생성해선 사용 가능
+			// 다시 Stream 을 생성해서 사용 가능
 			stream1 = customerList.stream();
 			stream1.forEach(s -> System.out.println(s.getAge()));
 
@@ -193,7 +193,7 @@ public class Stream02Main {
 
 			System.out.println();
 			// customer 이름 오름차순으로 정렬
-			// Comparator.comparing(Function<T,U>
+			// Comparator.comparing(Function<T,U>) 으로 가능.
 			customerList.stream()
 					.sorted((o1, o2) -> o1.getName().compareTo(o2.getName()))
 					.forEach(System.out::println);
@@ -283,7 +283,8 @@ public class Stream02Main {
 			Arrays.stream(intArr)
 					.skip(3)
 					.limit(6)
-					.forEach(System.out::println);
+					.forEach(s -> System.out.print(s + ", "));
+			System.out.println();
 
 			// ※ 위의 예에서 skip 과 limit 순서를 바꾸면 결과는?
 			// ※ 위의 결과를 for문으로 만들어 내려면?
@@ -292,7 +293,7 @@ public class Stream02Main {
 		//-------------------------------------------------------------
 		// peek(Consumer<T>)   [중간연산]
 		//    현재 진행중인 Stream 에 영향을 주지 않으면서 현재까지 연산된 요소들을 출력하는등의 동작 수행
-		System.out.println("-".repeat(30) +"\n▶ Consumer<T>");
+		System.out.println("-".repeat(30) +"\n▶ peek(Consumer<T>)");
 		{
 			List<String> nameList = new ArrayList<>();
 
@@ -375,7 +376,6 @@ public class Stream02Main {
 			var result3 = customerList.stream()
 					.mapToInt(Customer::getAge)
 					.average().getAsDouble()
-
 					;
 			System.out.println("average() = " + result3);
 
@@ -441,8 +441,6 @@ public class Stream02Main {
 		//   noneMatch() : 모든 요소가 조건을 충족하지 않는경우 true
 		System.out.println("-".repeat(30) +"\n▶ **Match(Predicate<T>)");
 		{
-			customerList.forEach(System.out::println);
-
 			//--------------------------------------------
 			// Stream 은 내부반복 로직 수행
 			// 기존 for, while 루프 대체

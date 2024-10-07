@@ -82,6 +82,7 @@ public class File11Main {
 			int charsRead = 0;  // 읽어들인 '문자'의 개수
 			int totalRead = 0;
 			while((charsRead = fr.read(buff)) != -1) {  // 더이상 읽어들일 문자데이터가 없으면 -1 리턴
+				totalRead += charsRead;
 				for (int i = 0; i < charsRead; i++) {
 					System.out.print(buff[i]);
 				}

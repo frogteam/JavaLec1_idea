@@ -32,6 +32,7 @@ public class File01Main {
 		System.out.println("IO(Input/Output)");
 		
 		// InputStream 객체 in을 가지고 읽어들일 수 있는 스캐너 객체 생성
+		// System.in 은 '표준 입력 장치 (키보드)'의 InputStream
 		Scanner sc = new Scanner(System.in);
 		
 		String msg = sc.nextLine();

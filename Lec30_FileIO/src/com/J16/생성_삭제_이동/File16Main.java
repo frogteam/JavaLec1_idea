@@ -78,7 +78,7 @@ public class File16Main {
 		if (f2.exists()) { // 파일이 존재하는 지 체크
 			// 원본 파일이 존재할 때만 이름 변경(renameTo)
 			
-			if (f2.renameTo(f3)) {
+			if (f2.renameTo(f3)) {  // ※ Mac 은 이미 존재해도 덮어쓰기 한다.
 				System.out.println("파일 이름 변경 성공!");
 			} else {
 				System.out.println("파일 이름 변경 실패!");  // 이미 re_dummy.txt 가 있으면 실패한다
@@ -93,7 +93,7 @@ public class File16Main {
 		
 		System.out.println();
 		// 파일 삭제: delete()
-		File f4 = new File(f, TEST_RENAME);
+		File f4 = new File(f, TEST_RENAME); // re_dummy.txt 를 삭제하려 한다
 		if (f4.exists()) {
 			// 파일이 존재하면 지움
 			if (f4.delete()) {

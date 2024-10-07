@@ -16,7 +16,9 @@ package com.lec.java.j18_04_예외객체계층;
 	
 	 getMessage(), printStackTrace() 등의 메소드는 Throwable 클래스에 정의
 	 자식 클래스들은 Throwable에 정의된 메소드들을 사용할 수 있음
-	 
+
+	catch(Throwable) <- catch 절에 선언할수 있는 변수는 Throwable 만 가능.
+
 	catch문은 여러개를 사용할 수는 있지만, 
 	 상위 예외 클래스를 하위 예외 클래스보다 먼저 사용할 수는 없다. (컴파일 에러) 
 	 

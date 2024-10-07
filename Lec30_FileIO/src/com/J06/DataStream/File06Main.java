@@ -49,15 +49,13 @@ public class File06Main {
 			// 최종 작성후에 data.bin 파일의 크기를 체크해보자   15byte 가 나올것이다.
 			
 			boolean b = din.readBoolean();
-			System.out.println("boolean: " + b);
-			
 			int num1 = din.readInt();
-			System.out.println("int: " + num1);
-			
 			double num2 = din.readDouble();
-			System.out.println("double: " + num2);
-			
 			char ch = din.readChar();
+
+			System.out.println("boolean: " + b);
+			System.out.println("int: " + num1);
+			System.out.println("double: " + num2);
 			System.out.println("char: " + ch);
 			
 			

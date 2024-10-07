@@ -78,7 +78,7 @@ public class Stream01Main {
 
 		// Collection 의 Stream 생성
 		Stream<String> stringStream = stringList.stream();
-		Stream<Integer> intStream = intList.stream();
+		Stream<Integer> integerStream1 = intList.stream();
 
 		// toString() 이 딱히...  볼수 있는 형태로 제공되지 않는다.
 		System.out.println(stream1);  // java.util.stream.IntPipeline$Head@4eec7777
@@ -91,7 +91,7 @@ public class Stream01Main {
 		Stream<Integer> intStream2 = integerSet.stream();   // Set 의 스트림 생성 ->  Integer이므로 Integer 스트림 생성
 
 		// Stream.of() 팩토리 메서드로 스트림 생성
-		Stream<Integer> integerStream = Stream.of(20, 30);  // boxing 발생!
+		Stream<Integer> integerStream3 = Stream.of(20, 30);  // boxing 발생!
 		IntStream intStream4 = IntStream.of(20, 30); // boxing 없슴
 
 		Stream<Customer> customerStream = Stream.of(
