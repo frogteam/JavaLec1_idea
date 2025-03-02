@@ -38,7 +38,7 @@ public class Array02Main {
 		// 타입[] 이름 = new 타입[] {a, b, c, ...};
 		// 주의: new를 할 때 배열의 길이를 명시하지 않는다.
 		// {}안에 배열의 원소가 몇 개인 지를 보고 배열의 길이가 결정됨
-		int[] english = new int[] {30, 20, 30};
+		int[] english = new int[] {30, 20, 30,};  // 끝의 콤마 허용함!
 		for (int n = 0; n < 3; n++) {
 			System.out.println("영어" + n + ": " + english[n]);
 		}

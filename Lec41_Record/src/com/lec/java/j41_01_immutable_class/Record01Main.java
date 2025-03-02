@@ -52,6 +52,7 @@ public class Record01Main {
                 return false;
             } else {
                 Person other = (Person) obj;
+                // return name.equals(other.name) && address.equals(other.address);
                 return Objects.equals(name, other.name)
                         && Objects.equals(address, other.address);
             }

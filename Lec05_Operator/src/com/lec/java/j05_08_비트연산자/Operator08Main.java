@@ -51,8 +51,16 @@ public class Operator08Main {
 		
 		result = ~n1;
 		System.out.println("~ 결과(10진수) = " + result);  // -11
-		System.out.println("~ 결과(2진수) = " + Integer.toBinaryString(result));
 		// ↑ 위 결과가 음수가 나온다
+
+		System.out.printf(" n1 : [%32s]\n", Integer.toBinaryString(n1));
+		System.out.printf("~n1 : [%32s]\n", Integer.toBinaryString(~n1));
+//		 n1 : [                            1010]
+//		~n1 : [11111111111111111111111111110101]
+
+
+
+
 		// 음수 정수 표현 참조 : http://tcpschool.com/c/c_refer_negativeNumber
 
 		System.out.println("\n\n================");
@@ -66,7 +74,13 @@ public class Operator08Main {
 		// ↘↘↘↘ ↘↘↘↘
 		// 00000 101  :5
 
-		
+		System.out.printf("    n3 : [%32s]\n", Integer.toBinaryString(n3));
+		System.out.printf("result : [%32s]\n", Integer.toBinaryString(result));
+
+		System.out.println(n3 / 2);
+		System.out.println(n3 >> 1);
+
+
 		n3 = 10;
 		result2 = n3 << 1; // 비트를 왼쪽(<<)으로 1비트씩 이동
 		

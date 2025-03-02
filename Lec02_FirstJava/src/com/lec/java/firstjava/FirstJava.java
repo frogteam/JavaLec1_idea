@@ -57,6 +57,7 @@ public class FirstJava {
         System.out.println("10 / 20 = " + (10 / 20));   // 정수/정수 연산 결과는 정수 (즉 소수점이하 절삭)
 
         // (double)10 => 10이라는 정수를 10.0 실수로 변환
+        // 실수와의 연산 결과는 실수
         System.out.println("10 / 20 = " + ((double)10 / 20)); // 실수와의 연산 결과는 실수
 
 

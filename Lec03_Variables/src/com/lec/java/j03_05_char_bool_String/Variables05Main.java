@@ -96,7 +96,7 @@ public class Variables05Main {
 
 		//            ↓ 반드시 첫
 		String txt2 = """
-				Exmple Text""";
+				Example Text""";
 		System.out.println(txt2);
 
 		// 아래와 같이 하면 자바는 최소 indent 를 계산하여 문자열 생성

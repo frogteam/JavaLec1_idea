@@ -13,9 +13,9 @@ public class Variables04Main {
 		//float number2 = 3.14;  // Type mismatch: cannot convert from double to float
 		// 별도의 표기가 없는 경우 소수점이 있는 리터럴은 double로 인식
 		// 3.14는 double형. 이것을 작은 자료 타입인 float에 저장할 수 없다.
-		float number3 = 3.14f;
 		// 숫자 뒤에 f를 붙여주면, float 리터럴이 된다. 자바는 그 숫자를 float 타입으로 인식
-		
+		float number3 = 3.14f;
+
 		
 		// 실수 타입의 최소, 최대값
 		System.out.println("float: " + Float.MIN_VALUE+ " ~ " + Float.MAX_VALUE);
