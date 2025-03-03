@@ -58,7 +58,7 @@ public class Array01Main {
 		
 		// 위에서 
 		// 변수 korean 의 타입은?	---> int[] 타입
-		// 변수 korean[0] 의 타입은?  ---> int 타입
+		// korean[0] 의 타입은?  ---> int 타입
 		
 		
 		System.out.println("for문 사용해서 출력 ");

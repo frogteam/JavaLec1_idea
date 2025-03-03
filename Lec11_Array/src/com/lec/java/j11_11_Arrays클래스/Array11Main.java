@@ -22,12 +22,12 @@ public class Array11Main {
         int[] arr1 = {10, 20, 30, 40, 50};
         int[] arr2;
 
-        // Arrays.toString() : 문자열 형태로 리턴
+        // 💚 Arrays.toString() : 문자열 형태로 리턴
         System.out.println("Arrays.toString()");
         System.out.println(Arrays.toString(arr1));
 
 
-        // Arrays.copyOf(원본배열, 복사할 length)
+        // 💚 Arrays.copyOf(원본배열, 복사할 length)
         // 배열을 복사하여 새로운 배열생성하여 리턴
         System.out.println("\nArrays.copyOf()");
         arr2 = Arrays.copyOf(arr1, 3);
@@ -38,7 +38,7 @@ public class Array11Main {
         arr2 = Arrays.copyOf(arr1, 10);   // length가 원본보다 크면, 나머지 부분은 기본값들로 채워짐
         System.out.println(Arrays.toString(arr2));
 
-        // Arrays.copyOfRange(원본배열, from, to))
+        // 💚 Arrays.copyOfRange(원본배열, from, to))
         // from 부터 to 직전까지 복사
         System.out.println("\nArrays.copyOfRange()");
         arr2 = Arrays.copyOfRange(arr1, 0, 2);
@@ -50,24 +50,24 @@ public class Array11Main {
 //		arr2 = Arrays.copyOfRange(arr1, 10, 20);   // 시작index 벗어나면  ArrayIndexOutOfBoundsException
 //		System.out.println(Arrays.toString(arr2));
 
-        // Arrays.fill(배열, val))
+        // 💚 Arrays.fill(배열, val))
         System.out.println("\nArrays.fill()");
         arr2 = new int[4];
         Arrays.fill(arr2, 8);   // 죄다 8로 채움
         System.out.println(Arrays.toString(arr2));
 
 
-        // Arrays.sort(원본배열)
+        // 💚 Arrays.sort(원본배열)
         // 오름차순 변경.  원본 배열을 변경시킨다
         // 내림차순은 지원하지 않는다.
         System.out.println("\nArrays.sort()");
-        int[] arr7 = {8, 9, 3, 5, 1, 2};
-        System.out.println(Arrays.toString(arr7));
-        Arrays.sort(arr7);
-        System.out.println(Arrays.toString(arr7));
+        arr2 = new int[]{8, 9, 3, 5, 1, 2};
+        System.out.println(Arrays.toString(arr2));
+        Arrays.sort(arr2);
+        System.out.println(Arrays.toString(arr2));
 
 
-        // Arrays.equals(배열1, 배열2)
+        // 💚 Arrays.equals(배열1, 배열2)
         // 배열원소를 순서대로 하나하나 비교한 결과  true/false
         System.out.println("\nArrays.equals()");
         int[] arr8 = {10, 20, 30};
@@ -79,7 +79,7 @@ public class Array11Main {
         System.out.println(Arrays.equals(arr8, arr10));  // false
 
 
-        // Arrays.asList()
+        // 💚 Arrays.asList()
         // array -> List 로 변경
         Integer[] arr3 = {10, 20, 30};
         List<Integer> list = Arrays.asList(arr3);

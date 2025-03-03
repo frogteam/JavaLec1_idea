@@ -7,7 +7,7 @@ package com.lec.java.j07_05_EnhancedSwitch;
  *      화살표 case 라벨, 다중 case 라벨, switch 연산식, yield 예약어 등의 기능이 추가
  */
 
-// ※ jungol 의 java compiler 는 위 기능 지원 안하는 듯.. (2023.09 현재)
+// ※ jungol 의 java compiler 는 위 기능 지원 안함.. (2025.02 현재 Java11 로 채점중)
 
 public class Switch05Main {
 

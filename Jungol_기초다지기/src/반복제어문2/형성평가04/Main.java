@@ -27,7 +27,7 @@ public class Main {
 		int total = 0; // 누적합계
 		
 		int i = 0;
-		while(i < n) {
+		while(i < n) { // n 번 입력
 			total += sc.nextInt();
 			i++;
 		}

@@ -46,6 +46,7 @@ public class Array05Main {
 		{
 			int[][] array = new int[3][];    // 1차원 배열 x 3개 담는 2차원 배열로 생성
 
+			// 각각의 1차원 배열 원소들 생성.
 			array[0] = new int[]{1, 2};
 			array[1] = new int[]{3, 4};
 			array[2] = new int[]{5, 6};
