@@ -116,9 +116,13 @@ public class Method02Main {
 	//   2) int y
 	// 리턴타입: int
 	public static int sub(int x, int y) {
+
 		int result = x - y;
-		
 		return result;
+
+		// IntelliJ
+		// 	Refactor - inline variable : CTRL + ALT + N
+		// 	Refactor - introduce variable : CTRL + ALT + V
 	} // end sub()
 	
 	// 메소드 이름: multiply

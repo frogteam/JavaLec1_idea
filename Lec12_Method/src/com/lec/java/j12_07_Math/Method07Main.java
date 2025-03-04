@@ -12,7 +12,7 @@ public class Method07Main {
 		// Math.random() : 0.0 <=  r < 1.0 사이의 난수 발생(double)
 		double r;
 		for(int i = 0; i < 10; i++) {
-			r = Math.random();    
+			r = Math.random();
 			System.out.println(r);
 		} // end for
 		
@@ -24,7 +24,7 @@ public class Method07Main {
 		// 1.2 == 1 < 1.2 < 2 == floor: 1, ceil: 2
 		// -1.2 == -2 < -1.2 < -1 == floor: -2, ceil: -1
 
-		/*
+		/*  (먼저 예측해보자)
 				floor   ceil   round
 		2.7]   2.0    3.0    3
 				floor   ceil   round
@@ -79,6 +79,7 @@ public class Method07Main {
 		System.out.println();
 		System.out.println("Random 객체 사용하여 난수 출력");
 		Random rand = new Random();
+		rand.setSeed(43L);  // seed 값을 설정하여 실행할때마다 '동일한' 램덤값 생성 가능
 		for(int i = 0; i < 5; i++) {			
 			System.out.print(rand.nextInt(3) + ", ");  // 0 ~ 2 사이 정수 난수 발생
 		}

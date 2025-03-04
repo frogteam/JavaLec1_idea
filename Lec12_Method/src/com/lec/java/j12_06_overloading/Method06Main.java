@@ -20,6 +20,9 @@ package com.lec.java.j12_06_overloading;
 
  */
 
+// IntelliJ 의 Class structure
+//    ALT + 7
+
 public class Method06Main {
 
 	public static void main(String[] args) {
