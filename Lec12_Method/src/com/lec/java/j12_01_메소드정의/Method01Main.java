@@ -18,6 +18,9 @@ package com.lec.java.j12_01_메소드정의;
 	   
 		매개변수 (parameter) : 메소드 호출시 넘겨주는 값.
 
+				parameter (매개변수) - 호출받는 쪽에서 받아내는 값.
+				argument (인자)  - 호출하는 측에서 전달하는 값
+
 		리턴타입 (return type) : 메소드 종료후 호출한 쪽에 돌려주는 값
 			void, int, double, String ...
 			(리턴타입 void의 의미는 되돌려주는 값(return 값)이 없다는 의미)

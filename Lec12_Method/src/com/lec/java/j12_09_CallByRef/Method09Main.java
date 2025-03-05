@@ -41,7 +41,7 @@ public class Method09Main {
 
 	public static void incNum(int[] arr) {
 		arr[0]++;
-		System.out.println("incNum(arr[]):" + arr[0]);
+		System.out.println("incNum(int[]):" + arr[0]);
 	}
 	
 } // end class

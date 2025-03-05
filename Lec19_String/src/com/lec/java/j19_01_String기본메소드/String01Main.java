@@ -98,7 +98,7 @@ public class String01Main {
 		// 공백기준으로 쪼갤때는 정규표현식의 \s+  사용하기 : 공백, 탭, 줄바꿈
 		str4 = "    Hello\t  \n  \t MY \n\n WORLD";
 		arr = str4.trim().split("\\s+");
-		System.out.println(Arrays.toString(arr));  // [, Hello, MY, WORLD]
+		System.out.println(Arrays.toString(arr));  // [Hello, MY, WORLD]
 		
 		// 단!  "|" 을 할경우는 주의,   ※ split(정규표현식) 을 사용하는 메소드임
 		String str5 = "HH|MM|SS";
@@ -178,7 +178,7 @@ public class String01Main {
 		System.out.println();
 		System.out.println("isEmpty(), isBlank()");
 		System.out.println("".length() == 0);     // 빈 문자열인지 여부
-		System.out.println("".isEmpty());      // 위 방법보단 이것을 추천
+		System.out.println("".isEmpty());      // 위 방법보단 이것을 추천   (CTRL+B 눌러서 보면 length() == 0 을 한다)
 		System.out.println("   ".isEmpty());   // false  (빈 문자열인지 여부)
 		System.out.println("   ".isBlank());   // true (공백 문자열 인지 여부)
 

@@ -32,7 +32,7 @@ public class RegExp03Main {
 	public static void main(String[] args) {
 		System.out.println("정규표현식\n");
 
-		String regex, intput, title;
+		String regex, input, title;
 		String [] arrInput;
 		
 		//─────────────────────────────────────────
