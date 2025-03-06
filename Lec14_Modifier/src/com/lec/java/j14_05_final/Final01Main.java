@@ -2,8 +2,8 @@ package com.lec.java.j14_05_final;
 
 public class Final01Main {
 
-	// final 멤버 변수
-	// (주의) final 멤버 변수는 반드시 선언과 동시에 초기화 (혹은 생성자에서 초기화) 해야 한다
+	// final 필드 변수
+	// (주의) final 필드 변수는 반드시 선언과 동시에 초기화 (혹은 생성자에서 초기화) 해야 한다
 	final int NUM1 = 1;
 	//final int NUM2; // 컴파일 에러: 초기화되지 않아서
 	final int NUM3;  // 생성자에서 초기화 가능.

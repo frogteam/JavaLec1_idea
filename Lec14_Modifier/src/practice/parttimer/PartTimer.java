@@ -2,13 +2,16 @@ package practice.parttimer;
 
 public class PartTimer {
 
+    // 클래스 변수
     private static final int HOUR_RATE = 9_860;  // 시급
     public static int TOTAL_PART_TIMERS = 0;   // 전체 직원수
 
+    // 인스턴스 변수
     private String nickName;
-    private String workPlace = "113동";
+    private String workPlace = "113동"; // 기본값 "113동"
     private int totalWage = 0;
 
+    // 생성자
     public PartTimer(String nickName) {
         this.nickName = nickName;
         TOTAL_PART_TIMERS++;

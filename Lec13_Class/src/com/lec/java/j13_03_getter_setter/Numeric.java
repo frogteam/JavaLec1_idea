@@ -57,3 +57,13 @@ public class Numeric{
 	
 
 }
+
+
+// 기본생성자
+// TODO
+
+// 매개변수 받는 생성자
+// TODO
+
+// getter & setter 들
+// TODO

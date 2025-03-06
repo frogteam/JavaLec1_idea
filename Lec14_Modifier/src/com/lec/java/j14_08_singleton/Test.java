@@ -7,6 +7,7 @@ public class Test {
 	// singleton 디자인패턴
 	// 생성자는 private로 작성
 	private Test() {
+		System.out.println("✅ Test 생성됨");
 		num = 100;
 	}
 	

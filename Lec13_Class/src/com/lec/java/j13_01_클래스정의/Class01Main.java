@@ -89,6 +89,8 @@ public class Class01Main {
 
 		System.out.println("tv1:" + tv1);
 		System.out.println("tv2:" + tv2);
+		// tv1 과 tv2 는 동일 타입이긴 하나 , 서로 다른 인스턴스다 => 주소값 다르다 => 서로 다른 인스턴스를 참조(reference) 한다.
+		System.out.println("tv1 == tv2 : " + (tv1 == tv2));
 
 		tv1 = tv2;		// 어떻게 되나
 		tv1.displayStatus();

@@ -15,7 +15,7 @@ package com.lec.java.j13_01_클래스정의;
  */
 public class MyTV {
 	// TV의 상태 -> 멤버 변수
-	// 멤버 변수: 같은 클래스내 에서 정의된 모든 메소드에서 다 사용 가능
+	// 필드(멤버 변수): 같은 클래스내 에서 정의된 모든 메소드에서 다 사용 가능
 	private boolean isPowerOn;   // 전원 on/off 
 	private int channel;		// 현재 채널
 	private int volume; 		// 현재 볼륨
