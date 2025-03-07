@@ -24,7 +24,7 @@ public class Polymorphism02Main {
 		cars[1] = new Car();
 		cars[2] = new HybridCar();
 		
-		// car 라는 하나의 이름의 변수로 여러가지 타입의
+		// carㄴ 라는 하나의 이름의 변수로 여러가지 타입의
 		// 오버라이딩 된 메소드를 각각 동작시킬수 있다!
 		for(var car : cars){
 			car.displayInfo();
@@ -122,9 +122,9 @@ public class Polymorphism02Main {
 
 
 /* 코드만 보아도 알아요~
- * A a = new B()   ←  A 는 B 의 조상타입
+ * A alpha = new B()   ←  A 는 B 의 조상타입
  * R doSomethig(K p1){..}  ← K 는 Z 의 조상타입
- * Y y = doSomething(new Z()) ← Y 는 R 의 조상타입
+ * Y yaho = doSomething(new Z()) ← Y 는 R 의 조상타입
  * 
  */
 

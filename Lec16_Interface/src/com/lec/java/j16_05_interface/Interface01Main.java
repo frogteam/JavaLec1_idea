@@ -64,6 +64,7 @@ interface TestInterface2 {
 
 // 인터페이스는 인스턴스를 생성할 수 없고,
 // 다른 클래스에서 구현(implements)해야 함.
+// 'implements' 키워드를 사용.
 class TestImpl implements TestInterface {
 
 	@Override

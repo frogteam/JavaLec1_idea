@@ -64,7 +64,7 @@ public class Exception04Main {
 			System.out.println("Null 포인터: " + ex.getMessage());
 			
 		} catch (Exception ex) {  // 나머지 처리 안된 예외들을 일괄 처리할때 Exception 으로 catch 한다
-			System.out.println("Exception: " + ex.getMessage());
+			System.out.println("Exception: " + ex.getMessage() + ", " + ex.getClass().getName());
 		
 		} // end catch
 		

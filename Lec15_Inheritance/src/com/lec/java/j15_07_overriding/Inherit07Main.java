@@ -31,8 +31,8 @@ public class Inherit07Main {
 		System.out.println();
 		// BusinessPerson 클래스의 인스턴스를 생성
 		BusinessPerson p2 = new BusinessPerson();
-		p2.setName("성춘향"); // 부모 클래스인 Person에 있는 setName()을 사용
-		p2.setCompany("(주)조선");
+		p2.setName("도라에몽"); // 부모 클래스인 Person에 있는 setName()을 사용
+		p2.setCompany("(주)진구네");
 		p2.showInfo(); // 메소드 overriding
 		
 		System.out.println();

@@ -60,10 +60,10 @@ public class BusinessPerson extends Person {
 
 	//--------------------------------------------------
 	// 리턴타입이 자손 타입으로는 오버라이딩 가능
-//	@Override
-//	public BusinessPerson myPerson() {
-//		return new BusinessPerson();
-//	}
+	@Override
+	public BusinessPerson myPerson() {
+		return new BusinessPerson();
+	}
 
 	// 리턴타입이 조상타입으로는 오버라이딩 불가
 //    @Override

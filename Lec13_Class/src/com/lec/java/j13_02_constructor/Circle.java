@@ -12,7 +12,7 @@ public class Circle {
 	// 생성자도 오버로딩(overload) 가능
 	
 	// 클래스를 만들 때, 생성자를 따로 만들지 않으면
-	// '디폴트 생성자(default constructor)'를 자동으로 만들어줌.
+	// '디폴트 생성자(default constructor, parameterless constructor)'를 자동으로 만들어줌.
 	// 디폴트 생성자란 : 매개변수가 없는 생성자.  모든 멤버변수는 기본값으로 초기화
 	// (주의) 클래스에서 하나 이상의 생성자를 만들게 되면,
 	// 자동으로 디폴트 생성자를 만들어 주지 않습니다.

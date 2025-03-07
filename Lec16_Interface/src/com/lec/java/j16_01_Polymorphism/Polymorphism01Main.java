@@ -14,12 +14,15 @@ package com.lec.java.j16_01_Polymorphism;
  */
 public class Polymorphism01Main {
 
+	static class A{}
+	static class B{}
+
 	public static void main(String[] args) {
 		System.out.println("다형성(Polymorphism)");
 
 		A aaa = new A();
 		B bbb = new B();
-		//aaa = bbb;   // 타입이 달라요!!!!
+//		aaa = bbb;   // 타입이 달라요!!!!
 
 		System.out.println();
 		
@@ -67,8 +70,7 @@ public class Polymorphism01Main {
 
 } // end class
 
-class A{}
-class B{}
+
 
 
 
