@@ -62,7 +62,7 @@ public class Exception05Main {
 			
 		} // end finally
 		
-		System.out.println("#6 try 종료후");
+		System.out.println("#6 try{} 종료후");
 	
 		// try블럭, catch블럭, finally 블럭등에서 두루두루
 		// 사용할 변수는 try블럭 전에 선언하고, 초기화 까지 하자.

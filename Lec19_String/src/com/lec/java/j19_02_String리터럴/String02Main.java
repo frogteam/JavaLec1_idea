@@ -43,6 +43,10 @@ public class String02Main {
 		System.out.printf("str1=%s str2=%s\n", str1, str2);		
 		System.out.println(str1 == str2);  // true
 
+		str2 = "He" + new String("llo");
+		System.out.printf("str1=%s str2=%s\n", str1, str2);
+		System.out.println(str1 == str2);  // false
+
 		
 		
 		System.out.println();
@@ -94,6 +98,7 @@ public class String02Main {
 		System.out.println("[4] String compareTo() 메소드");
 		// compareTo() 는 두 문자열의 문자코드량 의 비교 (lexicographical comparison based on the Unicode value)
 		// 이경우 유니코드 값을 비교하게 됨.
+		// compareTo() Comparable(I) 의 추상메소드
 		
 		System.out.println("compareTo: " + str3.compareTo(str4));  // 0
 		String str5 = "A";
