@@ -39,6 +39,12 @@ public class Generic02Main {
 				new Test<>(111, 3.14);
 		t2.display();
 
+		Test t3 = new Test(1, "hhh");   // Test<Object, Object> 로 typing 됨.
+
+
+		Test t4 = new Test<Integer, String>(1, "hhh");  // 이래도 마찬가지.
+
+
 		System.out.println("\n프로그램 종료");
 	} // end main
 

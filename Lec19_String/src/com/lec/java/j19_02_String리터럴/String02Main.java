@@ -4,6 +4,16 @@ package com.lec.java.j19_02_String리터럴;
  */
 public class String02Main {
 
+	public static void compareStr(String str1, String str2){
+		System.out.println("─".repeat(20));
+		System.out.printf("str1=%s str2=%s\n", str1, str2);
+		if (str1 == str2) {
+			System.out.println("✅동일 참조");
+		} else {
+			System.out.println("❌다른 참조");
+		}
+	}
+
 	public static void main(String[] args) {
 		System.out.println("String 생성자, literal(상수)");
 		
@@ -23,29 +33,17 @@ public class String02Main {
 		// 즉, str1과 str2에는 같은 값이 저장되게 됨
 		String str1 = "Hello";   
 		String str2 = "Hello";
-		System.out.printf("str1=%s str2=%s\n", str1, str2);
-		if (str1 == str2) {
-			System.out.println("동일한 곳(문자열) 참조");  // ◀
-		} else {
-			System.out.println("다른 곳(문자열) 참조");
-		}
+		compareStr(str1, str2);  // 동일 참조
 		
 		
 		str2 = "He".concat("llo");
-		System.out.printf("str1=%s str2=%s\n", str1, str2);
-		if (str1 == str2) {
-			System.out.println("동일한 곳(문자열) 참조");
-		} else {
-			System.out.println("다른 곳(문자열) 참조");  // ◀
-		}
+		compareStr(str1, str2);  // 다른 참조
 		
 		str2 = "He" + "llo";  // + 연산은, 연산결과가 이미 literal 존재하면 해당 literal 을 리턴
-		System.out.printf("str1=%s str2=%s\n", str1, str2);		
-		System.out.println(str1 == str2);  // true
+		compareStr(str1, str2);  // 동일 참조
 
 		str2 = "He" + new String("llo");
-		System.out.printf("str1=%s str2=%s\n", str1, str2);
-		System.out.println(str1 == str2);  // false
+		compareStr(str1, str2);  // 다른 참조
 
 		
 		
@@ -57,14 +55,8 @@ public class String02Main {
 		String str3 = new String("Hello");
 		String str4 = new String("Hello");
 
-		//System.out.println(str3);
-		//System.out.println(str4);
-		
-		if (str3 == str4) {
-			System.out.println("동일한 곳(문자열) 참조");
-		} else {
-			System.out.println("다른 곳(문자열) 참조"); // ◀
-		}
+		compareStr(str3, str4);
+
 		// == 연산자는 실제 문자열이 같은 지 다른 지를 비교하는 것이 아니고,
 		// 참조 변수(지역 변수) str3과 str4에 저장된 값(주소)가  같은 지 다른 지를 비교하는 것임.
 		// 문자열 비교를 == 으로 하지 말것!!!!

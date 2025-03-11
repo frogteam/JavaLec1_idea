@@ -50,9 +50,9 @@ public class DateTime04Main {
     public static void main(String[] args) {
         System.out.println("-- java.time.* --");
 
-        LocalDate date1, date2;
-        LocalTime time1, time2;
-        LocalDateTime datetime1, datetime2;
+        LocalDate date1, date2;   // 날짜
+        LocalTime time1, time2;   // 시간
+        LocalDateTime datetime1, datetime2;  // 날짜 + 시간
         String myDate = "2023-04-05";
 
         Object[] arr = {
@@ -89,6 +89,7 @@ public class DateTime04Main {
                 // single digit month/day 다룰때.
                 LocalDate.parse("2023-4-5", DateTimeFormatter.ofPattern("yyyy-M-d")),
                 LocalDate.parse("2023-04-05", DateTimeFormatter.ofPattern("yyyy-M-d")),
+                // 2023-04-31 => 2023-04-30 으로 출력됨.
         };
         for (var d : arr) System.out.println(d);
 

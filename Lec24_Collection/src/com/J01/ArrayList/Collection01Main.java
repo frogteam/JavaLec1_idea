@@ -123,7 +123,7 @@ public class Collection01Main {
 		while (itr.hasNext()) {
 			System.out.println(itr.next());
 		} // end while
-		// itr.next(); // NoSuchElementException
+		// itr.next(); // NoSuchElementException.  Iterator 는 1회용이다.
 		
 		System.out.println("forEach() 를 사용한 출력");
 		// forEach() + functional interface

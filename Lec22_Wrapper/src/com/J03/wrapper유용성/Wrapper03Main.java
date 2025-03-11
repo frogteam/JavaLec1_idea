@@ -12,23 +12,23 @@ public class Wrapper03Main {
 	public static void main(String[] args) {
 		System.out.println("Wrapper 클래스의 유용성");
 		
-		Object [] obj = new Object[5];
+		Object [] arr = new Object[5];
 		
-		obj[0] = Method1(new Wrapper03Main());
-		obj[1] = Method1(new A());
-		obj[2] = Method1(new A2());
-		obj[3] = Method1(new B());		
-		obj[4] = Method1(123);  // primitive type 도 받을 수 있다!
+		arr[0] = Method1(new Wrapper03Main());
+		arr[1] = Method1(new A());
+		arr[2] = Method1(new A2());
+		arr[3] = Method1(new B());
+		arr[4] = Method1(123);  // primitive type 도 받을 수 있다!
 					// ↑ Auto-Boxing + Polymorphism(다형성)
 					//  Integer <- Integer.valueOf() <- 123
 		
 		// 각각 출력해보면, Wrapper는 자동적으로 Auto-Unboxing 발생
-		for(var elm: obj) {
+		for(var elm: arr) {
 			System.out.println(elm);   // 사실 toString() 이다
 		}
 
 		//int num = obj[3];  // 에러, Object 타입인지라 unboxing 동작 안함.
-		int num = (Integer)obj[3];
+		int num = (Integer)arr[3];
 		// ↑ 실제 담고 있는게 Integer 다 하더라도,
 		//  원소타입이 Object 이기 때문에  일단 Wrapper 로 형변환 하여 auto-unboxing 이 발생하게 해야 한다
 

@@ -62,13 +62,13 @@ public class DateTime06Main {
 
 				"\n[경과시간 계산: Duration]",
 				// Duration : 두 '시간' 사이의 간격
-				duration = Duration.between(datetime1, nowDateTime),
+				duration = Duration.between(datetime1, nowDateTime),  // PT9042H50M9.4432268S
 				"seconds: " + duration.getSeconds() + "s",
 				"hours: " + duration.toHours() + "h",
 
 				"\n[경과날짜 계산: Period]",
 				// Period : 두 '날짜' 사이의 간격
-				period = Period.between(date1, nowDate),  // between(LocalDate, LocalDate)
+				period = Period.between(date1, nowDate),  // between(LocalDate, LocalDate)  P1Y11D
 				period.getYears(),
 				period.getMonths(),
 				period.getDays(),

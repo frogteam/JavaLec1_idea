@@ -19,13 +19,14 @@ import java.util.ArrayList;
 
 /*
     타입 계층 관계가 존재하는 타입 시스템에는
-    Covariance(공변선)와 Contravariance(반공변성)라는 개념(+ Invariance, Bivariance)이 존재한다.
+    Covariance(공변성)와 Contravariance(반공변성)라는 개념(+ Invariance, Bivariance)이 존재한다.
  */
 
 public class Generic04Main {
     public static void main(String[] args) {
         System.out.println("\n타입 파라미터 제한");
 
+        // <? extends B>
         // test1(new A());
         test1(new B());
         test1(new C());
@@ -56,7 +57,9 @@ public class Generic04Main {
         // 공변성?
         A a = new A();
         B b = new B();
-        a = b;  // 가능 (공변성?)
+        a = b;  // 가능
+
+        // '담겨있는' 객체가 형변환이 된다 -> '담고있는' 객체도 형변환이 된다면!
 
         // 배열의 경우
         // 배열은 공변성이 있다!
