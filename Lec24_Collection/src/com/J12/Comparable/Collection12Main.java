@@ -50,18 +50,18 @@ public class Collection12Main {
 	public static void main(String[] args) throws ParseException {
 		System.out.println("Collections 메소드");
 
-		List<String> list1 = Arrays.asList("장길산", "김철수", "구자철");
+		List<String> strList = Arrays.asList("장길산", "김철수", "구자철");
 
 		// ※ Arrays.asList 로 만든 List 는 add() 불가.  그러나 sort() 는 된다!
 		// ※ List.of 로 만든 List 는 add(), sort() 모두 불가!
 
-		System.out.println(list1);
+		System.out.println(strList);
 		
 		System.out.println("sort()");
 		// sort()
 		// 기본적으로 속도가 비교적 빠르고 안전성이 보장되는 Merge Sort 사용
-		Collections.sort(list1);  
-		System.out.println(list1);  // <-- 정렬후 결과는?
+		Collections.sort(strList);
+		System.out.println(strList);  // <-- 정렬후 결과는?
 
 		
 		System.out.println();
@@ -70,15 +70,16 @@ public class Collection12Main {
 //		list2.add(new SimpleDateFormat("yyyy-MM-dd").parse("2017-05-21"));
 //		list2.add(new SimpleDateFormat("yyyy-MM-dd").parse("2022-03-03"));
 		
-		List<LocalDate> list2 = new LinkedList<>();
-		list2.add(LocalDate.parse("2018-08-16"));
-		list2.add(LocalDate.parse("2017-05-21"));
-		list2.add(LocalDate.parse("2022-03-03"));		
+		List<LocalDate> dateList = Arrays.asList(
+			LocalDate.parse("2018-08-16"),
+			LocalDate.parse("1918-07-16"),
+			LocalDate.parse("2022-03-03")
+		);
+
+		System.out.println(dateList);
 		
-		System.out.println(list2);
-		
-		Collections.sort(list2);  
-		System.out.println(list2);  // <-- 정렬후 결과는?
+		Collections.sort(dateList);
+		System.out.println(dateList);  // <-- 정렬후 결과는?
 		
 		
 		// String 타입이면 알파벳 순으로 정렬된다.
@@ -87,40 +88,55 @@ public class Collection12Main {
 		// ※ String 온라인 도움말 확인해보자
 	
 		System.out.println();
-		List<Student> list3 = new LinkedList<Student>();
-		list3.add(new Student("Susie", 50));
-		list3.add(new Student("James", 80));		
-		list3.add(new Student("Kevin", 30));
+		List<Student> stuList = Arrays.asList(
+				new Student("Susie", 50),
+				new Student("James", 80),
+				new Student("Kevin", 30)
+		);
+		System.out.println(stuList);
 		
-		System.out.println(list3);
-		
-		System.out.println("Comparable 구현, sort() 적용");
-		Collections.sort(list3);  //Student 에 Comparable 이 구현안되어 있으면 sort() 가 에러 난다
+		System.out.println("\n💎Comparable 구현, sort() 적용");
+		Collections.sort(stuList);  //Student 에 Comparable 이 구현안되어 있으면 sort() 가 에러 난다
 		// Comparable 구현후 아래 실행
-		System.out.println(list3);
+		System.out.println(stuList);
 		
 		// 역순 정렬
 		System.out.println("reverseOrder() 적용");
-		Collections.sort(list3, Collections.reverseOrder());
-		System.out.println(list3);
+		Collections.sort(stuList, Collections.reverseOrder());
+		System.out.println(stuList);
 		
 		// 뒤집기
 		System.out.println("reverse() 적용");
-		Collections.reverse(list3);
-		System.out.println(list3);
+		Collections.reverse(stuList);
+		System.out.println(stuList);
 		
 		
 		// Comparator<> 적용
 		// Collections.sort 메소드는 두 번째 인자로 Comparator 인터페이스를 받을 수 있도록 해놓았습니다.
 		// Comparator 인터페이스의 compare 메소드를 오버라이드 하면 됩니다.
-		System.out.println("Comparator<> 적용");
-		Collections.sort(list3, new Asc());  // '이름' 오름차순
-		System.out.println(list3);
-		Collections.sort(list3, new Desc()); // '이름' 내림차순
-		System.out.println(list3);
+		System.out.println("\n🎃Comparator<> 적용");
+
+		List<Product> productList = Arrays.asList(
+				new Product(23000, LocalDate.parse("1993-04-07")),
+				new Product(42000, LocalDate.parse("2024-05-02")),
+				new Product(13000, LocalDate.parse("2002-06-06"))
+		);
+		System.out.println(productList);
+
+		Collections.sort(productList, new Asc());  // '가격' 오름차순
+		System.out.println(productList);
+		Collections.sort(productList, new Desc()); // '가격' 내림차순
+		System.out.println(productList);
+
+		// List 의 sort(Comparator<>) 도 제공됨.
+		productList.sort(new Asc());
+		System.out.println(productList);
+		productList.sort(new Desc());
+		System.out.println(productList);
+
 		
 		// Collections 에서 많이 쓰이는 인터페이스임
-		// Comparable<> 은 클래스 자체에 구현하는 인터페이스  compareTo(자기사진 vs 매개변수)
+		// Comparable<> 은 클래스 자체에 구현하는 인터페이스  compareTo(자기자신 vs 매개변수)
 		// Comparator<> 는 두개의 객체 비교하는 기능제공 인터페이스  compare(매개변수1 vs 매개변수2)
 		//      구현된 객체가 매개변수 등에 넘겨지는 형태로 많이 쓰임
 
@@ -131,21 +147,21 @@ public class Collection12Main {
 		// Shuffling 하기 (섞기)
 		System.out.println();
 		System.out.println("shuffle()");
-		Collections.shuffle(list1);
-		System.out.println(list1);
-		Collections.shuffle(list1);
-		System.out.println(list1);
+		Collections.shuffle(strList);
+		System.out.println(strList);
+		Collections.shuffle(strList);
+		System.out.println(strList);
 		
 		// 배열에서 랜덤으로 3명만 뽑기
 		String [] arr = {"aaa", "bbb", "ccc", "ddd", "eee", "fff", "ggg"};
-		List<String> arrList = Arrays.asList(arr);  // 배열 --> List<>    ( List<> 의 toArray() 의 반대)
-		Collections.shuffle(arrList);  
-		arrList = arrList.subList(0, 3);   // index 0 부터 3전까지의 List<> 생성
-		System.out.println(arrList);
+		strList = Arrays.asList(arr);  // 배열 --> List<>    ( List<> 의 toArray() 의 반대)
+		Collections.shuffle(strList);
+		strList = strList.subList(0, 3);   // index 0 부터 3전까지의 List<> 생성
+		System.out.println(strList);
 		
-		List<Integer> arrList2 = Arrays.asList(10, 20, 30, 40);  // asList() 안에 직접 값들 입력 가능.  ※ 1개 짜리 List 작성등 손쉽게 가능!
-		Collections.shuffle(arrList2);
-		System.out.println(arrList2.subList(0, 2));
+		List<Integer> intList = Arrays.asList(10, 20, 30, 40);  // asList() 안에 직접 값들 입력 가능.  ※ 1개 짜리 List 작성등 손쉽게 가능!
+		Collections.shuffle(intList);
+		System.out.println(intList.subList(0, 2));
 		System.out.println();
 		
 		
@@ -153,20 +169,25 @@ public class Collection12Main {
 		// Comparable 메소드 영향 받음
 		System.out.println();
 		System.out.println("min(), max()");
-		System.out.println(Collections.min(list3));  // Comparable 메소드 영향 받음
-		System.out.println(Collections.max(list3));
+		System.out.println(Collections.min(stuList));  // Comparable 메소드 영향 받음
+		System.out.println(Collections.max(stuList));
 		
 		// copy(dest, src)
 		System.out.println();
-		List<Student> list4 = new LinkedList<Student>();
-		list4.add(new Student("aaa", 10));
-		list4.add(new Student("bbb", 20));
-		list4.add(new Student("ccc", 30));
+		List<Student> newList = Arrays.asList(
+				new Student("aaa", 10),
+				new Student("bbb", 20),
+				new Student("ccc", 30)
+		);
 		System.out.println("copy() 전");
-		System.out.println(list4);
+		System.out.println(newList);
 		System.out.println("copy() 후");
-		Collections.copy(list4, list3);
-		System.out.println(list4);
+		Collections.copy(newList, stuList);
+		System.out.println(newList);
+		// 정말 사본으로 움직이는지 확인
+		Collections.sort(newList, Collections.reverseOrder());
+		System.out.println(newList);
+		System.out.println(stuList);
 		
 		// 로또 번호 추첨
 		//List<Integer> list4 = new ArrayList<Integer> 
@@ -176,7 +197,7 @@ public class Collection12Main {
 
 } // end class
 
-// 우선은 Comparable 구현 없이 해보자
+// ※ 우선은 Comparable 구현 없이 해보자
 class Student implements Comparable<Student>{
 	String name;
 	double point;
@@ -220,41 +241,55 @@ class Student implements Comparable<Student>{
 	
 } // end class
 
+class Product {
+	int price;
+	LocalDate date;
 
-class Asc implements Comparator<Student>{
+	Product(int price, LocalDate date) {
+		this.price = price;
+		this.date = date;
+	}
+
+	@Override
+	public String toString() {
+		return String.format("가격:%d 날짜:%s", price, date);
+	}
+} // end class
+
+class Asc implements Comparator<Product>{
 
 	// 두개의 객체를 비교
 	// o1 이 o2 보다 우선순위 낮으면 음수 리턴
 	// o1 이 o2 보다 우선순위 높으면 양수 리턴
 	// o1 과 o2 가 같으면 0 리턴
 	@Override
-	public int compare(Student o1, Student o2) {
-		// 성적(point) 오름차순
-//		if(o1.point < o2.point) return -1;
-//		if(o1.point > o2.point) return 1;
+	public int compare(Product o1, Product o2) {
+		// 가격(price) 오름차순
+//		if(o1.price < o2.price) return -1;
+//		if(o1.price > o2.price) return 1;
 //		return 0;
 
-//		return (int)(o1.point - o2.point);
+//		return (int)(o1.price - o2.price);
 		
-		// 이름(name) 오름차순
-		return o1.name.compareTo(o2.name);
+		// 날짜(date) 오름차순
+		return o1.date.compareTo(o2.date);
 	}	
 } // end Asc
 
 
-class Desc implements Comparator<Student>{
+class Desc implements Comparator<Product>{
 
 	@Override
-	public int compare(Student o1, Student o2) {
-		// 성적(point) 내림차순
-//		if(o1.point > o2.point) return -1;
-//		if(o1.point < o2.point) return 1;
+	public int compare(Product o1, Product o2) {
+		// 가격(price) 내림차순
+//		if(o1.price > o2.price) return -1;
+//		if(o1.price < o2.price) return 1;
 //		return 0;
 
-//		return (int)(o2.point - o1.point);
+//		return (int)(o2.price - o1.price);
 
-		// 이름 내림차순
-		return -o1.name.compareTo(o2.name);
+		// 날짜(date) 내림차순
+		return -o1.date.compareTo(o2.date);
 	}	
 } // end Desc
 

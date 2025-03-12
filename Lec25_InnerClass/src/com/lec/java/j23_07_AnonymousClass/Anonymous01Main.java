@@ -32,7 +32,7 @@ public class Anonymous01Main {
 		Person p = new Person("QWERTY");
 		MyReadable r = p.createInstance(20);
 		r.readInfo();  // 주인공은 readInfo()  메소드다.  이 메소드가 정의 되어 공급받은 거다.
-		
+		System.out.println(r);  // com.lec.java.j23_07_AnonymousClass.Person$1@568db2f2
 
 		//------------------------------------------------
 		System.out.println();
@@ -63,7 +63,8 @@ public class Anonymous01Main {
 		
 		//------------------------------------------------
 		System.out.println();
-		System.out.println(new MyClass().methodA(30));
+		System.out.println(new MyClass().methodA(30));  // 60
+		System.out.println(new MyClass(){}.methodA(30));  // 60
 		System.out.println(new MyClass() {
 			int d = 400;
 

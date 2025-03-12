@@ -20,7 +20,7 @@ import java.util.stream.Stream;
 	  |__ HashMap<K, V>, TreeMap<K, V>
 	
 	 Map: key-value 저장 방식의 자료 구조
-	  1. key는 중복되지 않는 값만 허용
+	  1. key는 중복되지 않는 값만 허용, 저장순서 유지되지 않음.
 	  2. value는 같더라도 key 값이 다르면 저장 가능
 	  3. 검색, 수정, 삭제를 할 때 key를 사용
 */
@@ -97,6 +97,8 @@ public class Collection10Main {
 		// 방법2 : Map.Entry 사용
 		// entrySet() 은 Set<Map.Entry<K, V>> 리턴함
 		//   Entry 객체는 Key 와 Value 를 가지고 있다 -> getter 제공!
+		System.out.println(hmap.entrySet());  // [1=손범규, 3=김현구, 4=최재석]
+
 		for(Map.Entry<Integer, String> entry : hmap.entrySet()) {
 			System.out.println(entry.getKey() + ":" + entry.getValue());
 		}

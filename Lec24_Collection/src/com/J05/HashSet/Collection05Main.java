@@ -80,6 +80,7 @@ public class Collection05Main {
 			System.out.println(itr.next());
 		}
 
+		// contains(e)
 		System.out.println(hset.contains(555));
 		System.out.println(hset.contains(700));
 		

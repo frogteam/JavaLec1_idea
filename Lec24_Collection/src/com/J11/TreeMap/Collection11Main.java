@@ -26,7 +26,7 @@ public class Collection11Main {
 
 		// values() : value 들로 이루어진 Collection<> 리턴
 		System.out.println("values()");
-		//tmap.values();   
+		//System.out.println(tmap.values());   // [aaa, qwerty, asdf, zxcv]
 		for(String value :tmap.values()) {
 			System.out.println(value);
 		}
@@ -44,7 +44,7 @@ public class Collection11Main {
 			System.out.println(key + ":" + tmap.get(key));
 			
 		} // end while
-		// ↑ key 에 대해 정렬된건 아니라는 사실 알수 있다
+		// ↑ key 에 대해 정렬되었다는 사실을 알수 있다
 		
 		System.out.println();
 		

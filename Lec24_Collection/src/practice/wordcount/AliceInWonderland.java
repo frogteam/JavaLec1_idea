@@ -79,7 +79,7 @@ public class AliceInWonderland {
 
 	public static void main(String[] args) {		
 		System.out.println("실습: 단어 발생 빈도");
-		
+
 		HashMap<String, Integer> hmap = new HashMap<String, Integer>();
 		
 		// 발생빈도 방법1 : split, StringTokenizer
