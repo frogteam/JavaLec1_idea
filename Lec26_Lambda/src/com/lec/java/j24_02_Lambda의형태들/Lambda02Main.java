@@ -24,6 +24,10 @@ public class Lambda02Main {
 			// 매개변수 한개, 리턴값은 없는 경우
 			Test02 lambda02 = (x) -> System.out.println("num = " + x);
 			lambda02.testPrint(55);
+
+			// 매개변수 한개 밖에 없으면 괄호 없어도 됨.
+			lambda02 = x -> System.out.println("num = " + x);
+			lambda02.testPrint(55);
 			
 			// 매개변수 여러개, 리턴값이 있슴.
 			Test03 lambda03 = (x, y) -> (x > y) ? x : y;

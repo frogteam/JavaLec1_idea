@@ -6,6 +6,7 @@ package com.lec.java.j24_01_Lambda;
  * 		(매개변수 리스트) -> {...}  수행코드
  * 
  * 	람다 표현식은 추상메소드가 '하나뿐'인 인터페이스 구현. (이를 함수형 인터페이스 functional interface) 라 한다
+ *  람다 표현식의 결과는 '익명객체'.
  *  @FunctionalInterface 를 사용하여 명시적으로 함수형 인터페이스임을 지정할수 있다
  * 	
  * 	- 익명클래스의 더 간략화한 표현식
@@ -19,7 +20,7 @@ public class Lambda01Main {
 		System.out.println();
 		System.out.println("[1] 인터페이스를 구현하는 클래스");
 		// 인터페이스 Adder를 구현하는 클래스 AdderImple 타입의 인스턴스 생성
-		Addable myAdder = new AdderImple();
+		Addable myAdder = new AdderImpl();
 		//AdderImple myAdder2 = new AdderImple();
 		
 		// Adder 인스턴스의 메소드 add()를 사용
@@ -69,6 +70,7 @@ public class Lambda01Main {
 
 		//------------------------------------------
 		System.out.println();
+		// 마치 메소드(함수) 가 데이타인것같은 코드 작성 가능
 		Addable[] arr = {
 				(a, b) -> a + b,
 				(a, b) -> a - b,
@@ -101,7 +103,7 @@ interface Addable {
 
 
 // 인터페이스를 구현하는 클래스를 정의
-class AdderImple implements Addable {
+class AdderImpl implements Addable {
 
 	@Override
 	public double add(double x, double y) {

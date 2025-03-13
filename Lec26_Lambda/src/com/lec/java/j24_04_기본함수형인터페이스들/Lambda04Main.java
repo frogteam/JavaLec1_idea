@@ -80,14 +80,14 @@ public class Lambda04Main {
             System.out.println(p.test(""));  // true
         }
 
-        // UnaryOperator<T>
+        // UnaryOperator<T> : 매개변수 T, 리턴타입 T
         {
             UnaryOperator<String> u = str -> str + " operator";
             String result = u.apply("hello unary");
             System.out.println(result);
         }
 
-        // BinaryOperator<T>
+        // BinaryOperator<T> : 매개변수 (T, T), 리턴타입 T
         {
             BinaryOperator<String> b = (str1, str2) -> str1 + " " + str2;
             String result = b.apply("hello", "binary");
@@ -114,7 +114,7 @@ public class Lambda04Main {
             System.out.println(result);
         }
 
-        // Comparator<T>
+        // Comparator<T> : 매개변수 (T, T) -> int
         {
             Comparator<String> c = (str1, str2) -> str1.compareTo(str2);
             int result = c.compare("aaa", "bbb");

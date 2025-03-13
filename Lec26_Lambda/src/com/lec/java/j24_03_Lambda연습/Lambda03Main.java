@@ -5,7 +5,7 @@ import java.util.*;
 /*
 	 세가지 방법으로 자유자재로 구현할수 있어야 합니다.
 	 방법 1) 클래스 implements 인터페이스 + 오버라이딩.
-	 방법 2) 익명클래스
+	 방법 2) 익명클래스 (오늘날은 비추)
 	 방법 3) 람다 표현식 lambda expression
 */
 public class Lambda03Main {
@@ -15,7 +15,7 @@ public class Lambda03Main {
 		
 		// 세가지 방법으로 연습
 		// 방법 1) 클래스 implements 인터페이스 + 오버라이딩.
-		// 방법 2) 익명클래스
+		// 방법 2) 익명클래스 (오늘날은 비추)
 		// 방법 3) 람다 표현식 lambda expression
 		{
 			// 인터페이스(추상메소드) 구현 3가지 방법
@@ -221,7 +221,7 @@ public class Lambda03Main {
 			System.out.println(hmap);
 
 			// 실습 : lambda 활용
-			// 1. 횟수 오름차순 출력
+			// 1. 횟수(value) 오름차순 출력
 			List<Map.Entry<String, Integer>> list = new ArrayList<>(hmap.entrySet());
 			System.out.println(list);// [AAA=400, CCC=100, BBB=200]
 
@@ -236,7 +236,7 @@ public class Lambda03Main {
 			Collections.sort(list, Comparator.comparingInt(Map.Entry::getValue));
 			System.out.println(list);
 
-			// 2. 횟수 내림차순 출력
+			// 2. 횟수(value) 내림차순 출력
 			Collections.sort(list,(o1, o2) -> (o2.getValue() - o1.getValue()));
 			System.out.println(list);
 
