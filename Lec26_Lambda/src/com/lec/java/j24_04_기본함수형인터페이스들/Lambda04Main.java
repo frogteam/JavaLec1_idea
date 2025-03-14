@@ -45,33 +45,33 @@ import java.util.function.*;
 public class Lambda04Main {
     public static void main(String[] args) {
 
-        // Runnable
+        // Runnable : 매개변수 없슴.  리턴타입 void.
         {
             Runnable r = () -> System.out.println("hello runnable");
             r.run();
         }
 
-        //  Supplier<T>
+        //  Supplier<T> : 매개변수 없슴.  리턴타입 (T타입).
         {
             Supplier<String> s = () -> "hello supplier";
             String result = s.get();
             System.out.println(result);
         }
 
-        // Consumer<T>
+        // Consumer<T> : 매개변수 있슴(T타입).  리턴타입 void.
         {
             Consumer<String> c = str -> System.out.println(str);
             c.accept("hello consumer");
         }
 
-        // Function<T, R>
+        // Function<T, R> : 하나의 매개변수 (T타입).  리턴타입 (R타입).
         {
             Function<String, Integer> f = str -> Integer.parseInt(str);
             Integer result = f.apply("1");
             System.out.println(result);
         }
 
-        //  Predicate<T>
+        //  Predicate<T> : 하나의 매개변수 (T타입). 리턴타입 boolean
         {
             // java.util.function.Predicate
             Predicate<String> p = str -> str.isEmpty();
@@ -94,27 +94,27 @@ public class Lambda04Main {
             System.out.println(result);
         }
 
-        // BiPredicate<T, U>
+        // BiPredicate<T, U> : 매개변수 (T, U), 리턴타입 boolean
         {
             BiPredicate<String, Integer> bp = (str, num) -> str.equals(Integer.toString(num));
             boolean result = bp.test("1", 1);
             System.out.println(result);
         }
 
-        //  BiConsumer<T, U>
+        //  BiConsumer<T, U> : 매개변수 (T, U), 리턴타입 void
         {
             BiConsumer<String, Integer> bc = (str, num) -> System.out.println(str + " :: " + num);
             bc.accept("숫자", 5);
         }
 
-        // BiFunction<T, U, R>
+        // BiFunction<T, U, R> : 매개변수 (T, U), 리턴타입 R
         {
             BiFunction<Integer, String, String> bf = (num, str) -> String.valueOf(num) + str;
             String result = bf.apply(5, "678");
             System.out.println(result);
         }
 
-        // Comparator<T> : 매개변수 (T, T) -> int
+        // Comparator<T> : 매개변수 (T, T), 리턴타입 int
         {
             Comparator<String> c = (str1, str2) -> str1.compareTo(str2);
             int result = c.compare("aaa", "bbb");

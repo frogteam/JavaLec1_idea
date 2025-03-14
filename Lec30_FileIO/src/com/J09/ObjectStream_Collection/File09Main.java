@@ -54,7 +54,7 @@ public class File09Main {
 			// 제대로 읽어오는지 확인하기 위해 기존 리스트 삭제
 			list = null;
 			
-			list = (ArrayList<Member>)oin.readObject();
+			list = (List<Member>)oin.readObject();
 			for(var m : list) {
 				m.displayInfo();
 			}

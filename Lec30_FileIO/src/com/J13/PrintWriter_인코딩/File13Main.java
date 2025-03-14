@@ -97,7 +97,7 @@ public class File13Main {
 			br.close();
 			//--------------------
 			
-			System.out.println("현재 OS인코딩 " + System.getProperty("file.encoding"));
+			System.out.println("현재 파일 인코딩 " + System.getProperty("file.encoding"));
 			// euc-kr 로 인코딩하여 저장
 			out = new PrintWriter(new BufferedWriter(new OutputStreamWriter(new FileOutputStream(FILE2), "euc-kr")));
 			
